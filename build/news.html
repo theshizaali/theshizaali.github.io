@@ -1,0 +1,18 @@
+<div class="news-container overflow">
+  <table class="news">
+    <tr>
+      <td>2023</td>
+      <td>&nbsp;XYZ</td>
+      <td class="pl-5">Awarded the <em>xyz</em> for xyz.</td>
+    </tr>
+  </table>
+</div>
+<div class="news-container-see-more has-text-centered">
+  <a href='#' onclick="javascript:see_more_news(event)">[see more]</a>
+</div>
+<script>
+  function see_more_news(e) {
+    e.target.remove();
+    document.querySelector('.news-container').classList.toggle('overflow');
+  }
+</script>

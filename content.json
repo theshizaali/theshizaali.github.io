@@ -1,0 +1,30 @@
+{
+    "publications": [
+        {
+            "title": "XYZ",
+            "authors": [
+                "XYZ",
+                "XYZ"
+            ],
+            "year": 2023,
+            "venue": "XYZ",
+            "urls": [
+                {
+                    "name": "pre-print",
+                    "url": "https://arxiv.org/pdf/XYZ.pdf"
+                },
+                {
+                    "name": "website",
+                    "url": "https://XYZ.com"
+                }
+            ]
+        }
+    ],
+    "news": [
+        {
+            "content": "Awarded the <em>xyz</em> for xyz.",
+            "month": "XYZ",
+            "year": 2023
+        }
+    ]
+}

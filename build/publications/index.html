@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Publications | Shiza Ali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&family=Inconsolata&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3J733H6KK"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J3J733H6KK');
+  </script>
+  <script> PAGE_NAME = 'publications'; </script>
+</head>
+
+<body>
+  <section class="section p-3 navbar">
+      <div class="container is-max-desktop is-size-4 is-flex is-align-items-center">
+          <div class="">
+              <h1 class="is-size-4">
+                  <span class="has-text-weight-semibold">Shiza</span> <span class="has-text-weight-light">Ali</span>
+              </h1>
+          </div>
+          <div id="navbar-menu" class="is-size-6 is-flex navbar-menu1">
+              <a class="is-size-6 navbar-item" href="/"> about </a>
+              <!-- <a class="navbar-item is-size-5" href="/publications"> Publications </a> -->
+              <a class="is-size-6 navbar-item" target='_blank' href="/static/shizaAli_CV.pdf"> cv </a>
+              <a class="is-size-6 navbar-item" href="/photos"> photos </a>
+              <!-- <a class="is-size-6 navbar-item" target='_blank' href="oooo"> ooooo </a> -->
+              <!-- <a class="is-size-6 navbar-item" href="/misc"> misc </a> -->
+          </div>
+      </div>
+  </section>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          try {
+              const navbar = document.getElementById('navbar-menu');
+              for (const tag of navbar.getElementsByTagName('a')) {
+                  // highlight the nav button for current page
+                  if (tag.innerText.toLowerCase().includes(PAGE_NAME)) {
+                      tag.classList.add('is-active');
+                  }
+              }
+          } catch (e) { }
+      });
+  </script>
+  <section class="section">
+    <div class="container">
+      <div class="publications">
+          <div class="publication mb-5">
+              <h1 class="publication-title">
+                  <strong>XYZ</strong>
+              </h1>
+              <h2>
+                  <span>XYZ</span>
+                  <span>XYZ</span>
+              </h2>
+              <h2>
+                  XYZ, 2023
+              </h2>
+              <h2 class="external-links">
+                  <a href="https://arxiv.org/pdf/XYZ.pdf" target="_blank">pre-print</a>
+                  <a href="https://XYZ.com" target="_blank">website</a>
+              </h2>
+          </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

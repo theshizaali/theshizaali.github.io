@@ -1,0 +1,26 @@
+{
+  "name": "theshizaali.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt && serve -l 3000 build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theshizaali/theshizaali.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theshizaali/theshizaali.github.io/issues"
+  },
+  "homepage": "https://github.com/theshizaali/theshizaali.github.io#readme",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-bake": "^1.9.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}
