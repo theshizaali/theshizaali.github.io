@@ -1,30 +1,43 @@
 {
     "publications": [
         {
-            "title": "XYZ",
+            "title": "Getting Meta: A Multimodal Approach for Detecting Unsafe Conversations within Instagram Direct Messages of Youth",
             "authors": [
-                "XYZ",
-                "XYZ"
+                "Shiza Ali",
+                "Afsaneh Razi",
+                "Seunghyun Kim",
+                "Ashwaq Alsoubai",
+                "Chen Ling",
+                "Munmun De Choudhury",
+                "Pamela J. Wisniewski",
+                "Gianluca Stringhini"
             ],
             "year": 2023,
-            "venue": "XYZ",
+            "venue": "Proceedings of the ACM on Human-Computer Interaction Volume 7 Issue CSCW1 Article No.: 132pp 1–30",
             "urls": [
                 {
-                    "name": "pre-print",
-                    "url": "https://arxiv.org/pdf/XYZ.pdf"
-                },
-                {
-                    "name": "website",
-                    "url": "https://XYZ.com"
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3579608"
                 }
             ]
         }
     ],
     "news": [
         {
-            "content": "Awarded the <em>xyz</em> for xyz.",
-            "month": "XYZ",
+            "content": "I got selected for the SIGCHI Gary Marsden Travel Award.",
+            "month": "August",
             "year": 2023
+        },
+        {
+            "content": "I received Research PhD. Fellowship Finalist Award at Meta.",
+            "month": "May",
+            "year": 2023
+        }
+        ,
+        {
+            "content": "My Paper \"Understanding the Digital Lives of Youth\" got the Honorable Mention Award st CHI 2023 ",
+            "month": "August",
+            "year": 2022
         }
     ]
 }
