@@ -13,14 +13,135 @@
                 "Gianluca Stringhini"
             ],
             "year": 2023,
-            "venue": "Proceedings of the ACM on Human-Computer Interaction Volume 7 Issue CSCW1 Article No.: 132pp 1–30",
+            "venue": "Proceedings of the ACM on Human-Computer Interaction (CSCW'23)",
             "urls": [
                 {
                     "name": "published",
                     "url": "https://doi.org/10.1145/3579608"
                 }
             ]
+        },
+        {
+            "title": "Sliding into My DMs: Detecting Uncomfortable or Unsafe Sexual Risk Experiences within Instagram Direct Messages Grounded in the Perspective of Youth",
+            "authors": [
+                "Afsaneh Razi",
+                "Ashwaq Alsoubai",
+                "Seunghyun Kim",
+                "Shiza Ali",
+                "Gianluca Stringhini",
+                "Munmun De Choudhury",
+                "Pamela J. Wisniewski"
+            ],
+            "year": 2023,
+            "venue": "Proceedings of the ACM on Human-Computer Interaction (CSCW'23)",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3579522"
+                }
+            ]
+        },
+        {
+            "title": "Understanding the Digital Lives of Youth: Analyzing Media Shared within Safe Versus Unsafe Private Conversations on Instagram",
+            "authors": [
+                "Shiza Ali",
+                "Afsaneh Razi",
+                "Seunghyun Kim",
+                "Ashwaq Alsoubai",
+                "Joshua Gracie",
+                "Munmun De Choudhury",
+                "Pamela J. Wisniewski",
+                "Gianluca Stringhini"
+            ],
+            "year": 2022,
+            "venue": "CHI Conference on Human Factors in Computing Systems (CHI'22)",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3491102.3501969"
+                }
+            ]
+        },
+        {
+            "title": "Instagram Data Donation: A Case Study on Collecting Ecologically Valid Social Media Data for the Purpose of Adolescent Online Risk Detection",
+            "authors": [
+                "Afsaneh Razi",
+                "Ashwaq Alsoubai",
+                "Seunghyun Kim",
+                "Nurun Naher",
+                "Shiza Ali",
+                "Gianluca Stringhini",
+                "Munmun De Choudhury",
+                "Pamela J. Wisniewski"
+            ],
+            "year": 2022,
+            "venue": "Extended Abstracts CHI Conference on Human Factors in Computing Systems",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3491101.3503569"
+                }
+            ]
+        },
+        {
+            "title": "TROLLMAGNIFIER: Detecting State-Sponsored Troll Accounts on Reddit",
+            "authors": [
+                "Mohammad Hammas Saeed",
+                "Shiza Ali",
+                "Jeremy Blackburn",
+                "Emiliano De Cristofaro",
+                "Savvas Zannettou",
+                "Gianluca Stringhini"
+            ],
+            "year": 2022,
+            "venue": "IEEE Symposium on Security and Privacy (IEEE SP'22)",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1109/SP46214.2022.9833706"
+                }
+            ]
+        },
+        {
+            "title": "Understanding the Effect of Deplatforming on Social Networks",
+            "authors": [
+                "Shiza Ali",
+                "Mohammad Hammas Saeed",
+                "Esraa Aldreabi",
+                "Jeremy Blackburn",
+                "Emiliano De Cristofaro",
+                "Savvas Zannettou",
+                "Gianluca Stringhini"
+            ],
+            "year": 2021,
+            "venue": "Proceedings of the 13th ACM Web Science Conference (WebSci'21)",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3447535.3462637"
+                }
+            ]
+        },
+        {
+            "title": "Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms",
+            "authors": [
+                "Rashid Tahir",
+                "Faizan Ahmed",
+                "Mohammad Hammas Saeed",
+                "Shiza Ali",
+                "Fareed Zaffar",
+                "Christo Wilson"
+            ],
+            "year": 2019,
+            "venue": "Proceedings of the IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM'19)",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3341161.3342913"
+                }
+            ]
         }
+
     ],
     "news": [
         {
@@ -35,9 +156,20 @@
         }
         ,
         {
-            "content": "My Paper \"Understanding the Digital Lives of Youth\" got the Honorable Mention Award st CHI 2023 ",
+            "content": "Our papers titled \"Getting Meta\" and \"Sliding into My DMs\" got accepted at CSCW'23. Two papers yaayy!!",
+            "month": "April",
+            "year": 2023
+        },
+        {
+            "content": "My Paper \"Understanding the Digital Lives of Youth\" got the Honorable Mention Award at CHI'22'!! ",
             "month": "August",
             "year": 2022
+        },
+        {
+            "content": "Our paper titled \"Understanding the Digital Lives of Youth\" got accepted at CHI'22!",
+            "month": "April",
+            "year": 2022
         }
+        
     ]
 }
