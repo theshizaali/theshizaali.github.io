@@ -260,3 +260,8 @@ h1.publication-title:hover strong {
 #image-modal .photo-previous svg {
     margin-left: 4px;
 }
+
+.center-div {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+  }
