@@ -1,7 +1,7 @@
 :root {
-    --font-family: 'IBM Plex Sans';
+    --font-family: 'Gill Sans';
     --font-family-mono: 'Inconsolata';
-    --accent: #644F4A;
+    --accent: #357DDD;
 }
 
 * {
@@ -52,7 +52,7 @@ p {
 }
 
 .navbar-menu1 a.navbar-item {
-    color: #aaa;
+    color: #357DDD;
 }
 
 .navbar-menu1 a.navbar-item:hover,
@@ -264,4 +264,5 @@ h1.publication-title:hover strong {
 .center-div {
     display: flex;
     justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
   }
