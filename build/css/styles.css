@@ -1,0 +1,265 @@
+:root {
+    --font-family: 'IBM Plex Sans';
+    --font-family-mono: 'Inconsolata';
+    --accent: #402A25;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.avatar img {
+    border-radius: 10% 10% 10% 10%;
+}
+
+.avatar {
+    max-width: 192px;
+}
+
+p,
+.navbar a.navbar-item {
+    color: #777;
+}
+
+.navbar a.navbar-title {
+    color: #4a4a4a;
+}
+
+.navbar a.navbar-title:hover {
+    color: black;
+}
+
+.navbar a {
+    margin-left: 1em;
+}
+
+p > em,
+p > a {
+    border-bottom: dashed 1px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+p {
+    font-size: 1.15rem;
+}
+
+.navbar-menu1 {
+    margin-left: auto;
+}
+
+.navbar-menu1 a.navbar-item {
+    color: #aaa;
+}
+
+.navbar-menu1 a.navbar-item:hover,
+.navbar-menu1 a.navbar-item.is-active {
+    color: var(--accent);
+}
+
+.navbar-menu1 a.navbar-item.is-active {
+    font-weight: bold;
+}
+
+footer.footer {
+    margin-top: auto;
+}
+
+ul.social-list {
+    width: 90%;
+}
+
+ul.social-list > li {
+    margin-bottom: 0.2em;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+ul.social-list svg {
+    fill: #aaa;
+}
+
+ul.social-list svg:hover {
+    fill: var(--accent);
+}
+
+div.talk > h2 span:not(:last-child)::after,
+div.podcast > h2 span:not(:last-child)::after,
+div.publication > h2 span:not(:last-child)::after {
+    content: ','
+}
+
+div.talk > h2 span strong,
+div.podcast > h2 span strong,
+div.publication > h2 span strong {
+    text-decoration: underline;
+}
+
+
+div.talk > h2.external-links a,
+div.podcast > h2.external-links a,
+div.publication > h2.external-links a {
+    font-family: var(--font-family-mono);
+}
+
+div.talk > h2.external-links a::before,
+div.podcast > h2.external-links a::before,
+div.publication > h2.external-links a::before {
+    content: '[';
+}
+
+div.talk > h2.external-links a::after,
+div.podcast > h2.external-links a::after,
+div.publication > h2.external-links a::after {
+    content: ']';
+}
+
+div.talk > h2.external-links a:hover,
+div.podcast > h2.external-links a:hover,
+div.publication > h2.external-links a:hover {
+    text-decoration: underline;
+    color: #444;
+}
+
+table.news {
+    font-weight: lighter;
+    table-layout: fixed;
+}
+
+table.news tr > td:first-child,
+table.news tr > td:nth-child(2),
+div.news-container-see-more a {
+    font-family: var(--font-family-mono);
+    white-space: nowrap;
+} 
+
+.news-container {
+    /* overflow: hidden; */
+    transition: all linear 0.1s;
+}
+
+table.news em {
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+h1.talk-title strong,
+h1.podcast-title strong,
+h1.publication-title strong {
+    font-size: 1.125rem;
+    color: var(--accent);
+
+}
+
+h1.talk-title:hover strong,
+h1.podcast-title:hover strong,
+h1.publication-title:hover strong {
+    color: #444;
+}
+
+.color-accent {
+    color: var(--accent) !important;
+}
+
+@media screen and (max-width:769px) {
+    .navbar a {
+        margin-left: 0;
+    }
+
+    .navbar-menu1 {
+        margin-left: 0;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+    }
+}
+
+.photo img {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.photo img:hover {
+    opacity: 1;
+}
+
+#image-modal .modal-content {
+    width: 80%;
+}
+
+#image-modal .modal-content div.photo-container {
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#image-modal .modal-content div.photo-description {
+    text-align: left;
+    position: absolute;
+    bottom: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.75;
+}
+
+#image-modal .modal-content div.photo-description:hover {
+    opacity: 1;
+}
+
+#image-modal .modal-content div.photo-description span {
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#image-modal img {
+    height: 99%;
+}
+
+#image-modal .photo-previous,
+#image-modal .photo-next {
+    position: relative;
+    fill: white;
+    border-radius: 100%;
+    min-width: 32px;
+    min-height: 32px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-modal .photo-previous:hover,
+#image-modal .photo-next:hover {
+    background: rgba(10,10,10,.3);
+}
+
+#image-modal .photo-previous {
+    left: 40px;
+}
+
+#image-modal .photo-previous svg {
+    margin-right: 4px;
+}
+
+#image-modal .photo-next {
+    transform: rotate(180deg);
+    right: 40px;
+}
+
+#image-modal .photo-previous svg {
+    margin-left: 4px;
+}
