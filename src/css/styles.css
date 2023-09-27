@@ -1,15 +1,11 @@
 :root {
     --font-family: 'IBM Plex Sans';
     --font-family-mono: 'Inconsolata';
-    --accent: #644F4A;
+    --accent: #485fc7;
 }
 
 * {
     font-family: var(--font-family);
-}
-
-a {
-    color: var(--accent);
 }
 
 body {
@@ -27,9 +23,16 @@ body {
 }
 
 p,
-.navbar a {
-    /* font-weight: 300; */
+.navbar a.navbar-item {
     color: #777;
+}
+
+.navbar a.navbar-title {
+    color: #4a4a4a;
+}
+
+.navbar a.navbar-title:hover {
+    color: black;
 }
 
 .navbar a {
@@ -52,7 +55,7 @@ p {
 }
 
 .navbar-menu1 a.navbar-item {
-    color: #644F4A;
+    color: #aaa;
 }
 
 .navbar-menu1 a.navbar-item:hover,
@@ -124,11 +127,6 @@ div.publication > h2.external-links a:hover {
     color: #444;
 }
 
-div.news-container.overflow {
-    max-height: 100px;
-    /* overflow: hidden; */
-}
-
 table.news {
     font-weight: lighter;
     table-layout: fixed;
@@ -140,6 +138,11 @@ div.news-container-see-more a {
     font-family: var(--font-family-mono);
     white-space: nowrap;
 } 
+
+.news-container {
+    /* overflow: hidden; */
+    transition: all linear 0.1s;
+}
 
 table.news em {
     font-style: normal;
