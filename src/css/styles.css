@@ -126,7 +126,7 @@ div.publication > h2.external-links a:hover {
 
 div.news-container.overflow {
     max-height: 100px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 table.news {
