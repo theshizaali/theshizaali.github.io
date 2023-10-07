@@ -145,6 +145,11 @@
     ],
     "news": [
         {
+            "content": "Our paper \"Sliding into My DMs: Detecting Uncomfortable or Unsafe Sexual Risk Experiences within Instagram Direct Messages.\" received the Impact Recognition award!",
+            "month": "October",
+            "year": 2023
+        },
+        {
             "content": "I got selected for the SIGCHI Gary Marsden Travel Award.",
             "month": "August",
             "year": 2023
