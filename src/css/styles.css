@@ -3,6 +3,9 @@
     --font-family-mono: 'Inconsolata';
     --accent: #402A25;
 }
+.underline {
+    text-decoration: underline;
+  }
 
 * {
     font-family: var(--font-family);
