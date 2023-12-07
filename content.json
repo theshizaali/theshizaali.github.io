@@ -145,6 +145,16 @@
     ],
     "news": [
         {
+            "content": "Gave a talk on \"Tackling Malicious Activity Online\" at the University of Iowa ",
+            "month": "December",
+            "year": 2023
+        },
+        {
+            "content": "I was awarded \"Rising Star in Social Computing and Tech Policy\" by University of Iowa",
+            "month": "November",
+            "year": 2023
+        },
+        {
             "content": "Our paper \"Sliding into My DMs: Detecting Uncomfortable or Unsafe Sexual Risk Experiences within Instagram Direct Messages.\" received the Impact Recognition award!",
             "month": "October",
             "year": 2023
