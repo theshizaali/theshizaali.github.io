@@ -149,7 +149,7 @@ div.news-container-see-more a {
 } 
 
 .news-container {
-    /* overflow: hidden; */
+    overflow: hidden;
     transition: all linear 0.1s;
 }
 
