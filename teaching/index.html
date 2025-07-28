@@ -1,121 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSCI 2410: Systems Programming | Dr. Shiza Ali</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2rem;
-    }
-    .avatar img {
-      border-radius: 50%;
-      max-width: 150px;
-    }
-    .section-title {
-      margin-top: 2rem;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    .content ul {
-      margin-left: 1.5rem;
-    }
-  </style>
+  <title>Courses | Shiza Ali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&family=Inconsolata&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3J733H6KK"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J3J733H6KK');
+  </script> -->
+  <script> PAGE_NAME = 'teaching'; </script>
 </head>
 
 <body>
+  <section class="section p-3 navbar">
+      <div class="container is-max-desktop is-size-4 is-flex is-align-items-center">
+          <div>
+              <h1 class="is-size-4">
+                  <a href="/" class="ml-0 navbar-title">
+                      <span class="has-text-weight-semibold">Shiza</span> <span class="has-text-weight-light">Ali</span>
+                  </a>
+              </h1>
+          </div>
+          <div id="navbar-menu" class="is-size-6 is-flex navbar-menu1">
+              <a class="is-size-6 navbar-item" href="/"> About Me </a>
+              <a class="is-size-6 navbar-item" href="/publications"> Research </a>
+              <a class="is-size-6 navbar-item" href="/teaching"> Teaching </a>
+              <!-- <a class="is-size-6 navbar-item" href="/research"> Research </a> -->
+              <a class="is-size-6 navbar-item" href="/blog"> Blog </a>
+              <a class="is-size-6 navbar-item" target='_blank' href="/static/shizaAli_CV.pdf"> CV </a>
+          </div>
+      </div>
+  </section>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          try {
+              const navbar = document.getElementById('navbar-menu');
+              for (const tag of navbar.getElementsByTagName('a')) {
+                  // highlight the nav button for current page
+                  if (tag.innerText.toLowerCase().includes(PAGE_NAME)) {
+                      tag.classList.add('is-active');
+                  }
+              }
+          } catch (e) { }
+      });
+  </script>
   <section class="section">
     <div class="container is-max-desktop">
-      <div class="columns is-vcentered">
-        <div class="column is-one-fifth has-text-centered">
-          <figure class="image avatar">
-            <img src="./img/shiza.png" alt="Dr. Shiza Ali">
-          </figure>
-        </div>
-        <div class="column">
-          <h1 class="title">CSCI 2410: Systems Programming</h1>
-          <h2 class="subtitle">Fall 2024 | TR 02:20--03:35PM ET | SEH 1300/1400/1450</h2>
-          <p><strong>Instructor:</strong> <a href="https://shizaali.com">Dr. Shiza Ali</a>, The George Washington University</p>
-          <p class="mt-2">This course covers the fundamentals of systems programming using the C language, with a focus on UNIX processes, memory, IPC, and systems tools.</p>
-        </div>
+      <div>
+        <h1 class="is-size-2">
+          <span class="has-text-weight-semibold">Courses</span>
+        </h1>
+    </div>
+    <div>
+      <p>&nbsp;</p>
+    </div>
+    <div class="container">
+      <div>
+          <h1 class="is-size-4 underline">
+            <a href="\systemProg">System Programming</a>.
+        </h1>
+        <p class="introduction mt-1">
+         kuch
+        </p>
       </div>
 
-      <div class="section-title">Course Structure</div>
-      <div class="content">
-        <ul>
-          <li><strong>Lectures</strong> focus on core system concepts and C programming practices.</li>
-          <li><strong>Labs</strong> reinforce lecture material with hands-on programming exercises.</li>
-          <li><strong>Homeworks</strong> in C to develop and apply system programming skills.</li>
-          <li><strong>Quizzes</strong> and <strong>In-class coding exercises</strong> to evaluate understanding.</li>
-        </ul>
+      <div>
+        <p>&nbsp;</p>
       </div>
 
-      <div class="section-title">Course Staff</div>
-      <div class="content">
-        <p><strong>Instructor:</strong> <a href="https://shizaali.com">Dr. Shiza Ali</a></p>
-        <p><strong>Teaching Assistants:</strong></p>
-        <ul>
-          <li><a href="mailto:daniaabdalla@gwu.edu">Dania Abdala</a></li>
-          <li><a href="mailto:indumathi.madhu@gwu.edu">Indumathi Madhu</a></li>
-          <li><a href="mailto:ruturajs@gwmail.gwu.edu">Ruturaj Shitole</a></li>
-          <li><a href="mailto:aalsaleh31@gwu.edu">Abdulrahman AlSaleh</a></li>
-          <li><a href="mailto:dchen36@gwmail.gwu.edu">Derek Chen</a></li>
-          <li><a href="mailto:londonogustavo@gwu.edu">Gustavo Londono</a></li>
-          <li><a href="mailto:sameen_ahmad@gwu.edu">Sameen Ahmed</a></li>
-        </ul>
-        <p><strong>Grader:</strong> <a href="mailto:minghsien.wu@gwmail.gwu.edu">Ming-Hsien Wu</a></p>
-      </div>
-
-      <div class="section-title">Communication</div>
-      <div class="content">
-        <p>We use <strong>Discord</strong> for class communication and <strong>Blackboard</strong> for announcements and grades. Please message via Discord for questions or office hours.</p>
-      </div>
-
-      <div class="section-title">Grading Breakdown</div>
-      <div class="content">
-        <ul>
-          <li><strong>Tests, Quizzes, In-class Exercises:</strong> 50%</li>
-          <li><strong>Homework Assignments:</strong> 40%</li>
-          <li><strong>Participation:</strong> 10%</li>
-        </ul>
-        <p><strong>Important:</strong> Homework is autograded and may require oral code reviews. Late submissions are penalized without valid excuses.</p>
-      </div>
-
-      <div class="section-title">Course Materials</div>
-      <div class="content">
-        <ul>
-          <li><strong>Textbook:</strong> Computer Systems: A Programmer's Perspective (3rd Ed.)</li>
-          <li>Readings: <a href="https://github.com/gwu-cs-sysprog/resources">Course Resources</a></li>
-          <li>Lectures & Slides: <a href="https://gwu-cs-sysprog.github.io">gwu-cs-sysprog.github.io</a></li>
-        </ul>
-      </div>
-
-      <div class="section-title">Schedule</div>
-      <div class="content">
-        <p>Visit <a href="https://gwu-cs-sysprog.github.io">class website</a> for detailed weekly topics, slide links, and assignments.</p>
-      </div>
-
-      <div class="section-title">Policies</div>
-      <div class="content">
-        <ul>
-          <li><strong>Attendance:</strong> Expected unless sick/emergency. Inform in advance.</li>
-          <li><strong>Late Work:</strong> Only accepted with valid medical/family reasons.</li>
-          <li><strong>Collaboration:</strong> Discuss concepts, but code must be written individually.</li>
-          <li><strong>No ChatGPT/Copilot:</strong> Code-generation tools are forbidden.</li>
-          <li><strong>Academic Integrity:</strong> Strictly enforced; violations reported.</li>
-        </ul>
-      </div>
-
-      <div class="section-title">Contact</div>
-      <div class="content">
-        <p>Email: <a href="mailto:shiza@bu.edu">shiza@bu.edu</a></p>
-        <p>Office Hours: Thursdays 11:00 AM – 12:00 Noon ET (SEH 5830) or by appointment</p>
-      </div>
+      <div>
+        <h1 class="is-size-4 underline">
+          <a href="https://medium.com/acm-cscw/unlocking-the-power-of-multimodal-analysis-for-safer-online-spaces-288a8802708a">Unlocking the Power of Multimodal Analysis for Safer Online Spaces</a>.
+      </h1>
+      <p class="introduction mt-1">
+        My medium article on my latest research paper "Getting Meta: A Multimodal Approach for Detecting Unsafe Conversations within Instagram Direct Messages of Youth".
+      </p>
+    </div>
+      
     </div>
   </section>
+
 </body>
 
 </html>
