@@ -1,55 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSCI 2410: Systems Programming | Dr. Shiza Ali</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2rem;
-    }
-    .avatar img {
-      border-radius: 50%;
-      max-width: 150px;
-    }
-    .section-title {
-      margin-top: 2rem;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    .content ul {
-      margin-left: 1.5rem;
-    }
-  </style>
+  <title>CSCI 6202: Computer Systems Fundamentals | Shiza Ali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&family=Inconsolata&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3J733H6KK"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J3J733H6KK');
+  </script> -->
+  <script> PAGE_NAME = 'systemProg'; </script>
 </head>
 
 <body>
+  <section class="section p-3 navbar">
+      <div class="container is-max-desktop is-size-4 is-flex is-align-items-center">
+          <div>
+              <h1 class="is-size-4">
+                  <a href="/" class="ml-0 navbar-title">
+                      <span class="has-text-weight-semibold">Shiza</span> <span class="has-text-weight-light">Ali</span>
+                  </a>
+              </h1>
+          </div>
+          <div id="navbar-menu" class="is-size-6 is-flex navbar-menu1">
+              <a class="is-size-6 navbar-item" href="/"> About Me </a>
+              <a class="is-size-6 navbar-item" href="/publications"> Research </a>
+              <a class="is-size-6 navbar-item" href="/teaching"> Teaching </a>
+              <!-- <a class="is-size-6 navbar-item" href="/research"> Research </a> -->
+              <a class="is-size-6 navbar-item" href="/blog"> Blog </a>
+              <a class="is-size-6 navbar-item" target='_blank' href="/static/shizaAli_CV.pdf"> CV </a>
+          </div>
+      </div>
+  </section>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          try {
+              const navbar = document.getElementById('navbar-menu');
+              for (const tag of navbar.getElementsByTagName('a')) {
+                  // highlight the nav button for current page
+                  if (tag.innerText.toLowerCase().includes(PAGE_NAME)) {
+                      tag.classList.add('is-active');
+                  }
+              }
+          } catch (e) { }
+      });
+  </script>
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-vcentered">
         <div class="column is-one-fifth has-text-centered">
           <figure class="image avatar">
-            <img src="./img/shiza.png" alt="Dr. Shiza Ali">
+            <img src="./img/hello-world-src.png" alt="C-prog-image">
           </figure>
         </div>
         <div class="column">
-          <h1 class="title">CSCI 2410: Systems Programming</h1>
-          <h2 class="subtitle">Fall 2024 | TR 02:20--03:35PM ET | SEH 1300/1400/1450</h2>
+          <h1 class="title">CSCI 6202: Computer Systems Fundamentals</h1>
+          <h2 class="subtitle">Fall 2025 | Wednesday 06:10--08:40PM ET | SEH 4040</h2>
           <p><strong>Instructor:</strong> <a href="https://shizaali.com">Dr. Shiza Ali</a>, The George Washington University</p>
-          <p class="mt-2">This course covers the fundamentals of systems programming using the C language, with a focus on UNIX processes, memory, IPC, and systems tools.</p>
+          <p class="mt-2">This course will focus on teaching the fundamentals of systems programming, using C.</p>
         </div>
       </div>
 
       <div class="section-title">Course Structure</div>
       <div class="content">
         <ul>
-          <li><strong>Lectures</strong> focus on core system concepts and C programming practices.</li>
-          <li><strong>Labs</strong> reinforce lecture material with hands-on programming exercises.</li>
-          <li><strong>Homeworks</strong> in C to develop and apply system programming skills.</li>
-          <li><strong>Quizzes</strong> and <strong>In-class coding exercises</strong> to evaluate understanding.</li>
+          <li><strong>5% Participation</strong> – attendance</li>
+          <li><strong>25% Midterm</strong></li>
+          <li><strong>30% Final</strong></li>
+          <li><strong>20% Weekly Programming Assignments</strong></li>
+          <li><strong>20% Homework/Projects</strong></li>
         </ul>
       </div>
 
@@ -61,16 +91,6 @@
       <div class="section-title">Communication</div>
       <div class="content">
         <p>We use <strong>Discord</strong> for class communication and <strong>Blackboard</strong> for announcements and grades. Please message via Discord for questions or office hours.</p>
-      </div>
-
-      <div class="section-title">Grading Breakdown</div>
-      <div class="content">
-        <ul>
-          <li><strong>Tests, Quizzes, In-class Exercises:</strong> 50%</li>
-          <li><strong>Homework Assignments:</strong> 40%</li>
-          <li><strong>Participation:</strong> 10%</li>
-        </ul>
-        <p><strong>Important:</strong> Homework is autograded and may require oral code reviews. Late submissions are penalized without valid excuses.</p>
       </div>
 
       <div class="section-title">Course Materials</div>
@@ -100,8 +120,8 @@
 
       <div class="section-title">Contact</div>
       <div class="content">
-        <p>Email: <a href="mailto:shiza@bu.edu">shiza@bu.edu</a></p>
-        <p>Office Hours: Thursdays 11:00 AM – 12:00 Noon ET (SEH 5830) or by appointment</p>
+        <p>Email: <a href="mailto:shiza.ali@gwu.edu">shiza.ali@gwu.edu</a></p>
+        <p>Office Hours: Mondays 11:00 AM – 12:00 Noon ET by appointment</p>
       </div>
     </div>
   </section>
