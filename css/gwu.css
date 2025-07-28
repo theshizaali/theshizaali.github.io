@@ -1,0 +1,143 @@
+:root {
+  --gwu-navy: #00205b;
+  --gwu-buff: #e0c36e;
+  --gwu-gray: #f7f7f7;
+  --gwu-link: #00497a;
+  --body-font: 'Segoe UI', system-ui, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--gwu-gray);
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.gwu-header {
+  background: var(--gwu-navy);
+  color: #fff;
+  padding: 0.7em 0;
+  border-bottom: 5px solid var(--gwu-buff);
+}
+
+.gwu-header-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.gwu-logo {
+  width: 52px;
+  height: auto;
+  margin-right: 18px;
+}
+
+.gwu-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-right: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+.gwu-header .gwu-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.2em;
+}
+.gwu-header .gwu-nav a {
+  color: var(--gwu-buff);
+  text-decoration: none;
+  font-weight: 500;
+}
+.gwu-header .gwu-nav a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 1.5em auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 2em 2.5em;
+  box-shadow: 0 3px 16px 0 #00205b14;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--gwu-navy);
+  font-family: var(--body-font);
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: var(--gwu-link);
+  text-decoration: underline;
+}
+a:hover { color: #bb9f39; }
+
+ul { 
+  margin: 0 0 1em 2em; 
+}
+li {
+  margin: 0.3em 0;
+}
+hr {
+  margin: 1.8em 0;
+  border: none;
+  border-top: 2px solid #e0c36e;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+    margin-bottom: 2em;
+    margin-top: .4em;
+    background: #fff;
+}
+.schedule-table th, .schedule-table td {
+    border: 1px solid #d6dbe2;
+    padding: 0.5em 0.7em;
+    vertical-align: top;
+    font-size: 15px;
+}
+.schedule-table th {
+    background: #00205b;
+    color: #f7f7f7;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.schedule-table tr:nth-child(even) td:not([bgcolor]) {
+    background: #f3f3f7;
+}
+.schedule-table .overflow-wrap-hack {
+    word-break: break-word;
+}
+.schedule-table tr.homework,
+.schedule-table tr.break {
+    background: #fbf5e7 !important;
+}
+.schedule-table td, .schedule-table th { transition: background 0.15s;}
+@media (max-width: 700px) {
+  .container { padding: 1.2em 0.5em; }
+  .gwu-header-content, .gwu-nav { flex-direction: column; gap: 0.3em; }
+  .gwu-title { margin-bottom: 0.3em; }
+  .schedule-table { font-size: 13px; }
+  .schedule-table th, .schedule-table td { padding: 0.35em 0.4em; }
+}
+.gwu-footer {
+  background: #00205b;
+  color: #eee;
+  text-align: center;
+  font-size: 13px;
+  padding: 1.2em 0 .8em 0;
+  margin-top: 2.2em;
+  border-top: 5px solid var(--gwu-buff);
+  letter-spacing: .01em;
+}
+.gwu-footer a { color: var(--gwu-buff); }
+.gwu-footer a:hover { text-decoration: underline; color: #fff; }

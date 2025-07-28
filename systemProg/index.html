@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>CSCI 6202 | Shiza Ali</title>
+  <link rel="stylesheet" href="gwu.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,68 +24,37 @@
 </head>
 
 <body>
-  <section class="section p-3 navbar">
-      <div class="container is-max-desktop is-size-4 is-flex is-align-items-center">
-          <div>
-              <h1 class="is-size-4">
-                  <a href="/" class="ml-0 navbar-title">
-                      <span class="has-text-weight-semibold">Shiza</span> <span class="has-text-weight-light">Ali</span>
-                  </a>
-              </h1>
-          </div>
-          <div id="navbar-menu" class="is-size-6 is-flex navbar-menu1">
-              <a class="is-size-6 navbar-item" href="/"> About Me </a>
-              <a class="is-size-6 navbar-item" href="/publications"> Research </a>
-              <a class="is-size-6 navbar-item" href="/teaching"> Teaching </a>
-              <!-- <a class="is-size-6 navbar-item" href="/research"> Research </a> -->
-              <a class="is-size-6 navbar-item" href="/blog"> Blog </a>
-              <a class="is-size-6 navbar-item" target='_blank' href="/static/shizaAli_CV.pdf"> CV </a>
-          </div>
-      </div>
-  </section>
-  <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          try {
-              const navbar = document.getElementById('navbar-menu');
-              for (const tag of navbar.getElementsByTagName('a')) {
-                  // highlight the nav button for current page
-                  if (tag.innerText.toLowerCase().includes(PAGE_NAME)) {
-                      tag.classList.add('is-active');
-                  }
-              }
-          } catch (e) { }
-      });
-  </script>
+
+  <!-- GWU HEADER -->
+  <header class="gwu-header">
+    <div class="gwu-header-content">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/GWU_George_Washington_University_Logo.png"
+           class="gwu-logo"
+           alt="GWU Logo">
+      <span class="gwu-title">CSCI 6202: Computer Systems Fundamentals</span>
+      <nav class="gwu-nav">
+        <a href="/">Home</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#material">Course Material</a>
+        <a href="mailto:shiza.ali@gwu.edu">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <section class="section">
     <div class="container is-max-desktop">
       <div>
         <h1 class="is-size-2">
           <span class="has-text-weight-semibold">CSCI 6202: Computer Systems Fundamentals</span>
         </h1>
-    </div>
-    <div>
-      <p>&nbsp;</p>
-    </div>
-      <div>
-          <h1 class="is-size-4 underline">
-            <a href="\research">Tackling Toxicity Online: Developing Comprehensive Approaches for Online Risk Detection</a>.
-        </h1>
-        <p class="introduction mt-1">
-          Read more about computational methods on handling online abuse.
-        </p>
-      </div>
-
-    <div>
-      <div>
-        <div>
-        </div>
-        <div class="column">
-          <h1 class="title">CSCI 6202: Computer Systems Fundamentals</h1>
-          <h2 class="subtitle">Fall 2025 | Wednesday 06:10--08:40PM ET | SEH 4040</h2>
+        <h4>
+          <span> Fall 2025 | Wednesday 06:10--08:40PM ET | SEH 4040 </span></h4>
           <p><strong>Instructor:</strong> <a href="https://shizaali.com">Dr. Shiza Ali</a>, The George Washington University</p>
           <p class="mt-2">This course will focus on teaching the fundamentals of systems programming, using C.</p>
-        </div>
-      </div>
+        
+    </div>
+
+    <div>
 
       <h2>Course Description</h2>
     <p>
@@ -546,7 +515,9 @@
       </div>
     </div>
   </section>
-
+ <!-- GWU FOOTER -->
+  <footer class="gwu-footer">
+    &copy; 2025 <a href="https://www.gwu.edu/">The George Washington University</a> | Designed by Shiza Ali
+  </footer>
 </body>
-
 </html>
