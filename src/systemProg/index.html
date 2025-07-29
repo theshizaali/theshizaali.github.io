@@ -1,88 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CSCI 6202 | Shiza Ali</title>
-  <link rel="stylesheet" href="gwu.css">
-  <!--(bake /src/includes/head.html)-->
-  <script> PAGE_NAME = 'systemProg'; </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSCI 6202 | Computer Systems Fundamentals</title>
+
+  <!-- Bulma CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  >
+
+  <!-- GWU Brand Overrides -->
+  <style>
+    :root {
+      --gwu-navy:        #033C5A;
+      --gwu-gold:        #AA9868;
+      --gwu-gray-light:  #F7F9FC;
+      --gwu-gray-mid:    #E0E0E0;
+    }
+
+    /* Page background + default text */
+    body {
+      background-color: var(--gwu-gray-light);
+      color: #033C5A;
+    }
+
+    /* Primary headings, accents */
+    .has-primary-color {
+      color: var(--gwu-navy) !important;
+    }
+    .has-secondary-color {
+      color: var(--gwu-gold) !important;
+    }
+
+    /* Links */
+    a {
+      color: var(--gwu-navy);
+      text-decoration: underline;
+    }
+    a:hover {
+      color: var(--gwu-gold);
+    }
+
+    /* HR accent */
+    hr {
+      border-top: 2px solid var(--gwu-gold);
+      opacity: 0.3;
+    }
+
+    /* Table styling */
+    .table thead {
+      background-color: var(--gwu-navy);
+      color: #fff;
+    }
+    .table tr:nth-child(even) {
+      background-color: var(--gwu-gray-light);
+    }
+    .table tr.homework,
+    .table tr.break {
+      background-color: var(--gwu-gray-mid) !important;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--gwu-navy);
+      color: #fff;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
+
   <section class="section">
-    <div class="container is-max-desktop">
-      <div>
-        <h1 class="is-size-2">
-          <span class="has-text-weight-semibold">CSCI 6202: Computer Systems Fundamentals</span>
+    <div class="container">
+
+      <!-- Header -->
+      <div class="has-text-centered mb-6">
+        <h1 class="title is-2 has-primary-color">
+          CSCI 6202: Computer Systems Fundamentals
         </h1>
-        <h4>
-          <span> Fall 2025 | Wednesday 06:10--08:40PM ET | SEH 4040 </span></h4>
-          <p><strong>Instructor:</strong> <a href="https://shizaali.com">Dr. Shiza Ali</a>, The George Washington University</p>
-          <p class="mt-2">This course will focus on teaching the fundamentals of systems programming, using C.</p>
-        
-    </div>
-
-    <div>
-
-      <h2>Course Description</h2>
-    <p>
-      On completion of this class, students will:
-    </p>
-    <ul>
-      <li>Design and implement C programs using the associated development tools.</li>
-      <li>Understand basic means of constructing applications from libraries and communication with services.</li>
-      <li>Demonstrate an understanding of composition as a fundamental design concept for advanced functionalities.</li>
-      <li>Understand representations of programs and processes.</li>
-      <li>Apply UNIX abstractions for processes, process control, inter-process communication, and file systems.</li>
-    </ul>
-    <p>
-      Fundamentally, students will understand that processes are manipulable data, processes control and manage other processes, and applications are composed out of libraries and processes.
-    </p>
-
-    <h2>Structure</h2>
-    <ul>
-      <li>This class is broken into two main activities: <strong>lectures</strong> and <strong>labs</strong>.</li>
-      <li>
-        Lectures discuss main concepts in systems with practical implementation details.
-      </li>
-      <li>
-        Labs involve hands-on experience, homeworks preview, and practicing key mechanisms.
-      </li>
-      <li>
-        Assignments include a series of homeworks (in C) testing your ability to apply course concepts in a set of projects.
-      </li>
-      <li>
-        In-class coding exercises will help you learn nuances of certain topics.
-      </li>
-    </ul>
-
+        <p class="subtitle is-5">
+          Fall 2025 | Weds 6:10–8:40 PM ET | SEH 4040
+        </p>
+        <p>
+          <strong>Instructor:</strong>
+          <a href="https://shizaali.com">Dr. Shiza Ali</a>,
+          The George Washington University
+        </p>
       </div>
 
-      <h2 class="is-size-4">Course Structure</h2>
-      <div class="content">
-        <ul>
-          <li><strong>5% Participation</strong> – attendance</li>
-          <li><strong>25% Midterm</strong></li>
-          <li><strong>30% Final</strong></li>
-          <li><strong>20% Weekly Programming Assignments</strong></li>
-          <li><strong>20% Homework/Projects</strong></li>
-        </ul>
-      </div>
+      <!-- Two-column content -->
+      <div class="columns is-multiline">
 
-     <h2 class="is-size-4">Communication</h2>
-      <div class="content">
-        <p>We use <strong>Discord</strong> for class communication and <strong>Blackboard</strong> for announcements and grades. Please message via Discord for questions or office hours.</p>
-      </div>
+        <div class="column is-6">
+          <h2 class="subtitle is-4 has-primary-color">Course Description</h2>
+          <p>On completion of this class, students will:</p>
+          <ul class="content">
+            <li>Design and implement C programs using the associated development tools.</li>
+            <li>Understand basic means of constructing applications from libraries and communication with services.</li>
+            <li>Demonstrate an understanding of composition as a fundamental design concept for advanced functionalities.</li>
+            <li>Understand representations of programs and processes.</li>
+            <li>Apply UNIX abstractions for processes, process control, inter-process communication, and file systems.</li>
+          </ul>
+          <p>
+            Fundamentally, students will understand that processes are manipulable data,
+            processes control and manage other processes, and applications are composed
+            out of libraries and processes.
+          </p>
+        </div>
 
-      <h2 class="is-size-4">Course Material</h2>
-      <div class="content">
-        <ul>
-          <li><strong>Textbook:</strong> Computer Systems: A Programmer's Perspective (3rd Ed.)</li>
-          <li>Readings: <a href="https://github.com/gwu-cs-sysprog/resources">Course Resources</a></li>
-          <li>Lectures & Slides: <a href="https://gwu-cs-sysprog.github.io">gwu-cs-sysprog.github.io</a></li>
-        </ul>
-      </div>
+        <div class="column is-6">
+          <h2 class="subtitle is-4 has-primary-color">Structure & Grading</h2>
+          <ul class="content">
+            <li><strong>Lectures</strong> + <strong>Labs</strong></li>
+            <li>Hands-on C programming exercises</li>
+            <li>Weekly assignments, in-class coding, projects</li>
+          </ul>
+
+          <h3 class="subtitle is-5">Grade Breakdown</h3>
+          <ul class="content">
+            <li><strong>5%</strong> Participation (attendance)</li>
+            <li><strong>25%</strong> Midterm Exam</li>
+            <li><strong>30%</strong> Final Exam</li>
+            <li><strong>20%</strong> Weekly Programming Assignments</li>
+            <li><strong>20%</strong> Homework/Projects</li>
+          </ul>
+
+          <h2 class="subtitle is-4 has-primary-color">Materials & Communication</h2>
+          <ul class="content">
+            <li><strong>Textbook:</strong> Computer Systems: A Programmer’s Perspective (3rd Ed.)</li>
+            <li><strong>Readings:</strong>
+              <a href="https://github.com/gwu-cs-sysprog/resources">Course Resources</a>
+            </li>
+            <li><strong>Slides & Lectures:</strong>
+              <a href="https://gwu-cs-sysprog.github.io">gwu-cs-sysprog.github.io</a>
+            </li>
+            <li><strong>Discord</strong> for chat &amp; <strong>Blackboard</strong> for announcements/grades</li>
+          </ul>
+        </div>
+
+      </div><!-- /columns -->
 
       <hr>
+
 
 <h3>Schedule</h3>
 <style>
@@ -99,7 +164,7 @@
     font-size: 15px;
 }
 .schedule-table th {
-    background: #304ffe;
+    background: #033C5A;
     color: white;
     text-align: left;
     font-weight: 600;
@@ -113,7 +178,7 @@
 }
 .schedule-table tr.homework,
 .schedule-table tr.break {
-    background: #fce4f5 !important;
+    background: #cdc3a7 !important;
 }
 @media (max-width: 900px) {
     .schedule-table th, .schedule-table td {
@@ -201,8 +266,8 @@
         </tr>
         <tr class="homework">
             <td>5</td>
-            <td bgcolor="#FCE4F5">Sep 17</td>
-            <td class="overflow-wrap-hack" bgcolor="#FCE4F5">
+            <td bgcolor="#cdc3a7">Sep 17</td>
+            <td class="overflow-wrap-hack" bgcolor="#cdc3a7">
                 <div class="content">
                     Homework 1 assigned.
                     <br>
@@ -464,27 +529,39 @@
     </tbody>
 </table>
 
-      <h2 class="is-size-4">Policies</h2>
-      <div class="content">
-        <ul>
-          <li><strong>Attendance:</strong> Expected unless sick/emergency. Inform in advance.</li>
-          <li><strong>Late Work:</strong> Only accepted with valid medical/family reasons.</li>
-          <li><strong>Collaboration:</strong> Discuss concepts, but code must be written individually.</li>
-          <li><strong>No ChatGPT/Copilot:</strong> Code-generation tools are forbidden.</li>
-          <li><strong>Academic Integrity:</strong> Strictly enforced; violations reported.</li>
-        </ul>
-      </div>
+<!-- Policies & Contact -->
+<div class="columns">
 
-      <h2 class="is-size-4">Contact</h2>
-      <div class="content">
-        <p>Email: <a href="mailto:shiza.ali@gwu.edu">shiza.ali@gwu.edu</a></p>
-        <p>Office Hours: Mondays 11:00 AM – 12:00 Noon ET by appointment</p>
-      </div>
-    </div>
+  <div class="column is-6">
+    <h2 class="subtitle is-4 has-primary-color">Policies</h2>
+    <ul class="content">
+      <li><strong>Attendance:</strong> Expected unless emergency; inform me ahead of time.</li>
+      <li><strong>Late Work:</strong> Only with valid medical/family reasons.</li>
+      <li><strong>Collaboration:</strong> Concept discussion is fine; code must be your own.</li>
+      <li><strong>No ChatGPT/Copilot:</strong> Code-generation tools are forbidden.</li>
+      <li><strong>Academic Integrity:</strong> Strictly enforced.</li>
+    </ul>
+  </div>
+
+  <div class="column is-6">
+    <h2 class="subtitle is-4 has-primary-color">Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:shiza.ali@gwu.edu">shiza.ali@gwu.edu</a></p>
+    <p><strong>Office Hours:</strong> Mondays 11 AM–12 Noon ET (by appointment)</p>
+  </div>
+
+</div><!-- /columns -->
+
+    </div><!-- /container -->
   </section>
- <!-- GWU FOOTER -->
-  <footer class="gwu-footer">
-    &copy; 2025 <a href="https://www.gwu.edu/">The George Washington University</a> | Designed by Shiza Ali
+
+  <!-- Footer -->
+  <footer>
+    <div class="content has-text-centered">
+      &copy; 2025 
+      <a href="https://www.gwu.edu/">The George Washington University</a>
+      | Designed by Shiza Ali
+    </div>
   </footer>
+
 </body>
 </html>
