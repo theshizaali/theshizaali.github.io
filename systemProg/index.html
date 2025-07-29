@@ -90,7 +90,7 @@
         <p>
           <strong>Instructor:</strong>
           <a href="https://shizaali.com">Dr. Shiza Ali</a>,
-          The George Washington University
+          <br> Office Hours: Monday 11am-12pm ET (by appointment)
         </p>
       </div>
 
@@ -99,36 +99,68 @@
 
         <div class="column is-6">
           <h2 class="subtitle is-4 has-primary-color">Course Description</h2>
-          <p>On completion of this class, students will:</p>
-          <ul class="content">
-            <li>Design and implement C programs using the associated development tools.</li>
-            <li>Understand basic means of constructing applications from libraries and communication with services.</li>
-            <li>Demonstrate an understanding of composition as a fundamental design concept for advanced functionalities.</li>
-            <li>Understand representations of programs and processes.</li>
-            <li>Apply UNIX abstractions for processes, process control, inter-process communication, and file systems.</li>
-          </ul>
-          <p>
-            Fundamentally, students will understand that processes are manipulable data,
-            processes control and manage other processes, and applications are composed
-            out of libraries and processes.
-          </p>
+<p>
+  From your very first “Hello, World!” to writing networked C programs, this 
+  course will teach you how to design, compile, debug and link multi-file 
+  applications in C, manage memory by hand, and understand the operating-system 
+  abstractions that lie beneath. You’ll also apply your skills to real-world 
+  shells and simple client/server networking.
+</p>
+
+<ul class="content">
+  <li>
+    <strong>Programming in C:</strong>
+    <ul>
+      <li>Compilation & command-line usage/li>
+      <li>Formatted I/O: <code>printf/scanf/gets</code> and string handling</li>
+      <li>Control flow: <code>if</code>, <code>for</code>, <code>while</code></li>
+      <li>Header files & modular code; pass-by-value functions & return values</li>
+      <li>Deep dive into pointers</ul>
+  </li>
+
+  <li>
+    <strong>Operating Systems & Shells:</strong>
+    <ul>
+      <li>Role of an OS; processes & process control (<code>fork</code>, <code>wait</code>)</li>
+      <li>Users, groups & permissions</li>
+      <li>How shells work under the hood; basic shell scripting</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>System Calls & Compilation:</strong>
+    <ul>
+      <li>Object files, linking & libraries</li>
+      <li>Key system calls for I/O, process management & file handling</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>I/O & Networking:</strong>
+    <ul>
+      <li>File descriptors & pipes</li>
+      <li>Socket programming: TCP/UDP client-server examples</li>
+    </ul>
+  </li>
+</ul>
         </div>
 
         <div class="column is-6">
           <h2 class="subtitle is-4 has-primary-color">Structure & Grading</h2>
           <ul class="content">
-            <li><strong>Lectures</strong> + <strong>Labs</strong></li>
+            <li><strong>Lectures</strong> + <strong>Assignments</strong></li>
             <li>Hands-on C programming exercises</li>
-            <li>Weekly assignments, in-class coding, projects</li>
+            <li>Weekly assignments, and homeworks</li>
           </ul>
 
-          <h3 class="subtitle is-5">Grade Breakdown</h3>
           <ul class="content">
-            <li><strong>5%</strong> Participation (attendance)</li>
-            <li><strong>25%</strong> Midterm Exam</li>
+            <li><strong>Grade Breakdown</strong></li>
+
+            <li><strong>5%</strong> Participation</li>
+            <li><strong>15%</strong> Midterm Exam</li>
             <li><strong>30%</strong> Final Exam</li>
             <li><strong>20%</strong> Weekly Programming Assignments</li>
-            <li><strong>20%</strong> Homework/Projects</li>
+            <li><strong>30%</strong> Homeworks</li>
           </ul>
 
           <h2 class="subtitle is-4 has-primary-color">Materials & Communication</h2>
@@ -151,133 +183,143 @@
 
 <h3>Schedule</h3>
 <style>
-.schedule-table {
+  /* ————————————————————————————
+     Schedule Table
+  ————————————————————————————— */
+  .schedule-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
     margin-bottom: 2em;
-}
-.schedule-table th, .schedule-table td {
+  }
+  .schedule-table th,
+  .schedule-table td {
     border: 1px solid #e0e0e0;
-    padding: 0.6em 0.8em;
+    padding: 0.75em 1em;
     vertical-align: top;
-    font-size: 15px;
-}
-.schedule-table th {
-    background: #033C5A;
-    color: white;
-    text-align: left;
+    font-size: 0.9rem;
+  }
+  .schedule-table th {
+    background-color: #0A2342; /* GWU Navy */
+    color: #fff;
     font-weight: 600;
-    letter-spacing: 0.05em;
-}
-.schedule-table tr:nth-child(even) td:not([bgcolor]) {
-    background: #f7f9fc;
-}
-.schedule-table .overflow-wrap-hack {
+    text-align: left;
+  }
+  /* zebra-striping for readability */
+  .schedule-table tr:nth-child(even) {
+    background-color: #f7f9fc;
+  }
+  /* special-row highlights */
+  .schedule-table tr.homework{
+    background-color: #cdc3a7 !important;
+  }
+
+  .schedule-table tr.break {
+    background-color: #0A2342 !important;
+    color:#fff
+  }
+  /* wrap long text */
+  .schedule-table .overflow-wrap-hack {
     word-break: break-word;
-}
-.schedule-table tr.homework,
-.schedule-table tr.break {
-    background: #cdc3a7 !important;
-}
-@media (max-width: 900px) {
-    .schedule-table th, .schedule-table td {
-        font-size: 13px;
-        padding: 0.4em 0.5em;
+  }
+  /* responsive tweaks */
+  @media (max-width: 900px) {
+    .schedule-table th,
+    .schedule-table td {
+      font-size: 0.8rem;
+      padding: 0.5em;
     }
-}
+  }
 </style>
 
 <table class="schedule-table">
-    <colgroup>
-        <col span="1" style="width: 6%">
-        <col span="1" style="width: 11%">
-        <col span="1" style="width: 44%">
-        <col span="1" style="width: 24%">
-        <col span="1" style="width: 15%">
-    </colgroup>
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>Date</th>
-            <th>Topic</th>
-            <th>Links</th>
-            <th>Assignment</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Aug 27</td>
-            <td class="overflow-wrap-hack">
-              <div class="content"><ul>
-                  C Programming Basic 1(a)
-                  <li>Setting Up VSCode</li>
-                  <li>Simple Printing</li>
-                  <li>Compilation basic</li>
-                  <li>Using the command line</li>
-                  <li>if statements, for loops, while loops</li>
-              </ul></div>
-            </td>
-            <td>
-              <ul>
-                    <li>Intro <a href="./slides/reveal_slides/intro.html"><u><i>Slides</i></u></a></li>
-                </ul></td>
-            <td>
-              Write a small paragraph on what do you want to achieve from this course?
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Sep 3</td>
-            <td class="overflow-wrap-hack">
-              <div class="content"><ul>
-                C Programming Basic 1(b)
-                  <li>Manipulating Strings</li>
-                  <li>Error Handling</li>
-                  <li>Debugging</li>
-              </ul></div>
-            </td>
-            <td>
-                <ul>
-                </ul>
-            </td>
-            <td>Error Handling, Hour glass</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Sep 10</td>
-            <td class="overflow-wrap-hack">
-                <div class="content">
-                    <ul>
-                        <li>Pointers in C.</li>
-                    </ul>
-                </div>
-            </td>
-            <td>
-                <ul>
-                    <li>Pointers <a href="./slides/reveal_slides/pointers.html"><u><i>Slides</i></u></a></li>
-                    <li>Pointers <a href="https://gwu-cs-sysprog.github.io/#pointers-and-arrays"><u><i>Lecture Notes</i></u></a></li>
-                    <li>Pointers <a href="./additional_materials/parlante_pointers_memory.pdf"><u><i>Addl Material</i></u></a></li>
-                    <li>Code: <a href="https://gwu-cs-sysprog.github.io/code/pointers.c"><u><i>pointers.c</i></u></a></li>
-                </ul>
-            </td>
-            <td></td>
-        </tr>
-        <tr class="homework">
-            <td>5</td>
-            <td bgcolor="#cdc3a7">Sep 17</td>
-            <td class="overflow-wrap-hack" bgcolor="#cdc3a7">
-                <div class="content">
-                    Homework 1 assigned.
-                    <br>
-                    Due Date: <b>Sept. 30, 2024 [6:00 PM ET]<br>
-                    <s>Sept. 27, 2024 [6:00 PM ET]</s></b>
-                </div>
-            </td>
-            <td></td>
-            <td>Homework 1 Assigned</td>
-        </tr>
+  <colgroup>
+    <col span="1" style="width:6%">
+    <col span="1" style="width:11%">
+    <col span="1" style="width:44%">
+    <col span="1" style="width:24%">
+    <col span="1" style="width:15%">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Links</th>
+      <th>Assignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Aug 27</td>
+      <td class="overflow-wrap-hack">
+        <div class="content">
+          <ul>
+            C Programming Basic 1(a)
+            <li>Setting Up VSCode</li>
+            <li>Simple Printing</li>
+            <li>Compilation basic</li>
+            <li>Using the command line</li>
+            <li>if statements, for loops, while loops</li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <ul>
+          <li>Intro <a href="./slides/reveal_slides/intro.html"><i>Slides</i></a></li>
+        </ul>
+      </td>
+      <td>Write a small paragraph on what do you want to achieve from this course?</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Sep 3</td>
+      <td class="overflow-wrap-hack">
+        <div class="content">
+          <ul>
+            C Programming Basic 1(b)
+            <li>Manipulating Strings</li>
+            <li>Error Handling</li>
+            <li>Debugging</li>
+          </ul>
+        </div>
+      </td>
+      <td><ul></ul></td>
+      <td>Error Handling, Hour glass</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Sep 10</td>
+      <td class="overflow-wrap-hack">
+        <div class="content">
+          <ul>
+            <li>Pointers in C.</li>
+          </ul>
+        </div>
+      </td>
+      <td>
+        <ul>
+          <li>Pointers <a href="./slides/reveal_slides/pointers.html"><i>Slides</i></a></li>
+          <li>Pointers <a href="https://gwu-cs-sysprog.github.io/#pointers-and-arrays"><i>Lecture Notes</i></a></li>
+          <li>Pointers <a href="./additional_materials/parlante_pointers_memory.pdf"><i>Addl Material</i></a></li>
+          <li>Code: <a href="https://gwu-cs-sysprog.github.io/code/pointers.c"><i>pointers.c</i></a></li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr class="homework">
+      <td>5</td>
+      <td>Sep 17</td>
+      <td class="overflow-wrap-hack">
+        <div class="content">
+          Homework 1 assigned.<br>
+          Due Date: <b>Sept. 30, 2024 [6:00 PM ET]<br>
+          <s>Sept. 27, 2024 [6:00 PM ET]</s></b>
+        </div>
+      </td>
+      <td></td>
+      <td>Homework 1 Assigned</td>
+    </tr>
         <tr>
             <td>6</td>
             <td>Sep 24</td>
@@ -383,9 +425,9 @@
             </td>
             <td>In-Class Exercise</td>
         </tr>
-        <tr>
+        <tr class="homework">
             <td>11</td>
-            <td>Oct. 29</td>
+            <td >Oct. 29</td>
             <td class="overflow-wrap-hack">
                 <div class="content">
                     <ul>
@@ -410,10 +452,10 @@
             </td>
             <td></td>
         </tr>
-        <tr class="break">
+        <tr>
             <td>12</td>
-            <td bgcolor="#FCE4F5">Nov. 05</td>
-            <td class="overflow-wrap-hack" bgcolor="#FCE4F5">
+            <td>Nov. 05</td>
+            <td class="overflow-wrap-hack">
                 <div class="content">
                     class
                 </div>
@@ -440,7 +482,7 @@
             </td>
             <td></td>
         </tr>
-        <tr>
+        <tr class="homework">
             <td>14</td>
             <td>Nov. 19</td>
             <td class="overflow-wrap-hack">
@@ -463,8 +505,8 @@
         </tr>
         <tr class="break">
             <td>15</td>
-            <td bgcolor="#FCE4F5">Nov. 26</td>
-            <td class="overflow-wrap-hack" bgcolor="#FCE4F5"><div class="content">Thanksgiving Break. No Class.</div></td>
+            <td>Nov. 26</td>
+            <td class="overflow-wrap-hack" ><div class="content">Thanksgiving Break. No Class.</div></td>
             <td></td>
             <td></td>
         </tr>
@@ -512,7 +554,7 @@
             </td>
             <td></td>
         </tr>
-        <tr>
+        <tr class="homework">
             <td>18</td>
             <td></td>
             <td class="overflow-wrap-hack">
@@ -529,37 +571,156 @@
     </tbody>
 </table>
 
-<!-- Policies & Contact -->
-<div class="columns">
+  <div class="container">
 
-  <div class="column is-6">
-    <h2 class="subtitle is-4 has-primary-color">Policies</h2>
-    <ul class="content">
-      <li><strong>Attendance:</strong> Expected unless emergency; inform me ahead of time.</li>
-      <li><strong>Late Work:</strong> Only with valid medical/family reasons.</li>
-      <li><strong>Collaboration:</strong> Concept discussion is fine; code must be your own.</li>
-      <li><strong>No ChatGPT/Copilot:</strong> Code-generation tools are forbidden.</li>
-      <li><strong>Academic Integrity:</strong> Strictly enforced.</li>
-    </ul>
-  </div>
+    <h2 class="title is-4 has-primary-color">Policies</h2>
+    <div class="content">
 
-  <div class="column is-6">
-    <h2 class="subtitle is-4 has-primary-color">Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:shiza.ali@gwu.edu">shiza.ali@gwu.edu</a></p>
-    <p><strong>Office Hours:</strong> Mondays 11 AM–12 Noon ET (by appointment)</p>
-  </div>
+      <p><strong>Student Responsibilities:</strong></p>
+      <ul>
+        <li>Conduct your online behavior in accordance with the class’ Professional and Social Contract</li>
+        <li>Attend all classes and labs unless sick or in emergency—email the professor before class</li>
+        <li>Interact, ask questions, and participate in class discussions</li>
+        <li>Be respectful in groups—ensure everyone’s ideas are heard</li>
+        <li>Complete all work in accordance with university and class academic‐honesty rules</li>
+        <li>Digest and process all provided materials (including Blackboard and Discord)</li>
+        <li>Contact the professor if you are worried about completing any responsibilities—  
+            we will work with you to craft a plan for success</li>
+      </ul>
 
-</div><!-- /columns -->
+      <!-- Late Policies -->
+      <h3 class="subtitle is-5 has-primary-color">Late Policies</h3>
+      <p>Submission/due dates appear with each homework description.</p>
+      <p>This class has a strict late policy for two reasons:</p>
+      <ul>
+        <li><strong>Fairness:</strong> Exceptions undermine equity.</li>
+        <li><strong>Progress:</strong> Falling behind creates an impossible catch-up workload.</li>
+      </ul>
+      <p>Only valid excuses are serious medical or family emergencies (or pre-approved athletic commitments).</p>
+      <h4 class="is-size-6 has-secondary-color">Generally unacceptable excuses:</h4>
+      <ul>
+        <li>Your computer failed</li>
+        <li>Several midterms/assignments</li>
+        <li>Forgetting to <code>git add</code> or <code>git push</code></li>
+        <li>Working hard but still not “quite there” yet</li>
+      </ul>
+      <p>Unexcused late work receives <strong>0 credit</strong>.  Homework is bi-weekly, so do not fall behind.</p>
 
-    </div><!-- /container -->
-  </section>
+  
+      <!-- Style & Craftsmanship -->
+      <h3 class="subtitle is-5 has-primary-color">Style &amp; Code Craftsmanship</h3>
+      <p>Follow the style guidelines in the lecture notes (and see “Composite Style” for full details).  Quality code is more than “working” code.</p>
+
+      <!-- Collaboration & Honor Code -->
+      <h3 class="subtitle is-5 has-primary-color">Collaboration &amp; the Honor Code</h3>
+      <p>
+        You may discuss concepts and approaches with peers, but each student must write solutions independently and list collaborators by name.  
+        Unauthorized sharing or copying is a violation.  
+        We run code-similarity tools against both current and past submissions—any confirmed cheating is reported.
+      </p>
+
+      <!-- ChatGPT, Copilot & Code-Gen -->
+      <h3 class="subtitle is-5 has-primary-color">ChatGPT, GitHub Copilot &amp; Other Code-Gen Tools</h3>
+      <p>The use of ChatGPT, GitHub Copilot, or any code-generation tool is strictly forbidden.  Violations are treated as academic misconduct.</p>
+
+      <!-- Consequences -->
+      <h3 class="subtitle is-5 has-primary-color">Consequences for Policy Violations</h3>
+      <ul>
+        <li>1st violation on an assignment: grade for that assignment = 0</li>
+        <li>2nd violation in class: course grade = F</li>
+        <li>All cases: reported to the Academic Integrity Office</li>
+      </ul>
+
+      <!-- Academic Integrity -->
+      <h3 class="subtitle is-5 has-primary-color">Academic Integrity</h3>
+      <p>
+        GWU takes integrity very seriously.  Violations (plagiarism, unauthorized collaboration, falsification, etc.) can lead to assignment failure, course failure, or expulsion, with a permanent record.  
+        See the GWU Code of Student Conduct and “Guide to Academic Integrity in Online Learning.”  
+        If in doubt—ask before you act.
+      </p>
+      <p>
+        <strong>Contact Academic Integrity Office:</strong>  
+        <a href="mailto:rights@gwu.edu">rights@gwu.edu</a> | 202-994-6757
+      </p>
+
+      <!-- Absence Policy -->
+      <h3 class="subtitle is-5 has-primary-color">Absence Policy</h3>
+      <p>If you miss a class, you remain responsible for its material.  Use lectures, scribe notes, office hours, and classmates to catch up.</p>
+
+      <!-- Grade Review -->
+      <h3 class="subtitle is-5 has-primary-color">Grade Review Policy</h3>
+      <p>You have one week after a grade is released to request a correction—and you must provide a clear rationale (e.g., test-case errors).</p>
+
+      <!-- Electronic Materials -->
+      <h3 class="subtitle is-5 has-primary-color">Use of Electronic Course Materials &amp; Recordings</h3>
+      <p>Materials and recorded sessions are for private, course-related use only.  Sharing without permission violates the Student Code of Conduct.</p>
+
+      <!-- Academic Support -->
+      <h3 class="subtitle is-5 has-primary-color">Academic Support</h3>
+      <ul>
+        <li>
+          <strong>Writing Center:</strong> Peer mentoring for all writing stages.  
+          Appointments: <a href="https://gwu.mywconline.com">gwu.mywconline.com</a>
+        </li>
+        <li>
+          <strong>Academic Commons:</strong> Tutoring &amp; drop-in support.  
+          Info &amp; scheduling: <a href="https://academiccommons.gwu.edu">academiccommons.gwu.edu</a>
+        </li>
+      </ul>
+
+      <!-- COVID & Face Coverings -->
+      <h3 class="subtitle is-5 has-primary-color">COVID-19 Guidelines</h3>
+      <p>
+        See the University’s <a href="https://coronavirus.gwu.edu">COVID-19 Safety &amp; Success</a> site for updates.  
+        Face coverings are required indoors—cloth or medical-grade masks.  
+        Exemptions require prior approval.
+      </p>
+
+      <!-- Disability Accommodations -->
+      <h3 class="subtitle is-5 has-primary-color">Students with Disabilities</h3>
+      <p>
+        Accommodations are arranged through Disability Support Services (DSS).  
+        Contact DSS at 202-994-8250 or <a href="https://disabilitysupport.gwu.edu">disabilitysupport.gwu.edu</a>.
+      </p>
+
+      <!-- Inclusive Behavior -->
+      <h3 class="subtitle is-5 has-primary-color">Ethical &amp; Respectful Behavior</h3>
+      <p>
+        We expect anti-racist, anti-sexist, accessible, and LGBTQ+-inclusive behavior.  
+        If you cannot meet these standards, please talk with the instructor or consider dropping the class.
+      </p>
+
+      <!-- Religious Holidays -->
+      <h3 class="subtitle is-5 has-primary-color">Religious Holidays</h3>
+      <p>
+        Notify the instructor in the first week of any religious observance absences.  
+        See the University policy on “Religious Holidays” for details.
+      </p>
+
+      <!-- Wellness & Emergencies -->
+      <h3 class="subtitle is-5 has-primary-color">Reach Out for Success &amp; Wellness</h3>
+      <p>
+        If you face difficulties, contact an instructor or advisor.  
+        Counseling: 202-994-5300 | Suicide Hotline: 1-800-273-8255
+      </p>
+      <h3 class="subtitle is-5 has-primary-color">Safety &amp; Security</h3>
+      <ul>
+        <li>Emergencies: GWPD 202-994-6111 or 911</li>
+        <li>Emergency Response Handbook: <a href="https://safety.gwu.edu/emergency-response-handbook">safety.gwu.edu/emergency-response-handbook</a></li>
+        <li>Active violence: Get Out, Hide Out, or Take Out (<a href="https://go.gwu.edu/shooterpret">go.gwu.edu/shooterpret</a>)</li>
+        <li>Stay Informed: <a href="https://safety.gwu.edu/stay-informed">safety.gwu.edu/stay-informed</a></li>
+      </ul>
+
+    </div><!-- /.content -->
+  </div><!-- /.container -->
+</section>
 
   <!-- Footer -->
   <footer>
     <div class="content has-text-centered">
       &copy; 2025 
       <a href="https://www.gwu.edu/">The George Washington University</a>
-      | Designed by Shiza Ali
+      | Shiza Ali
     </div>
   </footer>
 
