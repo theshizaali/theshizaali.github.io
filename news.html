@@ -1,59 +1,198 @@
 <div class="news-container">
-  <table class="news">
-    <tr>
-      <td class="news-year">2025</td>
-      <td class="news-month">July</td>
-      <td class="news-content">Started Research Scientist position at The Institute for Trustworthy AI in Law & Society (TRAILS).</td>
-    </tr>
-    <tr>
-      <td class="news-year">2024</td>
-      <td class="news-month">August</td>
-      <td class="news-content">Started postdoc at the University of Washington.</td>
-    </tr>
-    <tr>
-      <td class="news-year">2024</td>
-      <td class="news-month">May</td>
-      <td class="news-content">Defended my PhD. Thesis. You can call me a doc. now!!</td>
-    </tr>
-    <tr>
-      <td class="news-year">2023</td>
-      <td class="news-month">December</td>
-      <td class="news-content">Gave a talk on "Tackling Malicious Activity Online" at the University of Iowa </td>
-    </tr>
-    <tr>
-      <td class="news-year">2023</td>
-      <td class="news-month">November</td>
-      <td class="news-content">I was awarded "Rising Star in Social Computing and Tech Policy" by University of Iowa</td>
-    </tr>
-    <tr>
-      <td class="news-year">2023</td>
-      <td class="news-month">October</td>
-      <td class="news-content">Our paper "Sliding into My DMs" received the Impact Recognition award!</td>
-    </tr>
-    <tr>
-      <td class="news-year">2023</td>
-      <td class="news-month">August</td>
-      <td class="news-content">I got selected for the SIGCHI Gary Marsden Travel Award.</td>
-    </tr>
-    <tr>
-      <td class="news-year">2023</td>
-      <td class="news-month">May</td>
-      <td class="news-content">I received Research PhD. Fellowship Finalist Award at Meta.</td>
-    </tr>
-    <tr>
-      <td class="news-year">2023</td>
-      <td class="news-month">April</td>
-      <td class="news-content">Our papers titled "Getting Meta" and "Sliding into My DMs" got accepted at CSCW'23. Two papers yaayy!!</td>
-    </tr>
-    <tr>
-      <td class="news-year">2022</td>
-      <td class="news-month">August</td>
-      <td class="news-content">My Paper "Understanding the Digital Lives of Youth" got the Honorable Mention Award at CHI'22'!! </td>
-    </tr>
-    <tr>
-      <td class="news-year">2022</td>
-      <td class="news-month">April</td>
-      <td class="news-content">Our paper titled "Understanding the Digital Lives of Youth" got accepted at CHI'22!</td>
-    </tr>
-  </table>
+  <div class="news-list">
+    <details class="news-year-group" _if="y.open" open>
+      <summary class="news-year-toggle">2025 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">July</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Started Research Scientist position at The Institute for Trustworthy AI in Law & Society (TRAILS).
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="!y.open">
+      <summary class="news-year-toggle">2025 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">July</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Started Research Scientist position at The Institute for Trustworthy AI in Law & Society (TRAILS).
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="y.open" open>
+      <summary class="news-year-toggle">2024 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">August</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Started postdoc at the University of Washington.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">May</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Defended my PhD thesis. You can call me a doc now!!
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="!y.open">
+      <summary class="news-year-toggle">2024 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">August</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Started postdoc at the University of Washington.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">May</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Defended my PhD thesis. You can call me a doc now!!
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="y.open" open>
+      <summary class="news-year-toggle">2023 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">December</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Gave a talk on "Tackling Malicious Activity Online" at the University of Iowa.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">November</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            I was awarded "Rising Star in Social Computing and Tech Policy" by University of Iowa.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">October</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Our paper "Sliding into My DMs" received the Impact Recognition award!
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">August</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            I got selected for the SIGCHI Gary Marsden Travel Award.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">May</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            I received Research PhD Fellowship Finalist Award at Meta.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">April</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Our papers titled "Getting Meta" and "Sliding into My DMs" got accepted at CSCW'23. Two papers yaayy!!
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="!y.open">
+      <summary class="news-year-toggle">2023 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">December</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Gave a talk on "Tackling Malicious Activity Online" at the University of Iowa.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">November</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            I was awarded "Rising Star in Social Computing and Tech Policy" by University of Iowa.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">October</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Our paper "Sliding into My DMs" received the Impact Recognition award!
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">August</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            I got selected for the SIGCHI Gary Marsden Travel Award.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">May</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            I received Research PhD Fellowship Finalist Award at Meta.
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">April</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Our papers titled "Getting Meta" and "Sliding into My DMs" got accepted at CSCW'23. Two papers yaayy!!
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="y.open" open>
+      <summary class="news-year-toggle">2022 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">August</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            My paper "Understanding the Digital Lives of Youth" got the Honorable Mention Award at CHI'22!
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">April</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Our paper titled "Understanding the Digital Lives of Youth" got accepted at CHI'22!
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="news-year-group" _if="!y.open">
+      <summary class="news-year-toggle">2022 News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <div class="news-item">
+          <div class="news-date">August</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            My paper "Understanding the Digital Lives of Youth" got the Honorable Mention Award at CHI'22!
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">April</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-good">good news</span>
+            Our paper titled "Understanding the Digital Lives of Youth" got accepted at CHI'22!
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
 </div>
