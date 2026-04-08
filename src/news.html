@@ -1,8 +1,8 @@
 <div class="news-container">
   <div class="news-list">
     <!--(bake-start _foreach="y:news_years")-->
-    <details class="news-year-group" _if="y.open" open>
-      <summary class="news-year-toggle">{{ y.year }} News <span>(click to reveal)</span></summary>
+    <details class="news-year-group" _if="y@first" open>
+      <summary class="news-year-heading">{{ y.year }}</summary>
       <div class="news-year-items">
         <!--(bake-start _foreach="n:y.items")-->
         <div class="news-item">
@@ -15,8 +15,8 @@
         <!--(bake-end)-->
       </div>
     </details>
-    <details class="news-year-group" _if="!y.open">
-      <summary class="news-year-toggle">{{ y.year }} News <span>(click to reveal)</span></summary>
+    <details class="news-year-group" _if="!y@first">
+      <summary class="news-year-heading">{{ y.year }}</summary>
       <div class="news-year-items">
         <!--(bake-start _foreach="n:y.items")-->
         <div class="news-item">

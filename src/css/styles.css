@@ -106,9 +106,12 @@ ul.social-list svg:hover {
 }
 
 .hero-intro {
-    margin-bottom: 2rem;
-    padding: 0.25rem 0 1.35rem;
-    border-bottom: 2px solid rgba(224, 195, 110, 0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 1rem 0 0.5rem;
 }
 
 .hero-title-link {
@@ -118,35 +121,49 @@ ul.social-list svg:hover {
 .hero-title {
     margin: 0;
     color: var(--gwu-navy);
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    line-height: 1.05;
+    font-size: clamp(3rem, 8vw, 4.75rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
 }
 
 .hero-role {
-    margin-top: 0.55rem;
-    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.55rem;
     color: #4a4a4a;
-    font-size: 1.1rem;
+    font-size: 1.18rem;
     font-weight: 600;
 }
 
 .hero-summary {
-    max-width: 48rem;
-    margin: 0;
-    color: #5d5d5d;
-    font-size: 1.08rem;
-    line-height: 1.7;
+    max-width: 42rem;
+    margin: 0 auto;
+    color: #66605b;
+    font-size: 1.06rem;
+    line-height: 1.75;
 }
 
 .hero-avatar {
-    margin: 1.5rem auto 0;
+    margin: 1.8rem auto 0;
+    max-width: 240px;
+}
+
+.hero-avatar img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f4efeb;
+    box-shadow: 0 20px 40px rgba(64, 42, 37, 0.12);
 }
 
 .hero-social-list {
     width: auto;
     justify-content: center;
-    gap: 1rem;
-    margin: 1rem auto 0;
+    gap: 1.1rem;
+    margin: 1.15rem auto 0;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    background: #f6f2ef;
 }
 
 .hero-social-list > li {
@@ -154,9 +171,29 @@ ul.social-list svg:hover {
     text-align: center;
 }
 
+.hero-social-list a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-social-list svg {
+    fill: #7f7772;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.hero-social-list a:hover svg {
+    fill: var(--accent);
+    transform: translateY(-1px);
+}
+
 .homepage-copy {
     max-width: 48rem;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
+}
+
+.homepage-copy p {
+    text-align: left;
 }
 
 div.talk > h2 span:not(:last-child)::after,
@@ -200,50 +237,42 @@ div.publication > h2.external-links a:hover {
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1.1rem;
 }
 
 .news-year-group {
-    padding-bottom: 0.15rem;
+    padding-bottom: 0.2rem;
 }
 
-.news-year-group[open] {
-    padding-bottom: 0.5rem;
-}
-
-.news-year-toggle {
+.news-year-heading {
     display: inline-flex;
-    align-items: baseline;
-    gap: 0.45rem;
-    cursor: pointer;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.55rem;
     color: var(--accent);
     font-family: var(--font-family-mono);
-    font-size: 0.98rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
     list-style: none;
 }
 
-.news-year-toggle::-webkit-details-marker {
+.news-year-heading::-webkit-details-marker {
     display: none;
 }
 
-.news-year-toggle::before {
+.news-year-heading::before {
     content: '+';
     display: inline-block;
     width: 0.75rem;
     color: #8b827d;
 }
 
-.news-year-group[open] .news-year-toggle::before {
+.news-year-group[open] .news-year-heading::before {
     content: '-';
 }
 
-.news-year-toggle span {
-    color: #8b827d;
-    font-size: 0.85rem;
-}
-
 .news-year-items {
-    margin-top: 0.55rem;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
@@ -335,10 +364,6 @@ div.publication > h2.external-links a:hover {
         row-gap: 0.15rem;
     }
 
-    .news-year-toggle {
-        font-size: 0.92rem;
-    }
-
     .news-date {
         font-size: 0.9rem;
     }
@@ -386,8 +411,23 @@ h1.publication-title:hover strong {
     }
 
     .hero-intro {
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
+        margin-bottom: 1.75rem;
+        padding-top: 0.35rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 13vw, 3.5rem);
+    }
+
+    .hero-avatar,
+    .hero-avatar img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .hero-social-list {
+        gap: 0.8rem;
+        padding: 0.45rem 0.75rem;
     }
 
     .hero-role,

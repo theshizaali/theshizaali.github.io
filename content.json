@@ -146,7 +146,6 @@
     "news_years": [
         {
             "year": 2025,
-            "open": true,
             "items": [
                 {
                     "kind": "good",
