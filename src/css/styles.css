@@ -142,15 +142,21 @@ table.news {
 }
 
 table.news tr > td:first-child,
-table.news tr > td:nth-child(2),
-div.news-container-see-more a {
+table.news tr > td:nth-child(2) {
     font-family: var(--font-family-mono);
     white-space: nowrap;
 } 
 
 .news-container {
-    overflow: hidden;
-    transition: all linear 0.1s;
+    max-height: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 0.5rem;
+}
+
+table.news td {
+    vertical-align: top;
+    padding-bottom: 0.6rem;
 }
 
 table.news em {

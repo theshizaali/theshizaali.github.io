@@ -1,4 +1,4 @@
-<div class="news-container overflow">
+<div class="news-container">
   <table class="news">
     <!--(bake-start _foreach="n:news")-->
     <tr>
@@ -9,24 +9,3 @@
     <!--(bake-end)-->
   </table>
 </div>
-<div class="news-container-see-more has-text-centered">
-  <a onclick="javascript:see_more_news(event)">[see more]</a>
-</div>
-<script>
-  const news = document.querySelector('.news-container');
-  let height = 100;
-
-  function updateHeight() {
-    news.style.maxHeight = `${height}px`;
-  }
-  window.onload = function() {
-    updateHeight();
-  }
-  function see_more_news(e) {
-    height += 150;
-    updateHeight();
-    if (height > news.scrollHeight) {
-      e.target.remove();
-    }
-  }
-</script>
