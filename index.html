@@ -132,7 +132,7 @@ Previously, I worked within the <a href="https://www.raise.uw.edu/">(RAISE Lab)<
 
       <div>
         <h1 class="section-title mt-4">News</h1>
-        <div class="news-container overflow">
+        <div class="news-container">
           <table class="news">
             <tr>
               <td>2025</td>
@@ -191,27 +191,7 @@ Previously, I worked within the <a href="https://www.raise.uw.edu/">(RAISE Lab)<
             </tr>
           </table>
         </div>
-        <div class="news-container-see-more has-text-centered">
-          <a onclick="javascript:see_more_news(event)">[see more]</a>
-        </div>
-        <script>
-          const news = document.querySelector('.news-container');
-          let height = 100;
 
-          function updateHeight() {
-            news.style.maxHeight = `${height}px`;
-          }
-          window.onload = function() {
-            updateHeight();
-          }
-          function see_more_news(e) {
-            height += 150;
-            updateHeight();
-            if (height > news.scrollHeight) {
-              e.target.remove();
-            }
-          }
-        </script>
       </div>
 
       <div>
