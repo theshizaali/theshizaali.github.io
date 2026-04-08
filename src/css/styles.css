@@ -132,19 +132,51 @@ ul.social-list svg:hover {
     transform: translateY(-1px);
 }
 
+.gwu-page-header {
+    background: linear-gradient(135deg, #001b4d 0%, var(--gwu-navy) 100%);
+    border-bottom: 5px solid var(--gwu-buff);
+    margin-top: -0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.gwu-page-header-inner {
+    padding-top: 1.1rem;
+    padding-bottom: 1.15rem;
+}
+
+.gwu-page-header-label,
+.gwu-page-header-title,
+.gwu-page-header-subtitle {
+    color: #fff;
+}
+
+.gwu-page-header-label {
+    margin-bottom: 0.3rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.gwu-page-header-title {
+    margin: 0;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.gwu-page-header-subtitle {
+    margin-top: 0.45rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.84);
+}
+
 .hero-intro {
     margin-bottom: 2rem;
     padding: 0.25rem 0 1.35rem;
     border-bottom: 2px solid rgba(224, 195, 110, 0.65);
-}
-
-.hero-kicker {
-    margin-bottom: 0.45rem;
-    color: var(--gwu-navy);
-    font-size: 0.88rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
 }
 
 .hero-title-link {
@@ -358,6 +390,16 @@ h1.publication-title:hover strong {
         padding-bottom: 1rem;
     }
 
+    .gwu-page-header {
+        margin-bottom: 1rem;
+    }
+
+    .gwu-page-header-inner {
+        padding-top: 0.9rem;
+        padding-bottom: 0.95rem;
+    }
+
+    .gwu-page-header-subtitle,
     .hero-role,
     .hero-summary {
         font-size: 1rem;
