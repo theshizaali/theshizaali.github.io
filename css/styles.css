@@ -139,6 +139,7 @@ div.publication > h2.external-links a:hover {
 table.news {
     font-weight: lighter;
     table-layout: fixed;
+    width: 100%;
 }
 
 table.news tr > td:first-child,
@@ -148,10 +149,33 @@ table.news tr > td:nth-child(2) {
 } 
 
 .news-container {
+    display: block;
     max-height: 260px;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     padding-right: 0.5rem;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #9a9a9a #ececec;
+}
+
+.news-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.news-container::-webkit-scrollbar-track {
+    background: #ececec;
+    border-radius: 999px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+    background: #9a9a9a;
+    border-radius: 999px;
+    border: 2px solid #ececec;
+}
+
+.news-container::-webkit-scrollbar-thumb:hover {
+    background: #7d7d7d;
 }
 
 table.news td {
