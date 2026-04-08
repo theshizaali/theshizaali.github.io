@@ -105,74 +105,6 @@ ul.social-list svg:hover {
     fill: var(--accent);
 }
 
-.quick-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.quick-link-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.45rem 0.9rem;
-    border: 1px solid #d3cbc7;
-    border-radius: 999px;
-    background: #f8f5f3;
-    color: #4f443f;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-}
-
-.quick-link-button:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: #fff;
-    transform: translateY(-1px);
-}
-
-.gwu-page-header {
-    background: linear-gradient(135deg, #001b4d 0%, var(--gwu-navy) 100%);
-    border-bottom: 5px solid var(--gwu-buff);
-    margin-top: -0.75rem;
-    margin-bottom: 1.5rem;
-}
-
-.gwu-page-header-inner {
-    padding-top: 1.1rem;
-    padding-bottom: 1.15rem;
-}
-
-.gwu-page-header-label,
-.gwu-page-header-title,
-.gwu-page-header-subtitle {
-    color: #fff;
-}
-
-.gwu-page-header-label {
-    margin-bottom: 0.3rem;
-    font-size: 0.84rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.82);
-}
-
-.gwu-page-header-title {
-    margin: 0;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.gwu-page-header-subtitle {
-    margin-top: 0.45rem;
-    margin-bottom: 0;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.84);
-}
-
 .hero-intro {
     margin-bottom: 2rem;
     padding: 0.25rem 0 1.35rem;
@@ -286,7 +218,7 @@ table.news .news-content {
 
 .news-container {
     display: block;
-    max-height: 320px;
+    max-height: 15rem;
     overflow-y: scroll;
     overflow-x: hidden;
     margin-top: 0.5rem;
@@ -376,30 +308,11 @@ h1.publication-title:hover strong {
         flex-direction: column;
     }
 
-    .quick-links {
-        gap: 0.5rem;
-    }
-
-    .quick-link-button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.75rem;
-    }
-
     .hero-intro {
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;
     }
 
-    .gwu-page-header {
-        margin-bottom: 1rem;
-    }
-
-    .gwu-page-header-inner {
-        padding-top: 0.9rem;
-        padding-bottom: 0.95rem;
-    }
-
-    .gwu-page-header-subtitle,
     .hero-role,
     .hero-summary {
         font-size: 1rem;
