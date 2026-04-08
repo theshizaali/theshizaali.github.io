@@ -12,6 +12,9 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="hero-intro">
+        <figure class="image avatar hero-avatar">
+          <img src="./img/shiza.png" alt="Portrait of Shiza Ali" loading="lazy">
+        </figure>
         <a href="/" aria-label="Go to homepage" class="hero-title-link">
           <h1 class="hero-title">
             <span class="has-text-weight-semibold">Shiza Ali</span>
@@ -21,9 +24,6 @@
         <p class="hero-summary">
           I study how people understand, trust, and respond to AI systems, with a focus on human-centered AI, online safety, and the design of trustworthy sociotechnical systems.
         </p>
-        <figure class="image avatar hero-avatar">
-          <img src="./img/shiza.png" alt="Portrait of Shiza Ali" loading="lazy">
-        </figure>
         <ul class="social-list hero-social-list mt-4 is-flex is-justify-content-center">
           <li>
             <a target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile" href="https://twitter.com/theshizaali">
@@ -63,24 +63,26 @@ Previously, I worked with the <a href="https://www.raise.uw.edu/">RAISE Lab</a> 
         </p>
       </div>
 
-      <div>
-        <p>
+      <section class="homepage-highlight">
+        <p class="homepage-highlight-text">
           My work has been published in top-tier venues including ACM CHI, CSCW, and IEEE S&P and has been reported by <a href="https://www.wired.com/story/researchers-reddit-state-trolls/">WIRED</a>.
-          My research has been supported by the <a href="https://www.nsf.gov/">National Science Foundation (NSF)</a> .
+          My research has been supported by the <a href="https://www.nsf.gov/">National Science Foundation (NSF)</a>.
         </p> 
-      </div>
+      </section>
 
-      <div>
-        <h1 class="section-title mt-4">News</h1>
-        <!--(bake /src/news.html)-->
-      </div>
+      <div class="homepage-sections">
+        <section class="homepage-panel">
+          <h1 class="section-title">News</h1>
+          <!--(bake /src/news.html)-->
+        </section>
 
-      <div>
-        <h1 class="section-title mt-4">My Blog</h1>
-          <div>
+        <section class="homepage-panel">
+          <h1 class="section-title">My Blog</h1>
+          <div class="homepage-panel-body">
             <p>Read my blog on <a href="https://medium.com/acm-cscw/unlocking-the-power-of-multimodal-analysis-for-safer-online-spaces-288a8802708a">"Unlocking the Power of Multimodal Analysis for Safer Online Spaces"</a></p>
             <p>Stay tuned for more!!</p>
           </div>
+        </section>
       </div>
 
     </div>
