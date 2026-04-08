@@ -2,6 +2,8 @@
     --font-family: 'IBM Plex Sans';
     --font-family-mono: 'Inconsolata';
     --accent: #402A25;
+    --gwu-navy: #00205b;
+    --gwu-buff: #e0c36e;
 }
 .underline {
     text-decoration: underline;
@@ -130,6 +132,48 @@ ul.social-list svg:hover {
     transform: translateY(-1px);
 }
 
+.hero-intro {
+    margin-bottom: 2rem;
+    padding: 0.25rem 0 1.35rem;
+    border-bottom: 2px solid rgba(224, 195, 110, 0.65);
+}
+
+.hero-kicker {
+    margin-bottom: 0.45rem;
+    color: var(--gwu-navy);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero-title-link {
+    display: inline-block;
+}
+
+.hero-title {
+    margin: 0;
+    color: var(--gwu-navy);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    line-height: 1.05;
+}
+
+.hero-role {
+    margin-top: 0.55rem;
+    margin-bottom: 0.8rem;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hero-summary {
+    max-width: 48rem;
+    margin: 0;
+    color: #5d5d5d;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
 div.talk > h2 span:not(:last-child)::after,
 div.podcast > h2 span:not(:last-child)::after,
 div.publication > h2 span:not(:last-child)::after {
@@ -171,43 +215,41 @@ div.publication > h2.external-links a:hover {
 table.news {
     font-weight: lighter;
     table-layout: auto;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 0.45rem;
     width: 100%;
 }
 
 table.news tr {
-    border-bottom: 1px solid #e5e1de;
-}
-
-table.news tr:last-child {
-    border-bottom: none;
+    background: transparent;
 }
 
 table.news td {
     vertical-align: top;
-    padding: 0.8rem 0;
+    padding: 0.15rem 0;
 }
 
 table.news .news-year,
 table.news .news-month {
     font-family: var(--font-family-mono);
     white-space: nowrap;
-    color: #6f6a67;
+    color: #7b736f;
+    font-size: 0.95rem;
 }
 
 table.news .news-year {
     width: 4.5rem;
-    padding-right: 0.4rem;
+    padding-right: 0.3rem;
 }
 
 table.news .news-month {
     width: 6.5rem;
-    padding-right: 1rem;
+    padding-right: 1.25rem;
 }
 
 table.news .news-content {
-    color: #555;
-    line-height: 1.55;
+    color: #5b5551;
+    line-height: 1.6;
 }
 
 .news-container {
@@ -216,7 +258,7 @@ table.news .news-content {
     overflow-y: scroll;
     overflow-x: hidden;
     margin-top: 0.5rem;
-    padding: 0.35rem 0.85rem 0.35rem 0;
+    padding: 0.1rem 0.85rem 0.1rem 0;
     scrollbar-gutter: stable;
     scrollbar-width: thin;
     scrollbar-color: #9a9a9a #ececec;
@@ -244,6 +286,25 @@ table.news .news-content {
 table.news em {
     font-style: normal;
     font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+    table.news {
+        border-spacing: 0 0.75rem;
+    }
+
+    table.news .news-year {
+        width: 3.8rem;
+    }
+
+    table.news .news-month {
+        width: 5.25rem;
+        padding-right: 0.8rem;
+    }
+
+    table.news .news-content {
+        line-height: 1.5;
+    }
 }
 
 h1.section-title {
@@ -290,6 +351,16 @@ h1.publication-title:hover strong {
     .quick-link-button {
         font-size: 0.9rem;
         padding: 0.4rem 0.75rem;
+    }
+
+    .hero-intro {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero-role,
+    .hero-summary {
+        font-size: 1rem;
     }
 }
 
