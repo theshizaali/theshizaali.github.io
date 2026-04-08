@@ -138,29 +138,60 @@ div.publication > h2.external-links a:hover {
 
 table.news {
     font-weight: lighter;
-    table-layout: fixed;
+    table-layout: auto;
+    border-collapse: collapse;
     width: 100%;
 }
 
-table.news tr > td:first-child,
-table.news tr > td:nth-child(2) {
+table.news tr {
+    border-bottom: 1px solid #e5e1de;
+}
+
+table.news tr:last-child {
+    border-bottom: none;
+}
+
+table.news td {
+    vertical-align: top;
+    padding: 0.8rem 0;
+}
+
+table.news .news-year,
+table.news .news-month {
     font-family: var(--font-family-mono);
     white-space: nowrap;
-} 
+    color: #6f6a67;
+}
+
+table.news .news-year {
+    width: 4.5rem;
+    padding-right: 0.4rem;
+}
+
+table.news .news-month {
+    width: 6.5rem;
+    padding-right: 1rem;
+}
+
+table.news .news-content {
+    color: #555;
+    line-height: 1.55;
+}
 
 .news-container {
     display: block;
-    max-height: 260px;
+    max-height: 320px;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.35rem 0.85rem 0.35rem 0;
     scrollbar-gutter: stable;
     scrollbar-width: thin;
     scrollbar-color: #9a9a9a #ececec;
 }
 
 .news-container::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
 }
 
 .news-container::-webkit-scrollbar-track {
@@ -176,11 +207,6 @@ table.news tr > td:nth-child(2) {
 
 .news-container::-webkit-scrollbar-thumb:hover {
     background: #7d7d7d;
-}
-
-table.news td {
-    vertical-align: top;
-    padding-bottom: 0.6rem;
 }
 
 table.news em {
