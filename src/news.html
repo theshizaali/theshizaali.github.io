@@ -1,11 +1,34 @@
 <div class="news-container">
-  <table class="news">
-    <!--(bake-start _foreach="n:news")-->
-    <tr>
-      <td class="news-year">{{ n.year }}</td>
-      <td class="news-month">{{ n.month }}</td>
-      <td class="news-content">{{ n.content }}</td>
-    </tr>
+  <div class="news-list">
+    <!--(bake-start _foreach="y:news_years")-->
+    <details class="news-year-group" _if="y.open" open>
+      <summary class="news-year-toggle">{{ y.year }} News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <!--(bake-start _foreach="n:y.items")-->
+        <div class="news-item">
+          <div class="news-date">{{ n.month }}</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-{{ n.kind }}">{{ n.kind }} news</span>
+            {{ n.content }}
+          </div>
+        </div>
+        <!--(bake-end)-->
+      </div>
+    </details>
+    <details class="news-year-group" _if="!y.open">
+      <summary class="news-year-toggle">{{ y.year }} News <span>(click to reveal)</span></summary>
+      <div class="news-year-items">
+        <!--(bake-start _foreach="n:y.items")-->
+        <div class="news-item">
+          <div class="news-date">{{ n.month }}</div>
+          <div class="news-content">
+            <span class="news-kind news-kind-{{ n.kind }}">{{ n.kind }} news</span>
+            {{ n.content }}
+          </div>
+        </div>
+        <!--(bake-end)-->
+      </div>
+    </details>
     <!--(bake-end)-->
-  </table>
+  </div>
 </div>

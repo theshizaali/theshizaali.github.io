@@ -138,6 +138,27 @@ ul.social-list svg:hover {
     line-height: 1.7;
 }
 
+.hero-avatar {
+    margin: 1.5rem auto 0;
+}
+
+.hero-social-list {
+    width: auto;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto 0;
+}
+
+.hero-social-list > li {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.homepage-copy {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
 div.talk > h2 span:not(:last-child)::after,
 div.podcast > h2 span:not(:last-child)::after,
 div.publication > h2 span:not(:last-child)::after {
@@ -176,97 +197,153 @@ div.publication > h2.external-links a:hover {
     color: #444;
 }
 
-table.news {
-    font-weight: lighter;
-    table-layout: auto;
-    border-collapse: separate;
-    border-spacing: 0 0.45rem;
-    width: 100%;
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-table.news tr {
-    background: transparent;
+.news-year-group {
+    padding-bottom: 0.15rem;
 }
 
-table.news td {
-    vertical-align: top;
-    padding: 0.15rem 0;
+.news-year-group[open] {
+    padding-bottom: 0.5rem;
 }
 
-table.news .news-year,
-table.news .news-month {
+.news-year-toggle {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    cursor: pointer;
+    color: var(--accent);
+    font-family: var(--font-family-mono);
+    font-size: 0.98rem;
+    list-style: none;
+}
+
+.news-year-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.news-year-toggle::before {
+    content: '+';
+    display: inline-block;
+    width: 0.75rem;
+    color: #8b827d;
+}
+
+.news-year-group[open] .news-year-toggle::before {
+    content: '-';
+}
+
+.news-year-toggle span {
+    color: #8b827d;
+    font-size: 0.85rem;
+}
+
+.news-year-items {
+    margin-top: 0.55rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    column-gap: 1.1rem;
+    align-items: start;
+}
+
+.news-date {
     font-family: var(--font-family-mono);
     white-space: nowrap;
     color: #7b736f;
     font-size: 0.95rem;
 }
 
-table.news .news-year {
-    width: 4.5rem;
-    padding-right: 0.3rem;
-}
-
-table.news .news-month {
-    width: 6.5rem;
-    padding-right: 1.25rem;
-}
-
-table.news .news-content {
+.news-content {
     color: #5b5551;
     line-height: 1.6;
+}
+
+.news-kind {
+    display: inline-block;
+    margin-right: 0.55rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+.news-kind-good {
+    background: #eef4ea;
+    color: #45633b;
+}
+
+.news-kind-bad {
+    background: #f9ece8;
+    color: #8c4a3d;
+}
+
+.news-kind-neutral {
+    background: #f1efed;
+    color: #6d655f;
 }
 
 .news-container {
     display: block;
     max-height: 15rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     margin-top: 0.5rem;
-    padding: 0.1rem 0.85rem 0.1rem 0;
+    padding: 0.1rem 0.35rem 0.1rem 0;
     scrollbar-gutter: stable;
     scrollbar-width: thin;
-    scrollbar-color: #9a9a9a #ececec;
+    scrollbar-color: #c8c2bc transparent;
 }
 
 .news-container::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
 }
 
 .news-container::-webkit-scrollbar-track {
-    background: #ececec;
-    border-radius: 999px;
+    background: transparent;
 }
 
 .news-container::-webkit-scrollbar-thumb {
-    background: #9a9a9a;
+    background: #c8c2bc;
     border-radius: 999px;
-    border: 2px solid #ececec;
 }
 
 .news-container::-webkit-scrollbar-thumb:hover {
-    background: #7d7d7d;
+    background: #aca39b;
 }
 
-table.news em {
+.news-content em {
     font-style: normal;
     font-weight: normal;
 }
 
 @media screen and (max-width: 768px) {
-    table.news {
-        border-spacing: 0 0.75rem;
+    .news-item {
+        grid-template-columns: 1fr;
+        row-gap: 0.15rem;
     }
 
-    table.news .news-year {
-        width: 3.8rem;
+    .news-year-toggle {
+        font-size: 0.92rem;
     }
 
-    table.news .news-month {
-        width: 5.25rem;
-        padding-right: 0.8rem;
+    .news-date {
+        font-size: 0.9rem;
     }
 
-    table.news .news-content {
+    .news-content {
         line-height: 1.5;
     }
 }

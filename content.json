@@ -143,63 +143,82 @@
         }
 
     ],
-    "news": [
+    "news_years": [
         {
-            "content": "Started Research Scientist position at The Institute for Trustworthy AI in Law & Society (TRAILS).",
-            "month": "July",
-            "year": 2025
+            "year": 2025,
+            "open": true,
+            "items": [
+                {
+                    "kind": "good",
+                    "month": "July",
+                    "content": "Started Research Scientist position at The Institute for Trustworthy AI in Law & Society (TRAILS)."
+                }
+            ]
         },
         {
-            "content": "Started postdoc at the University of Washington.",
-            "month": "August",
-            "year": 2024
+            "year": 2024,
+            "items": [
+                {
+                    "kind": "good",
+                    "month": "August",
+                    "content": "Started postdoc at the University of Washington."
+                },
+                {
+                    "kind": "good",
+                    "month": "May",
+                    "content": "Defended my PhD thesis. You can call me a doc now!!"
+                }
+            ]
         },
         {
-            "content": "Defended my PhD. Thesis. You can call me a doc. now!!",
-            "month": "May",
-            "year": 2024
+            "year": 2023,
+            "items": [
+                {
+                    "kind": "good",
+                    "month": "December",
+                    "content": "Gave a talk on \"Tackling Malicious Activity Online\" at the University of Iowa."
+                },
+                {
+                    "kind": "good",
+                    "month": "November",
+                    "content": "I was awarded \"Rising Star in Social Computing and Tech Policy\" by University of Iowa."
+                },
+                {
+                    "kind": "good",
+                    "month": "October",
+                    "content": "Our paper \"Sliding into My DMs\" received the Impact Recognition award!"
+                },
+                {
+                    "kind": "good",
+                    "month": "August",
+                    "content": "I got selected for the SIGCHI Gary Marsden Travel Award."
+                },
+                {
+                    "kind": "good",
+                    "month": "May",
+                    "content": "I received Research PhD Fellowship Finalist Award at Meta."
+                },
+                {
+                    "kind": "good",
+                    "month": "April",
+                    "content": "Our papers titled \"Getting Meta\" and \"Sliding into My DMs\" got accepted at CSCW'23. Two papers yaayy!!"
+                }
+            ]
         },
         {
-            "content": "Gave a talk on \"Tackling Malicious Activity Online\" at the University of Iowa ",
-            "month": "December",
-            "year": 2023
-        },
-        {
-            "content": "I was awarded \"Rising Star in Social Computing and Tech Policy\" by University of Iowa",
-            "month": "November",
-            "year": 2023
-        },
-        {
-            "content": "Our paper \"Sliding into My DMs\" received the Impact Recognition award!",
-            "month": "October",
-            "year": 2023
-        },
-        {
-            "content": "I got selected for the SIGCHI Gary Marsden Travel Award.",
-            "month": "August",
-            "year": 2023
-        },
-        {
-            "content": "I received Research PhD. Fellowship Finalist Award at Meta.",
-            "month": "May",
-            "year": 2023
+            "year": 2022,
+            "items": [
+                {
+                    "kind": "good",
+                    "month": "August",
+                    "content": "My paper \"Understanding the Digital Lives of Youth\" got the Honorable Mention Award at CHI'22!"
+                },
+                {
+                    "kind": "good",
+                    "month": "April",
+                    "content": "Our paper titled \"Understanding the Digital Lives of Youth\" got accepted at CHI'22!"
+                }
+            ]
         }
-        ,
-        {
-            "content": "Our papers titled \"Getting Meta\" and \"Sliding into My DMs\" got accepted at CSCW'23. Two papers yaayy!!",
-            "month": "April",
-            "year": 2023
-        },
-        {
-            "content": "My Paper \"Understanding the Digital Lives of Youth\" got the Honorable Mention Award at CHI'22'!! ",
-            "month": "August",
-            "year": 2022
-        },
-        {
-            "content": "Our paper titled \"Understanding the Digital Lives of Youth\" got accepted at CHI'22!",
-            "month": "April",
-            "year": 2022
-        }
-        
     ]
 }
