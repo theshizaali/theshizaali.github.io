@@ -145,12 +145,39 @@
     ],
     "news_years": [
         {
+            "year": 2026,
+            "items": [
+                {
+                    "kind": "good",
+                    "month": "January",
+                    "content": "Joined The Institute for Trustworthy AI in Law & Society (TRAILS) as a Research Scientist."
+                }
+            ]
+        },
+        {
             "year": 2025,
             "items": [
                 {
                     "kind": "good",
-                    "month": "July",
-                    "content": "Joined The Institute for Trustworthy AI in Law & Society (TRAILS) as a Research Scientist."
+                    "month": "September",
+                    "content": "Won the People's Choice Award for my research talk at GWU Postdoc Research Symposium.",
+                    "details": "Ghazal Kalhor, Shiza Ali and Afra Mashhadi Measuring biases in AI-generated co-authorship networks EPJ Data Science (May 2025)"
+                },
+                {
+                    "kind": "good",
+                    "month": "August",
+                    "content": "Joined GWUSEC Lab with Dr. Adam Aviv at GW as a Postdoc."
+                },
+                {
+                    "kind": "bad",
+                    "month": "August",
+                    "content": "One paper rejected from CIKM'26"
+                },
+                {
+                    "kind": "good",
+                    "month": "August",
+                    "content": "Paper accepted at EPJ Data Science",
+                    "details": "Ghazal Kalhor, Shiza Ali and Afra Mashhadi Measuring biases in AI-generated co-authorship networks EPJ Data Science (May 2025)"
                 }
             ]
         },

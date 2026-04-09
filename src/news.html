@@ -8,6 +8,7 @@
         <!--(bake-start _foreach="n:y.items")-->
         <li class="news-item">
           <div class="news-content">
+            <span class="news-kind-text news-kind-text-{{ n.kind }}">{{ n.kind }} news</span>
             <span class="news-date">({{ n.month }} {{ y.year }})</span>
             {{ n.content }}
           </div>
