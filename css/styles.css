@@ -122,10 +122,11 @@ ul.social-list svg:hover {
 
 .hero-title {
     margin: 0;
-    color: var(--gwu-navy);
-    font-size: clamp(2.8rem, 7vw, 4.3rem);
-    line-height: 0.98;
-    letter-spacing: -0.03em;
+    color: #111;
+    font-size: clamp(2.15rem, 5vw, 3rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
 }
 
 .hero-role {
@@ -225,7 +226,7 @@ ul.social-list svg:hover {
 .homepage-highlight-text {
     margin: 0;
     color: #5e5650;
-    font-size: 1.08rem;
+    font-size: 1.01rem;
     line-height: 1.85;
     text-align: center;
 }
@@ -503,7 +504,7 @@ h1.publication-title:hover strong {
     }
 
     .hero-title {
-        font-size: clamp(2.35rem, 13vw, 3.2rem);
+        font-size: clamp(1.95rem, 10vw, 2.45rem);
     }
 
     .hero-avatar,
