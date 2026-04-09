@@ -11,19 +11,17 @@
   <!--(bake /src/includes/navbar.html)-->
   <section class="section">
     <div class="container is-max-desktop">
-      <div>
-        <a href="/">
-            <h1 class="is-size-2">
-                <span class="has-text-weight-semibold">Publications</span>
-            </h1>
-        </a>
-        
-    </div>
-    <div class="container">
-      <div>
-        <p>&nbsp;</p>
+      <section class="publications-hero">
+        <p class="publications-eyebrow">Research</p>
+        <h1 class="publications-page-title">Publications</h1>
+        <p class="publications-page-intro">
+          A selection of my work across human-centered AI, usable security, online safety, and platform harms.
+        </p>
+      </section>
+
+      <div class="publications-page-content">
+        <!--(bake /src/publications/publications.html)-->
       </div>
-      <!--(bake /src/publications/publications.html)-->
     </div>
   </section>
   <!--(bake /src/includes/footer.html)-->

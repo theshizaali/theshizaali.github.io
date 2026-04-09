@@ -1,10 +1,13 @@
 <div class="publications">
     <!--(bake-start _foreach="publication:publications")-->
-    <div class="publication mb-5">
-        <h1 class="publication-title">
-            <strong>{{ publication.title }}</strong>
-        </h1>
-        <h2>
+    <article class="publication">
+        <div class="publication-card-top">
+            <p class="publication-venue-badge">{{ publication.venue }} &middot; {{ publication.year }}</p>
+            <h2 class="publication-title">
+                <strong>{{ publication.title }}</strong>
+            </h2>
+        </div>
+        <p class="publication-authors">
             <!--(bake-start _foreach="author:publication.authors")-->
             <!--(bake-start _if="author == 'Shiza Ali'")-->
             <span><strong>{{ author }}</strong></span>
@@ -13,15 +16,19 @@
             <span>{{ author }}</span>
             <!--(bake-end)-->
             <!--(bake-end)-->
-        </h2>
-        <h2>
-            {{ publication.venue }}, {{ publication.year }}
-        </h2>
-        <h2 class="external-links">
-            <!--(bake-start _foreach="url:publication.urls")-->
-            <a href="{{ url.url }}" target="_blank">{{ url.name }}</a>
-            <!--(bake-end)-->
-        </h2>
-    </div>
+        </p>
+        <div class="publication-footer">
+            <div class="external-links publication-links">
+                <!--(bake-start _foreach="url:publication.urls")-->
+                <!--(bake-start _if="url.name == 'published'")-->
+                <a href="{{ url.url }}" target="_blank">Read Paper</a>
+                <!--(bake-end)-->
+                <!--(bake-start _if="url.name != 'published'")-->
+                <a href="{{ url.url }}" target="_blank">{{ url.name }}</a>
+                <!--(bake-end)-->
+                <!--(bake-end)-->
+            </div>
+        </div>
+    </article>
     <!--(bake-end)-->
 </div>
