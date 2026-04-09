@@ -262,10 +262,10 @@
           </div>
           <script>
             document.addEventListener('DOMContentLoaded', () => {
-              const firstNewsGroup = document.querySelector('.news-year-details');
-              if (firstNewsGroup) {
-                firstNewsGroup.open = true;
-              }
+              const newsGroups = document.querySelectorAll('.news-year-details');
+              newsGroups.forEach((group, index) => {
+                group.open = index < 2;
+              });
             });
           </script>
 
@@ -274,8 +274,10 @@
         <section class="homepage-panel">
           <h1 class="section-title">My Blog</h1>
           <div class="homepage-panel-body">
-            <p>Read <a href="https://medium.com/acm-cscw/unlocking-the-power-of-multimodal-analysis-for-safer-online-spaces-288a8802708a">"Unlocking the Power of Multimodal Analysis for Safer Online Spaces"</a>, a short essay on multimodal methods for understanding online risk and safety.</p>
-            <p>Additional writing and commentary will be added here over time.</p>
+            <ul class="blog-list">
+              <li><a href="https://medium.com/acm-cscw/unlocking-the-power-of-multimodal-analysis-for-safer-online-spaces-288a8802708a">Unlocking the Power of Multimodal Analysis for Safer Online Spaces</a></li>
+              <li><a href="/blog/">Tackling Toxicity Online: Developing Comprehensive Approaches for Online Risk Detection</a></li>
+            </ul>
           </div>
         </section>
       </div>

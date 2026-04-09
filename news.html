@@ -144,9 +144,9 @@
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const firstNewsGroup = document.querySelector('.news-year-details');
-    if (firstNewsGroup) {
-      firstNewsGroup.open = true;
-    }
+    const newsGroups = document.querySelectorAll('.news-year-details');
+    newsGroups.forEach((group, index) => {
+      group.open = index < 2;
+    });
   });
 </script>
