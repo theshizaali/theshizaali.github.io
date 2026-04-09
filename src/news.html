@@ -1,21 +1,7 @@
 <div class="news-container">
   <div class="news-list">
     <!--(bake-start _foreach="y:news_years")-->
-    <details class="news-year-group" _if="y@first" open>
-      <summary class="news-year-heading">{{ y.year }}</summary>
-      <div class="news-year-items">
-        <!--(bake-start _foreach="n:y.items")-->
-        <div class="news-item">
-          <div class="news-date">{{ n.month }}</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-{{ n.kind }}">Update</span>
-            {{ n.content }}
-          </div>
-        </div>
-        <!--(bake-end)-->
-      </div>
-    </details>
-    <details class="news-year-group" _if="!y@first">
+    <details class="news-year-group">
       <summary class="news-year-heading">{{ y.year }}</summary>
       <div class="news-year-items">
         <!--(bake-start _foreach="n:y.items")-->
@@ -32,3 +18,11 @@
     <!--(bake-end)-->
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstNewsGroup = document.querySelector('.news-year-group');
+    if (firstNewsGroup) {
+      firstNewsGroup.open = true;
+    }
+  });
+</script>
