@@ -203,7 +203,7 @@ ul.social-list svg:hover {
 }
 
 .homepage-copy {
-    max-width: 48rem;
+    max-width: 56rem;
     margin: 0 auto 1.6rem;
     padding: 0;
 }
@@ -216,7 +216,7 @@ ul.social-list svg:hover {
 }
 
 .homepage-highlight {
-    max-width: 48rem;
+    max-width: 56rem;
     margin: 0 auto 1.8rem;
     padding: 1.15rem 0;
     border-top: 1px solid rgba(0, 32, 91, 0.12);
@@ -250,6 +250,20 @@ ul.social-list svg:hover {
 .homepage-panel-body p {
     color: #5a544f;
     line-height: 1.75;
+}
+
+.blog-list {
+    margin: 0.55rem 0 0 1.15rem;
+}
+
+.blog-list li {
+    margin-bottom: 0.35rem;
+    color: #4f4a46;
+    line-height: 1.7;
+}
+
+.blog-list li:last-child {
+    margin-bottom: 0;
 }
 
 div.talk > h2 span:not(:last-child)::after,
