@@ -1,6 +1,6 @@
 <div class="news-container">
   <div class="news-list">
-    <details class="news-year-group" _if="y@first" open>
+    <details class="news-year-group">
       <summary class="news-year-heading">2025</summary>
       <div class="news-year-items">
         <div class="news-item">
@@ -12,19 +12,7 @@
         </div>
       </div>
     </details>
-    <details class="news-year-group" _if="!y@first">
-      <summary class="news-year-heading">2025</summary>
-      <div class="news-year-items">
-        <div class="news-item">
-          <div class="news-date">July</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Joined The Institute for Trustworthy AI in Law & Society (TRAILS) as a Research Scientist.
-          </div>
-        </div>
-      </div>
-    </details>
-    <details class="news-year-group" _if="y@first" open>
+    <details class="news-year-group">
       <summary class="news-year-heading">2024</summary>
       <div class="news-year-items">
         <div class="news-item">
@@ -43,26 +31,7 @@
         </div>
       </div>
     </details>
-    <details class="news-year-group" _if="!y@first">
-      <summary class="news-year-heading">2024</summary>
-      <div class="news-year-items">
-        <div class="news-item">
-          <div class="news-date">August</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Started a postdoctoral position at the University of Washington.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">May</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Defended my PhD thesis at Boston University.
-          </div>
-        </div>
-      </div>
-    </details>
-    <details class="news-year-group" _if="y@first" open>
+    <details class="news-year-group">
       <summary class="news-year-heading">2023</summary>
       <div class="news-year-items">
         <div class="news-item">
@@ -109,73 +78,7 @@
         </div>
       </div>
     </details>
-    <details class="news-year-group" _if="!y@first">
-      <summary class="news-year-heading">2023</summary>
-      <div class="news-year-items">
-        <div class="news-item">
-          <div class="news-date">December</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Gave a talk on "Tackling Malicious Activity Online" at the University of Iowa.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">November</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Received the "Rising Star in Social Computing and Tech Policy" award from the University of Iowa.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">October</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Our paper "Sliding into My DMs" received the Impact Recognition Award.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">August</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Received the SIGCHI Gary Marsden Travel Award.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">May</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Named a finalist for Meta's Research PhD Fellowship.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">April</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Our papers "Getting Meta" and "Sliding into My DMs" were accepted to CSCW 2023.
-          </div>
-        </div>
-      </div>
-    </details>
-    <details class="news-year-group" _if="y@first" open>
-      <summary class="news-year-heading">2022</summary>
-      <div class="news-year-items">
-        <div class="news-item">
-          <div class="news-date">August</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            My paper "Understanding the Digital Lives of Youth" received an Honorable Mention Award at CHI 2022.
-          </div>
-        </div>
-        <div class="news-item">
-          <div class="news-date">April</div>
-          <div class="news-content">
-            <span class="news-kind news-kind-good">Update</span>
-            Our paper "Understanding the Digital Lives of Youth" was accepted to CHI 2022.
-          </div>
-        </div>
-      </div>
-    </details>
-    <details class="news-year-group" _if="!y@first">
+    <details class="news-year-group">
       <summary class="news-year-heading">2022</summary>
       <div class="news-year-items">
         <div class="news-item">
@@ -196,3 +99,11 @@
     </details>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstNewsGroup = document.querySelector('.news-year-group');
+    if (firstNewsGroup) {
+      firstNewsGroup.open = true;
+    }
+  });
+</script>

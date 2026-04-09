@@ -4,9 +4,7 @@
     --accent: #402A25;
     --gwu-navy: #00205b;
     --gwu-buff: #e0c36e;
-    --surface: rgba(255, 255, 255, 0.9);
     --surface-border: rgba(64, 42, 37, 0.1);
-    --surface-shadow: 0 24px 60px rgba(50, 34, 29, 0.08);
 }
 .underline {
     text-decoration: underline;
@@ -31,10 +29,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background:
-        radial-gradient(circle at top left, rgba(224, 195, 110, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(0, 32, 91, 0.08), transparent 30%),
-        linear-gradient(180deg, #fcfaf8 0%, #f6f1ed 100%);
+    background: #fcfbf9;
 }
 
 .avatar img {
@@ -118,11 +113,7 @@ ul.social-list svg:hover {
     align-items: center;
     text-align: center;
     margin-bottom: 2rem;
-    padding: 1.5rem 1.5rem 1.2rem;
-    border: 1px solid var(--surface-border);
-    border-radius: 32px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 242, 237, 0.92) 100%);
-    box-shadow: var(--surface-shadow);
+    padding: 1.2rem 0 0.9rem;
 }
 
 .hero-title-link {
@@ -140,9 +131,12 @@ ul.social-list svg:hover {
 .hero-role {
     margin-top: 0.8rem;
     margin-bottom: 0.55rem;
-    color: #4a4a4a;
-    font-size: 1.18rem;
+    max-width: 42rem;
+    color: #5b5651;
+    font-size: 1.02rem;
     font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: none;
 }
 
 .hero-summary {
@@ -163,8 +157,8 @@ ul.social-list svg:hover {
     height: 240px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #f4efeb;
-    box-shadow: 0 20px 40px rgba(64, 42, 37, 0.12);
+    border: 3px solid #f1ebe6;
+    box-shadow: 0 14px 32px rgba(64, 42, 37, 0.08);
 }
 
 .hero-social-list {
@@ -188,8 +182,7 @@ ul.social-list svg:hover {
     height: 2.8rem;
     border: 1px solid rgba(64, 42, 37, 0.14);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.78);
-    box-shadow: 0 8px 20px rgba(64, 42, 37, 0.05);
+    background: transparent;
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -199,9 +192,9 @@ ul.social-list svg:hover {
 }
 
 .hero-social-list a:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     border-color: rgba(64, 42, 37, 0.28);
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .hero-social-list a:hover svg {
@@ -211,33 +204,29 @@ ul.social-list svg:hover {
 .homepage-copy {
     max-width: 48rem;
     margin: 0 auto 1.6rem;
-    padding: 1.5rem 1.65rem;
-    border: 1px solid var(--surface-border);
-    border-radius: 28px;
-    background: var(--surface);
-    box-shadow: var(--surface-shadow);
+    padding: 0;
 }
 
 .homepage-copy p {
     text-align: left;
     line-height: 1.8;
+    color: #55504b;
+    margin-bottom: 1rem;
 }
 
 .homepage-highlight {
     max-width: 48rem;
     margin: 0 auto 1.8rem;
-    padding: 1.55rem 1.8rem;
-    border: 1px solid rgba(0, 32, 91, 0.09);
-    border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255, 252, 247, 0.98) 0%, rgba(247, 242, 236, 0.96) 100%);
-    box-shadow: var(--surface-shadow);
+    padding: 1.15rem 0;
+    border-top: 1px solid rgba(0, 32, 91, 0.12);
+    border-bottom: 1px solid rgba(0, 32, 91, 0.12);
 }
 
 .homepage-highlight-text {
     margin: 0;
     color: #5e5650;
-    font-size: 1.14rem;
-    line-height: 1.9;
+    font-size: 1.08rem;
+    line-height: 1.85;
     text-align: center;
 }
 
@@ -249,15 +238,17 @@ ul.social-list svg:hover {
 }
 
 .homepage-panel {
-    padding: 1.35rem 1.4rem 1.45rem;
-    border: 1px solid var(--surface-border);
-    border-radius: 28px;
-    background: var(--surface);
-    box-shadow: var(--surface-shadow);
+    padding: 1.1rem 0 0;
+    border-top: 1px solid rgba(64, 42, 37, 0.12);
 }
 
 .homepage-panel-body p:last-child {
     margin-bottom: 0;
+}
+
+.homepage-panel-body p {
+    color: #5a544f;
+    line-height: 1.75;
 }
 
 div.talk > h2 span:not(:last-child)::after,
@@ -320,7 +311,7 @@ div.publication > h2.external-links a:hover {
     justify-content: space-between;
     gap: 0.75rem;
     margin: 0;
-    padding: 0.2rem 0;
+    padding: 0.15rem 0;
     color: var(--accent);
     font-family: var(--font-family-mono);
     font-size: 1rem;
@@ -344,7 +335,7 @@ div.publication > h2.external-links a:hover {
     height: 1.5rem;
     border: 1px solid rgba(64, 42, 37, 0.12);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.75);
+    background: transparent;
     color: #8b827d;
     font-family: var(--font-family);
     font-size: 1rem;
@@ -508,7 +499,7 @@ h1.publication-title:hover strong {
 
     .hero-intro {
         margin-bottom: 1.5rem;
-        padding: 1.35rem 1rem 1.1rem;
+        padding: 1rem 0 0.8rem;
     }
 
     .hero-title {
@@ -533,8 +524,8 @@ h1.publication-title:hover strong {
     .homepage-copy,
     .homepage-highlight,
     .homepage-panel {
-        padding: 1.25rem 1rem;
-        border-radius: 22px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .homepage-sections {
