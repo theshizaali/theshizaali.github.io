@@ -239,8 +239,7 @@ ul.social-list svg:hover {
 }
 
 .homepage-panel {
-    padding: 1.1rem 0 0;
-    border-top: 1px solid rgba(64, 42, 37, 0.12);
+    padding: 0.35rem 0 0;
 }
 
 .homepage-panel-body p:last-child {
@@ -253,29 +252,146 @@ ul.social-list svg:hover {
 }
 
 .blog-list {
-    margin: 0.55rem 0 0 0.9rem;
-    padding-left: 0.8rem;
+    display: grid;
+    gap: 0.95rem;
+    margin-top: 0.8rem;
 }
 
-.blog-list li {
-    margin-bottom: 0.35rem;
-    color: #4f4a46;
-    line-height: 1.7;
+.blog-card {
+    display: block;
+    padding: 1rem 1.05rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 240, 235, 0.92));
+    border: 1px solid rgba(0, 32, 91, 0.08);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.blog-list li:last-child {
-    margin-bottom: 0;
+.blog-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(176, 96, 60, 0.28);
+    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1);
 }
 
-.blog-list a {
-    color: #1f1f1f;
-    border-bottom: 1px solid rgba(64, 42, 37, 0.35);
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.blog-list a:hover {
+.blog-card-kicker {
+    display: inline-block;
+    margin-bottom: 0.45rem;
     color: var(--accent);
-    border-color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.blog-card-title {
+    display: block;
+    color: #142f6b;
+    font-size: 1.18rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.blog-card-meta {
+    display: block;
+    margin-top: 0.45rem;
+    color: #665f59;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.publications-hero {
+    margin: 0 auto 2rem;
+    padding: 0.9rem 0 1.35rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 32, 91, 0.08);
+}
+
+.publications-eyebrow {
+    margin: 0 0 0.45rem;
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.publications-page-title {
+    margin: 0;
+    color: var(--gwu-navy);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+.publications-page-intro {
+    max-width: 42rem;
+    margin: 0.95rem auto 0;
+    color: #625b55;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.publications-page-content {
+    max-width: 50rem;
+    margin: 0.75rem auto 0;
+}
+
+.publications {
+    display: grid;
+    gap: 1.1rem;
+}
+
+.publication {
+    position: relative;
+    overflow: hidden;
+    padding: 1.3rem 1.35rem;
+    border: 1px solid rgba(0, 32, 91, 0.1);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at top right, rgba(224, 195, 110, 0.12), transparent 26%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 243, 238, 0.96));
+    box-shadow: 0 18px 40px rgba(24, 35, 52, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.publication::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: linear-gradient(180deg, var(--gwu-navy), rgba(176, 96, 60, 0.9));
+}
+
+.publication:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 32, 91, 0.16);
+    box-shadow: 0 22px 44px rgba(24, 35, 52, 0.1);
+}
+
+.publication-card-top {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.publication-venue-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0;
+    padding: 0.36rem 0.76rem;
+    border-radius: 999px;
+    background: rgba(0, 32, 91, 0.065);
+    color: var(--gwu-navy);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+h2.publication-title {
+    margin: 0;
 }
 
 div.talk > h2 span:not(:last-child)::after,
@@ -414,6 +530,70 @@ h1.publication-title:hover strong {
     color: #444;
 }
 
+.publication-title strong {
+    color: #162f6d;
+    font-size: 1.28rem;
+    line-height: 1.48;
+}
+
+.publication-authors {
+    margin: 0.85rem 0 0;
+    color: #5c5650;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+.publication-authors span:not(:last-child)::after {
+    content: ',';
+}
+
+.publication-authors strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.publication-footer {
+    margin-top: 1rem;
+    padding-top: 0.95rem;
+    border-top: 1px solid rgba(64, 42, 37, 0.08);
+}
+
+.publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.publication-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.2rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba(64, 42, 37, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #40342f;
+    font-family: var(--font-family);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.publication-links a::before,
+.publication-links a::after {
+    content: none !important;
+}
+
+.publication-links a:hover {
+    transform: translateY(-1px);
+    color: var(--accent);
+    border-color: rgba(176, 96, 60, 0.28);
+    background: #fff;
+    text-decoration: none;
+}
+
 .color-accent {
     color: var(--accent) !important;
 }
@@ -464,6 +644,37 @@ h1.publication-title:hover strong {
 
     .homepage-sections {
         grid-template-columns: 1fr;
+    }
+
+    .blog-card {
+        padding: 0.95rem 0.95rem 0.9rem;
+    }
+
+    .blog-card-title {
+        font-size: 1.08rem;
+    }
+
+    .publications-hero {
+        margin-bottom: 1.5rem;
+        padding-top: 0.2rem;
+    }
+
+    .publication {
+        padding: 1.05rem 1rem;
+        border-radius: 18px;
+    }
+
+    .publication::before {
+        width: 4px;
+    }
+
+    .publication-title strong {
+        font-size: 1.16rem;
+    }
+
+    .publication-authors,
+    .publications-page-intro {
+        font-size: 0.98rem;
     }
 }
 
