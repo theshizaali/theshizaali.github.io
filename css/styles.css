@@ -311,6 +311,7 @@ div.publication > h2.external-links a:hover {
 
 .news-year-items {
     margin: 0.35rem 0 0.8rem 1.25rem;
+    list-style: disc;
 }
 
 .news-item {
@@ -320,6 +321,23 @@ div.publication > h2.external-links a:hover {
 .news-date {
     color: #5f5954;
     font-size: 0.98rem;
+}
+
+.news-kind-text {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.news-kind-text-good {
+    color: #2f7a32;
+}
+
+.news-kind-text-bad {
+    color: #b13a32;
+}
+
+.news-kind-text-neutral {
+    color: #5f5954;
 }
 
 .news-content {
