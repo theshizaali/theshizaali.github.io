@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CS488 | Natural Language Processing</title>
+
+  <!-- Bulma CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  >
+
+  <!-- UW Bothell-inspired brand overrides -->
+  <style>
+    :root {
+      --uw-purple:       #4b2e83;
+      --uw-gold:         #b7a57a;
+      --uw-gray-light:   #f8f7f4;
+      --uw-gray-mid:     #e8e3d3;
+    }
+
+    /* Page background + default text */
+    body {
+      background-color: var(--uw-gray-light);
+      color: #2e1a47;
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    /* Primary headings, accents */
+    .has-primary-color {
+      color: var(--uw-purple) !important;
+    }
+    .has-secondary-color {
+      color: var(--uw-gold) !important;
+    }
+
+    h1, h2, h3, h4, .title, .subtitle {
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .title.is-2 {
+      font-size: 2rem;
+    }
+
+    .subtitle.is-4 {
+      font-size: 1.2rem;
+    }
+
+    .subtitle.is-5 {
+      font-size: 1rem;
+    }
+
+    /* Links */
+    a {
+      color: var(--uw-purple);
+      text-decoration: underline;
+    }
+    a:hover {
+      color: var(--uw-gold);
+    }
+
+    /* HR accent */
+    hr {
+      border-top: 2px solid var(--uw-gold);
+      opacity: 0.3;
+    }
+
+    /* Table styling */
+    .table thead {
+      background-color: var(--uw-purple);
+      color: #fff;
+    }
+    .table tr:nth-child(even) {
+      background-color: var(--uw-gray-light);
+    }
+    .table tr.homework,
+    .table tr.break {
+      background-color: var(--uw-gray-mid) !important;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--uw-purple);
+      color: #fff;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .content,
+    .content p,
+    .content li,
+    .content a,
+    ul,
+    li {
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="has-text-centered mb-5">
+        <h1 class="title is-2 has-primary-color">
+          CS488: Natural Language Processing
+        </h1>
+        <p class="subtitle is-5">
+          Spring 2025 | University of Washington Bothell
+        </p>
+      </div>
+
+      <div class="content has-text-centered mb-6">
+        <p>
+          <a href="#overview">Overview</a> |
+          <a href="#staff">Teaching Staff</a> |
+          <a href="#info">Course Info</a> |
+          <a href="#resources">Resources</a>
+        </p>
+      </div>
+
+      <div class="content mb-6" id="overview">
+        <p>
+          This page is an archive for <strong>CS488: Natural Language Processing</strong>, taught in
+          <strong>Spring 2025</strong> at the <strong>University of Washington Bothell</strong>.
+        </p>
+        <p>
+          The course introduced core ideas in natural language processing, including text representation,
+          language modeling, classification, sequence labeling, and neural methods, with attention to
+          real-world applications and responsible design.
+        </p>
+      </div>
+
+      <div class="columns is-variable is-6" id="staff">
+
+        <div class="column is-6">
+          <h2 class="subtitle is-4 has-primary-color">Teaching Staff</h2>
+          <ul>
+            <li><strong>Instructor:</strong> <a href="https://shizaali.com">Dr. Shiza Ali</a></li>
+            <li><strong>Institution:</strong> University of Washington Bothell</li>
+            <li><strong>Office Hours:</strong> By appointment</li>
+          </ul>
+        </div>
+
+        <div class="column is-6" id="info">
+          <h2 class="subtitle is-4 has-primary-color">Course Info</h2>
+          <ul>
+            <li><strong>Course Number:</strong> CS488</li>
+            <li><strong>Course Title:</strong> Natural Language Processing</li>
+            <li><strong>Term:</strong> Spring 2025</li>
+            <li><strong>Format:</strong> Lecture and hands-on assignments</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="columns is-variable is-6">
+        <div class="column is-6">
+          <h2 class="subtitle is-4 has-primary-color">Topics</h2>
+          <ul>
+            <li>Text preprocessing and representation</li>
+            <li>Language modeling</li>
+            <li>Classification and sequence labeling</li>
+            <li>Neural methods for NLP</li>
+            <li>Evaluation and responsible use</li>
+          </ul>
+        </div>
+
+        <div class="column is-6" id="resources">
+          <h2 class="subtitle is-4 has-primary-color">Resources</h2>
+          <ul>
+            <li>Syllabus: Coming soon</li>
+            <li>Schedule: Coming soon</li>
+            <li>Readings: To be announced</li>
+            <li>Assignments: To be announced</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="content">
+        <p>
+          Detailed course materials may be added here over time. For archived questions about this offering,
+          please contact the instructor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="content has-text-centered">
+      &copy; 2025 
+      <a href="https://www.uwb.edu/">University of Washington Bothell</a>
+      | Shiza Ali
+    </div>
+  </footer>
+
+</body>
+</html>
