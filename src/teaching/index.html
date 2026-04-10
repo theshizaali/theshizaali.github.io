@@ -2,35 +2,69 @@
 <html>
 
 <head>
-  <title>Courses | Shiza Ali</title>
+  <title>Teaching | Shiza Ali</title>
   <!--(bake /src/includes/head.html)-->
   <script> PAGE_NAME = 'teaching'; </script>
 </head>
 
 <body>
   <!--(bake /src/includes/navbar.html)-->
- <section class="section">
+  <section class="section">
     <div class="container is-max-desktop">
-      <h1 class="is-size-2 has-text-weight-semibold" style="color:#00205b;">Teaching</h1>
-      <div class="course-listing">
-        <h2>Currently Offered</h2>
-        <h3>
-          <a class="course-link" href="/systemProg-f25">
-            CSCI 6202: Computer Systems Fundamentals
-          </a>
-          <span class="course-term"></span>
-        </h3>
-      </div>
+      <section class="publications-hero teaching-page-hero">
+        <a href="/" aria-label="Go to homepage" class="hero-title-link">
+          <h1 class="hero-title publications-page-title">
+            <span>Teaching</span>
+          </h1>
+        </a>
+        <p class="teaching-page-intro">
+          My teaching spans computer systems, usable security and privacy, natural language processing, and human-AI interaction,
+          with an emphasis on deep conceptual understanding, hands-on technical work, and responsible design.
+        </p>
+      </section>
 
-      <div class="course-listing">
-        <h2>Prior Courses @ UW–Bothell</h2>
-        <h3>
-          <a class="course-link" href="#">
-            CS488: Natural Language Processing
-          </a>
-          <span class="course-term"></span>
-        </h3>
-      </div>
+      <section class="teaching-section">
+        <h2 class="teaching-section-title">Current Course</h2>
+        <h3 class="teaching-subsection-title">The George Washington University</h3>
+        <ul class="teaching-course-list">
+          <li class="teaching-course-list-item">
+            <span class="teaching-course-name">
+              <a class="teaching-inline-link" href="/systemProg-f25">CSCI 6202: Computer Systems Fundamentals</a>
+            </span>
+            <span class="teaching-course-term">Fall 2025</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="teaching-section">
+        <h2 class="teaching-section-title">Previous Teaching</h2>
+
+        <h3 class="teaching-subsection-title">University of Washington Bothell</h3>
+        <ul class="teaching-course-list">
+          <li class="teaching-course-list-item">
+            <span class="teaching-course-name">
+              <a class="teaching-inline-link" href="/cs488-s25">CS488: Natural Language Processing</a>
+            </span>
+            <span class="teaching-course-term">Spring 2025</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="teaching-section">
+        <h2 class="teaching-section-title">Teaching Philosophy</h2>
+        <p class="teaching-body-copy">
+          My teaching focuses on helping students solve real-world problems through practical examples, hands-on technical work,
+          and discussion of current issues and emerging technologies.
+        </p>
+        <p class="teaching-body-copy">
+          I believe students learn best by doing. In my courses, lectures introduce the problem, its technical challenges, and why it
+          matters; assignments and labs then give students the chance to build solutions themselves.
+        </p>
+        <p class="teaching-body-copy">
+          I also see mentoring as central to teaching. I aim to create an inclusive environment where students from different
+          backgrounds can build confidence, deepen their skills, and find space to pursue their own ideas.
+        </p>
+      </section>
     </div>
   </section>
   <!--(bake /src/includes/footer.html)-->
