@@ -10,6 +10,9 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
   >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- GWU Brand Overrides -->
   <style>
@@ -24,6 +27,8 @@
     body {
       background-color: var(--gwu-gray-light);
       color: #033C5A;
+      font-family: "IBM Plex Sans", sans-serif;
+      line-height: 1.65;
     }
 
     /* Primary headings, accents */
@@ -32,6 +37,11 @@
     }
     .has-secondary-color {
       color: var(--gwu-gold) !important;
+    }
+
+    h1, h2, h3, h4, .title, .subtitle,
+    p, li, a {
+      font-family: "IBM Plex Sans", sans-serif !important;
     }
 
     /* Links */
