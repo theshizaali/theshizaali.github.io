@@ -2,6 +2,7 @@
     "publications": [
         {
             "title": "Getting Meta: A Multimodal Approach for Detecting Unsafe Conversations within Instagram Direct Messages of Youth",
+            "theme": "online-safety-platform-harm",
             "authors": [
                 "Shiza Ali",
                 "Afsaneh Razi",
@@ -23,6 +24,7 @@
         },
         {
             "title": "Sliding into My DMs: Detecting Uncomfortable or Unsafe Sexual Risk Experiences within Instagram Direct Messages Grounded in the Perspective of Youth",
+            "theme": "online-safety-platform-harm",
             "authors": [
                 "Afsaneh Razi",
                 "Ashwaq Alsoubai",
@@ -43,6 +45,7 @@
         },
         {
             "title": "Understanding the Digital Lives of Youth: Analyzing Media Shared within Safe Versus Unsafe Private Conversations on Instagram",
+            "theme": "online-safety-platform-harm",
             "authors": [
                 "Shiza Ali",
                 "Afsaneh Razi",
@@ -64,6 +67,7 @@
         },
         {
             "title": "Instagram Data Donation: A Case Study on Collecting Ecologically Valid Social Media Data for the Purpose of Adolescent Online Risk Detection",
+            "theme": "online-safety-platform-harm",
             "authors": [
                 "Afsaneh Razi",
                 "Ashwaq Alsoubai",
@@ -85,6 +89,7 @@
         },
         {
             "title": "TROLLMAGNIFIER: Detecting State-Sponsored Troll Accounts on Reddit",
+            "theme": "ai-surveillance-sociotechnical-security",
             "authors": [
                 "Mohammad Hammas Saeed",
                 "Shiza Ali",
@@ -104,6 +109,7 @@
         },
         {
             "title": "Understanding the Effect of Deplatforming on Social Networks",
+            "theme": "online-safety-platform-harm",
             "authors": [
                 "Shiza Ali",
                 "Mohammad Hammas Saeed",
@@ -124,6 +130,7 @@
         },
         {
             "title": "Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms",
+            "theme": "online-safety-platform-harm",
             "authors": [
                 "Rashid Tahir",
                 "Faizan Ahmed",

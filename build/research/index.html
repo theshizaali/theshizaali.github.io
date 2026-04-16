@@ -4,6 +4,16 @@
 <head>
   <title>Research | Shiza Ali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (() => {
+      const key = 'theme';
+      const saved = localStorage.getItem(key);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,13 +30,14 @@
 
       gtag('config', 'G-J3J733H6KK');
   </script> -->
+
   <script> PAGE_NAME = 'blog'; </script>
 </head>
 
 <body>
-  <section class="section p-3 navbar">
-      <div class="container is-max-desktop is-size-4 is-flex is-align-items-center">
-          <div>
+  <section class="section navbar">
+      <div class="container is-max-desktop navbar-shell">
+          <div class="navbar-brand-wrap">
               <h1 class="is-size-4">
                   <a href="/" class="ml-0 navbar-title">
                       <span class="has-text-weight-semibold">Shiza</span> <span class="has-text-weight-light">Ali</span>
@@ -35,10 +46,15 @@
           </div>
           <div id="navbar-menu" class="is-size-6 is-flex navbar-menu1">
               <a class="is-size-6 navbar-item" href="/"> About Me </a>
-              <a class="is-size-6 navbar-item" href="/publications"> Publications </a>
+              <a class="is-size-6 navbar-item" href="/publications"> Research </a>
+              <a class="is-size-6 navbar-item" href="/teaching"> Teaching </a>
               <!-- <a class="is-size-6 navbar-item" href="/research"> Research </a> -->
               <a class="is-size-6 navbar-item" href="/blog"> Blog </a>
               <a class="is-size-6 navbar-item" target='_blank' href="/static/shizaAli_CV.pdf"> CV </a>
+              <button id="theme-toggle" class="theme-toggle navbar-theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                  <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                  <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+              </button>
           </div>
       </div>
   </section>
@@ -53,8 +69,30 @@
                   }
               }
           } catch (e) { }
+
+          try {
+              const root = document.documentElement;
+              const toggle = document.getElementById('theme-toggle');
+              const updateToggle = () => {
+                  const dark = root.dataset.theme === 'dark';
+                  toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+                  toggle.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+                  toggle.dataset.theme = dark ? 'dark' : 'light';
+              };
+
+              toggle.addEventListener('click', () => {
+                  const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                  root.dataset.theme = nextTheme;
+                  root.style.colorScheme = nextTheme;
+                  localStorage.setItem('theme', nextTheme);
+                  updateToggle();
+              });
+
+              updateToggle();
+          } catch (e) { }
       });
   </script>
+
   <section class="section">
     <div class="container is-max-desktop">
       <div>

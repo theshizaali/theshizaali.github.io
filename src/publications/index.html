@@ -27,6 +27,66 @@
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const selectedArea = params.get('area') || 'all';
+      const sourceRecords = Array.from(document.querySelectorAll('#publication-source-list .publication-record'));
+      const listRoot = document.getElementById('publication-list-root');
+      const areaLinks = Array.from(document.querySelectorAll('[data-area-link]'));
+      const emptyState = document.getElementById('publication-empty-state');
+
+      const areaMeta = {
+        'authenticity-provenance-trust-ai': {
+          empty: 'This is an active research area in my current work. Publications in this area are still forthcoming; for now, see my research overview for related projects.'
+        }
+      };
+
+      areaLinks.forEach((link) => {
+        if (link.dataset.areaLink === selectedArea) {
+          link.classList.add('is-active');
+        }
+      });
+
+      const filteredRecords = sourceRecords.filter((record) => (
+        selectedArea === 'all' || record.dataset.theme === selectedArea
+      ));
+
+      const grouped = filteredRecords.reduce((acc, record) => {
+        const year = record.dataset.year;
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(record.cloneNode(true));
+        return acc;
+      }, {});
+
+      listRoot.innerHTML = '';
+      Object.keys(grouped)
+        .sort((a, b) => Number(b) - Number(a))
+        .forEach((year) => {
+          const group = document.createElement('section');
+          group.className = 'publication-year-group';
+
+          const heading = document.createElement('h2');
+          heading.className = 'publication-year-heading';
+          heading.textContent = year;
+
+          const publications = document.createElement('div');
+          publications.className = 'publications';
+          grouped[year].forEach((record) => publications.appendChild(record));
+
+          group.appendChild(heading);
+          group.appendChild(publications);
+          listRoot.appendChild(group);
+        });
+
+      if (filteredRecords.length === 0 && selectedArea !== 'all' && areaMeta[selectedArea]?.empty) {
+        emptyState.hidden = false;
+        emptyState.innerHTML = areaMeta[selectedArea].empty + ' <a href="/research/">View research overview</a>.';
+      } else {
+        emptyState.hidden = true;
+      }
+    });
+  </script>
   <!--(bake /src/includes/footer.html)-->
 </body>
 

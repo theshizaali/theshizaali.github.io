@@ -1,11 +1,21 @@
-<div class="publications">
+<div class="publication-filters" role="navigation" aria-label="Publication areas">
+    <a class="publication-filter-link" data-area-link="all" href="/publications/">All</a>
+    <a class="publication-filter-link" data-area-link="online-safety-platform-harm" href="/publications/?area=online-safety-platform-harm">Online Safety &amp; Platform Harm</a>
+    <a class="publication-filter-link" data-area-link="authenticity-provenance-trust-ai" href="/publications/?area=authenticity-provenance-trust-ai">Authenticity, Provenance &amp; Trust in AI</a>
+    <a class="publication-filter-link" data-area-link="ai-surveillance-sociotechnical-security" href="/publications/?area=ai-surveillance-sociotechnical-security">AI, Surveillance &amp; Sociotechnical Security</a>
+</div>
+
+<div id="publication-empty-state" class="publication-empty-state" hidden></div>
+<div id="publication-list-root" class="publication-year-groups"></div>
+
+<div id="publication-source-list" hidden>
     <!--(bake-start _foreach="publication:publications")-->
-    <article class="publication">
+    <article class="publication publication-record" data-theme="{{ publication.theme }}" data-year="{{ publication.year }}">
         <div class="publication-card-top">
             <p class="publication-venue-badge">{{ publication.venue }} &middot; {{ publication.year }}</p>
-            <h2 class="publication-title">
+            <h3 class="publication-title">
                 <strong>{{ publication.title }}</strong>
-            </h2>
+            </h3>
         </div>
         <p class="publication-authors">
             <!--(bake-start _foreach="author:publication.authors")-->
