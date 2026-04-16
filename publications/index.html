@@ -4,6 +4,16 @@
 <head>
   <title>Publications | Shiza Ali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (() => {
+      const key = 'theme';
+      const saved = localStorage.getItem(key);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,13 +30,14 @@
 
       gtag('config', 'G-J3J733H6KK');
   </script> -->
+
   <script> PAGE_NAME = 'publications'; </script>
 </head>
 
 <body>
-  <section class="section p-3 navbar">
-      <div class="container is-max-desktop is-size-4 is-flex is-align-items-center">
-          <div>
+  <section class="section navbar">
+      <div class="container is-max-desktop navbar-shell">
+          <div class="navbar-brand-wrap">
               <h1 class="is-size-4">
                   <a href="/" class="ml-0 navbar-title">
                       <span class="has-text-weight-semibold">Shiza</span> <span class="has-text-weight-light">Ali</span>
@@ -40,6 +51,10 @@
               <!-- <a class="is-size-6 navbar-item" href="/research"> Research </a> -->
               <a class="is-size-6 navbar-item" href="/blog"> Blog </a>
               <a class="is-size-6 navbar-item" target='_blank' href="/static/shizaAli_CV.pdf"> CV </a>
+              <button id="theme-toggle" class="theme-toggle navbar-theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+                  <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                  <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+              </button>
           </div>
       </div>
   </section>
@@ -54,8 +69,30 @@
                   }
               }
           } catch (e) { }
+
+          try {
+              const root = document.documentElement;
+              const toggle = document.getElementById('theme-toggle');
+              const updateToggle = () => {
+                  const dark = root.dataset.theme === 'dark';
+                  toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+                  toggle.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+                  toggle.dataset.theme = dark ? 'dark' : 'light';
+              };
+
+              toggle.addEventListener('click', () => {
+                  const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                  root.dataset.theme = nextTheme;
+                  root.style.colorScheme = nextTheme;
+                  localStorage.setItem('theme', nextTheme);
+                  updateToggle();
+              });
+
+              updateToggle();
+          } catch (e) { }
       });
   </script>
+
   <section class="section">
     <div class="container is-max-desktop">
       <section class="publications-hero">
@@ -70,13 +107,23 @@
       </section>
 
       <div class="publications-page-content">
-        <div class="publications">
-            <article class="publication">
+        <div class="publication-filters" role="navigation" aria-label="Publication areas">
+            <a class="publication-filter-link" data-area-link="all" href="/publications/">All</a>
+            <a class="publication-filter-link" data-area-link="online-safety-platform-harm" href="/publications/?area=online-safety-platform-harm">Online Safety &amp; Platform Harm</a>
+            <a class="publication-filter-link" data-area-link="authenticity-provenance-trust-ai" href="/publications/?area=authenticity-provenance-trust-ai">Authenticity, Provenance &amp; Trust in AI</a>
+            <a class="publication-filter-link" data-area-link="ai-surveillance-sociotechnical-security" href="/publications/?area=ai-surveillance-sociotechnical-security">AI, Surveillance &amp; Sociotechnical Security</a>
+        </div>
+
+        <div id="publication-empty-state" class="publication-empty-state" hidden></div>
+        <div id="publication-list-root" class="publication-year-groups"></div>
+
+        <div id="publication-source-list" hidden>
+            <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2023">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">Proceedings of the ACM on Human-Computer Interaction (CSCW'23) &middot; 2023</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>Getting Meta: A Multimodal Approach for Detecting Unsafe Conversations within Instagram Direct Messages of Youth</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
@@ -94,12 +141,12 @@
                     </div>
                 </div>
             </article>
-            <article class="publication">
+            <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2023">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">Proceedings of the ACM on Human-Computer Interaction (CSCW'23) &middot; 2023</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>Sliding into My DMs: Detecting Uncomfortable or Unsafe Sexual Risk Experiences within Instagram Direct Messages Grounded in the Perspective of Youth</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span>Afsaneh Razi</span>
@@ -116,12 +163,12 @@
                     </div>
                 </div>
             </article>
-            <article class="publication">
+            <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2022">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">CHI Conference on Human Factors in Computing Systems (CHI'22) &middot; 2022</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>Understanding the Digital Lives of Youth: Analyzing Media Shared within Safe Versus Unsafe Private Conversations on Instagram</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
@@ -139,12 +186,12 @@
                     </div>
                 </div>
             </article>
-            <article class="publication">
+            <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2022">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">Extended Abstracts CHI Conference on Human Factors in Computing Systems &middot; 2022</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>Instagram Data Donation: A Case Study on Collecting Ecologically Valid Social Media Data for the Purpose of Adolescent Online Risk Detection</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span>Afsaneh Razi</span>
@@ -162,12 +209,12 @@
                     </div>
                 </div>
             </article>
-            <article class="publication">
+            <article class="publication publication-record" data-theme="ai-surveillance-sociotechnical-security" data-year="2022">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">IEEE Symposium on Security and Privacy (IEEE SP'22) &middot; 2022</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>TROLLMAGNIFIER: Detecting State-Sponsored Troll Accounts on Reddit</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span>Mohammad Hammas Saeed</span>
@@ -183,12 +230,12 @@
                     </div>
                 </div>
             </article>
-            <article class="publication">
+            <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2021">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">Proceedings of the 13th ACM Web Science Conference (WebSci'21) &middot; 2021</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>Understanding the Effect of Deplatforming on Social Networks</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
@@ -205,12 +252,12 @@
                     </div>
                 </div>
             </article>
-            <article class="publication">
+            <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2019">
                 <div class="publication-card-top">
                     <p class="publication-venue-badge">Proceedings of the IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM'19) &middot; 2019</p>
-                    <h2 class="publication-title">
+                    <h3 class="publication-title">
                         <strong>Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms</strong>
-                    </h2>
+                    </h3>
                 </div>
                 <p class="publication-authors">
                     <span>Rashid Tahir</span>
@@ -231,6 +278,66 @@
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const selectedArea = params.get('area') || 'all';
+      const sourceRecords = Array.from(document.querySelectorAll('#publication-source-list .publication-record'));
+      const listRoot = document.getElementById('publication-list-root');
+      const areaLinks = Array.from(document.querySelectorAll('[data-area-link]'));
+      const emptyState = document.getElementById('publication-empty-state');
+
+      const areaMeta = {
+        'authenticity-provenance-trust-ai': {
+          empty: 'This is an active research area in my current work. Publications in this area are still forthcoming; for now, see my research overview for related projects.'
+        }
+      };
+
+      areaLinks.forEach((link) => {
+        if (link.dataset.areaLink === selectedArea) {
+          link.classList.add('is-active');
+        }
+      });
+
+      const filteredRecords = sourceRecords.filter((record) => (
+        selectedArea === 'all' || record.dataset.theme === selectedArea
+      ));
+
+      const grouped = filteredRecords.reduce((acc, record) => {
+        const year = record.dataset.year;
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(record.cloneNode(true));
+        return acc;
+      }, {});
+
+      listRoot.innerHTML = '';
+      Object.keys(grouped)
+        .sort((a, b) => Number(b) - Number(a))
+        .forEach((year) => {
+          const group = document.createElement('section');
+          group.className = 'publication-year-group';
+
+          const heading = document.createElement('h2');
+          heading.className = 'publication-year-heading';
+          heading.textContent = year;
+
+          const publications = document.createElement('div');
+          publications.className = 'publications';
+          grouped[year].forEach((record) => publications.appendChild(record));
+
+          group.appendChild(heading);
+          group.appendChild(publications);
+          listRoot.appendChild(group);
+        });
+
+      if (filteredRecords.length === 0 && selectedArea !== 'all' && areaMeta[selectedArea]?.empty) {
+        emptyState.hidden = false;
+        emptyState.innerHTML = areaMeta[selectedArea].empty + ' <a href="/research/">View research overview</a>.';
+      } else {
+        emptyState.hidden = true;
+      }
+    });
+  </script>
 
 </body>
 
