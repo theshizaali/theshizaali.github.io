@@ -8,8 +8,7 @@
     (() => {
       const key = 'theme';
       const saved = localStorage.getItem(key);
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = saved || (prefersDark ? 'dark' : 'light');
+      const theme = saved || 'light';
       document.documentElement.dataset.theme = theme;
       document.documentElement.style.colorScheme = theme;
     })();
@@ -157,7 +156,7 @@
             <p class="homepage-featured-copy">
               I study harmful behavior online, including youth risk, unsafe interactions, and what happens when platforms intervene through moderation or deplatforming.
             </p>
-            <span class="homepage-featured-meta">View publications in this area</span>
+            <span class="homepage-featured-meta">Publications</span>
           </a>
 
           <a class="homepage-featured-card" href="/publications/?area=authenticity-provenance-trust-ai">
@@ -165,7 +164,7 @@
             <p class="homepage-featured-copy">
               My current work examines how people interpret AI-generated content, authenticity signals, and provenance cues when making judgments in high-stakes information settings.
             </p>
-            <span class="homepage-featured-meta">Browse current and related work</span>
+            <span class="homepage-featured-meta">Publications</span>
           </a>
 
           <a class="homepage-featured-card" href="/publications/?area=ai-surveillance-sociotechnical-security">
@@ -173,7 +172,7 @@
             <p class="homepage-featured-copy">
               I explore how AI is adopted in practice, from security and privacy defenses to workplace monitoring and the human factors that shape whether these systems actually help.
             </p>
-            <span class="homepage-featured-meta">See publications and ongoing projects</span>
+            <span class="homepage-featured-meta">Publications</span>
           </a>
         </div>
       </section>
