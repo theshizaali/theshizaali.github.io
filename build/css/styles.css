@@ -3,42 +3,67 @@
     --font-family-mono: 'Inconsolata';
     --page-bg: #fcfbf9;
     --surface-bg: #ffffff;
-    --surface-muted: #f8fafc;
-    --accent: #e58b9a;
-    --gwu-navy: #1f4e79;
+    --surface-muted: #f7f4f1;
+    --accent: #e3a0ac;
+    --gwu-navy: #1d3557;
     --gwu-buff: #dcecf8;
-    --surface-border: rgba(56, 100, 145, 0.14);
+    --surface-border: rgba(29, 53, 87, 0.12);
     --header-bg: #fcfbf9;
-    --header-border: rgba(31, 78, 121, 0.14);
-    --header-link: #16324a;
-    --header-link-muted: #61778f;
-    --body-text: #486682;
-    --heading-text: #16324a;
-    --link-blue: #2a86c8;
+    --header-border: rgba(29, 53, 87, 0.12);
+    --header-link: #1d3557;
+    --header-link-muted: #5f7892;
+    --body-text: #5f7892;
+    --heading-text: #1d3557;
+    --link-blue: #2f79bd;
+    --muted-text: #7a93aa;
+    --icon-muted: #7d96b0;
+    --accent-soft-bg: rgba(227, 160, 172, 0.08);
+    --accent-soft-border: rgba(227, 160, 172, 0.34);
+    --accent-strong-border: rgba(227, 160, 172, 0.72);
+    --success-text: #3c7f54;
+    --danger-text: #c56f84;
     --shadow-soft: 0 8px 20px rgba(24, 35, 52, 0.05);
 }
 
 html[data-theme='dark'] {
-    --page-bg: #0f1720;
-    --surface-bg: #16212b;
-    --surface-muted: #1b2834;
-    --accent: #f0a6b2;
-    --surface-border: rgba(154, 182, 210, 0.18);
-    --header-bg: #0f1720;
-    --header-border: rgba(154, 182, 210, 0.18);
-    --header-link: #eef5fb;
-    --header-link-muted: #c4d3df;
-    --body-text: #bed0df;
-    --heading-text: #f4f8fc;
-    --link-blue: #8bc6ff;
+    --page-bg: #121a24;
+    --surface-bg: #18222d;
+    --surface-muted: #1e2a36;
+    --accent: #f0a8b4;
+    --surface-border: rgba(184, 199, 214, 0.16);
+    --header-bg: #121a24;
+    --header-border: rgba(184, 199, 214, 0.16);
+    --header-link: #eaf0f5;
+    --header-link-muted: #b8c7d6;
+    --body-text: #b8c7d6;
+    --heading-text: #eaf0f5;
+    --link-blue: #8cc6ff;
+    --muted-text: #90a4b8;
+    --icon-muted: #9bb0c4;
+    --accent-soft-bg: rgba(240, 168, 180, 0.12);
+    --accent-soft-border: rgba(240, 168, 180, 0.36);
+    --accent-strong-border: rgba(240, 168, 180, 0.72);
+    --success-text: #8fd0a7;
+    --danger-text: #f0a8b4;
     --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 .underline {
     text-decoration: underline;
-  }
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.14em;
+}
 
 * {
     font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-text);
 }
 
 a {
@@ -47,9 +72,31 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: var(--link-blue);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
 a:focus-visible {
     outline: 2px dashed var(--accent);
     outline-offset: 2px;
+}
+
+h1.underline a,
+h2.underline a,
+h3.underline a,
+h4.underline a {
+    color: var(--link-blue);
+}
+
+h1.underline a:hover,
+h2.underline a:hover,
+h3.underline a:hover,
+h4.underline a:hover {
+    color: var(--accent);
 }
 
 body {
@@ -99,7 +146,7 @@ p,
     width: 2.1rem;
     height: 2.1rem;
     padding: 0;
-    border: 1px solid rgba(56, 100, 145, 0.16);
+    border: 1px solid var(--surface-border);
     border-radius: 999px;
     background: transparent;
     color: var(--header-link);
@@ -111,8 +158,8 @@ p,
 
 .theme-toggle:hover {
     transform: translateY(-1px);
-    background: rgba(229, 139, 154, 0.08);
-    border-color: rgba(229, 139, 154, 0.4);
+    background: var(--accent-soft-bg);
+    border-color: var(--accent-soft-border);
     color: var(--accent);
 }
 
@@ -177,6 +224,16 @@ p > a {
     font-weight: normal;
 }
 
+p > a:hover,
+p > a:visited {
+    color: var(--link-blue);
+}
+
+p > a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent-soft-border);
+}
+
 p {
     font-size: 1.15rem;
 }
@@ -201,7 +258,7 @@ p {
 .navbar-menu1 a.navbar-item:hover,
 .navbar-menu1 a.navbar-item.is-active {
     color: var(--accent);
-    border-bottom-color: rgba(229, 139, 154, 0.75);
+    border-bottom-color: var(--accent-strong-border);
 }
 
 .navbar-menu1 a.navbar-item.is-active {
@@ -223,7 +280,7 @@ ul.social-list > li {
 }
 
 ul.social-list svg {
-    fill: #7d96b0;
+    fill: var(--icon-muted);
 }
 
 ul.social-list svg:hover {
@@ -281,7 +338,7 @@ ul.social-list svg:hover {
     height: 240px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid rgba(90, 134, 175, 0.14);
+    border: 3px solid var(--surface-border);
     box-shadow: var(--shadow-soft);
 }
 
@@ -304,7 +361,7 @@ ul.social-list svg:hover {
     justify-content: center;
     width: 2.8rem;
     height: 2.8rem;
-    border: 1px solid rgba(90, 134, 175, 0.18);
+    border: 1px solid var(--surface-border);
     border-radius: 999px;
     background: transparent;
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -317,7 +374,7 @@ ul.social-list svg:hover {
 
 .hero-social-list a:hover {
     transform: translateY(-1px);
-    border-color: rgba(229, 139, 154, 0.4);
+    border-color: var(--accent-soft-border);
     background: var(--surface-bg);
 }
 
@@ -342,8 +399,8 @@ ul.social-list svg:hover {
     max-width: 56rem;
     margin: 0 auto 1.8rem;
     padding: 1.15rem 0;
-    border-top: 1px solid rgba(31, 78, 121, 0.16);
-    border-bottom: 1px solid rgba(31, 78, 121, 0.16);
+    border-top: 1px solid var(--surface-border);
+    border-bottom: 1px solid var(--surface-border);
 }
 
 .homepage-highlight-text {
@@ -383,7 +440,7 @@ ul.social-list svg:hover {
 
 .homepage-featured-card:hover {
     transform: translateY(-1px);
-    border-color: rgba(229, 139, 154, 0.32);
+    border-color: var(--accent-soft-border);
     background: var(--surface-muted);
 }
 
@@ -448,7 +505,7 @@ ul.social-list svg:hover {
 }
 
 .blog-card:hover {
-    border-color: rgba(229, 139, 154, 0.34);
+    border-color: var(--accent-soft-border);
     background: var(--surface-muted);
 }
 
@@ -526,7 +583,7 @@ ul.social-list svg:hover {
 .publication-filter-link:hover,
 .publication-filter-link.is-active {
     color: var(--accent);
-    border-color: rgba(229, 139, 154, 0.34);
+    border-color: var(--accent-soft-border);
     background: var(--surface-muted);
 }
 
@@ -560,7 +617,7 @@ ul.social-list svg:hover {
     margin-bottom: 1.8rem;
     text-align: left;
     padding: 1.6rem 1.75rem;
-    border: 1px solid rgba(112, 153, 196, 0.2);
+    border: 1px solid var(--surface-border);
     border-radius: 28px;
     background: var(--surface-bg);
     box-shadow: none;
@@ -577,7 +634,7 @@ ul.social-list svg:hover {
 .teaching-section {
     margin-top: 1.9rem;
     padding: 1.35rem 1.45rem 1.5rem;
-    border: 1px solid rgba(122, 160, 199, 0.18);
+    border: 1px solid var(--surface-border);
     border-radius: 24px;
     background: var(--surface-bg);
     box-shadow: none;
@@ -586,7 +643,7 @@ ul.social-list svg:hover {
 .teaching-section-title,
 .teaching-subsection-title {
     margin: 0;
-    color: #234a6d;
+    color: var(--heading-text);
     font-family: var(--font-family);
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -601,7 +658,7 @@ ul.social-list svg:hover {
     margin-top: 1rem;
     font-size: 1rem;
     line-height: 1.45;
-    color: #5f82a2;
+    color: var(--muted-text);
 }
 
 .teaching-body-copy,
@@ -626,24 +683,24 @@ ul.social-list svg:hover {
 }
 
 .teaching-course-name {
-    color: #203a57;
+    color: var(--heading-text);
 }
 
 .teaching-course-term {
-    color: #6d8aa6;
+    color: var(--muted-text);
     margin-left: 0.35rem;
 }
 
 .teaching-inline-link {
     color: var(--link-blue);
     text-decoration: none;
-    border-bottom: 1px solid rgba(47, 105, 163, 0.22);
+    border-bottom: 1px solid var(--surface-border);
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .teaching-inline-link:hover {
     color: var(--accent);
-    border-color: rgba(229, 139, 154, 0.42);
+    border-color: var(--accent-soft-border);
     text-decoration: none;
 }
 
@@ -662,7 +719,7 @@ ul.social-list svg:hover {
 }
 
 .publication:hover {
-    border-color: rgba(229, 139, 154, 0.3);
+    border-color: var(--accent-soft-border);
     background: var(--surface-muted);
 }
 
@@ -679,7 +736,7 @@ ul.social-list svg:hover {
     padding: 0;
     border-radius: 0;
     background: transparent;
-    color: #7a93aa;
+    color: var(--muted-text);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -729,7 +786,7 @@ div.talk > h2.external-links a:hover,
 div.podcast > h2.external-links a:hover,
 div.publication > h2.external-links a:hover {
     text-decoration: underline;
-    color: #315f8c;
+    color: var(--accent);
 }
 
 .news-list {
@@ -771,11 +828,11 @@ div.publication > h2.external-links a:hover {
 }
 
 .news-kind-text-good {
-    color: #2f7a32;
+    color: var(--success-text);
 }
 
 .news-kind-text-bad {
-    color: #b13a32;
+    color: var(--danger-text);
 }
 
 .news-kind-text-neutral {
@@ -837,11 +894,11 @@ h1.publication-title strong {
 h1.talk-title:hover strong,
 h1.podcast-title:hover strong,
 h1.publication-title:hover strong {
-    color: #315f8c;
+    color: var(--accent);
 }
 
 .publication-title strong {
-    color: #1f4e79;
+    color: var(--heading-text);
     font-size: 0.98rem;
     line-height: 1.42;
     letter-spacing: -0.01em;
@@ -849,7 +906,7 @@ h1.publication-title:hover strong {
 
 .publication-authors {
     margin: 0.65rem 0 0;
-    color: #62809d;
+    color: var(--body-text);
     font-size: 0.84rem;
     line-height: 1.6;
 }
@@ -866,7 +923,7 @@ h1.publication-title:hover strong {
 .publication-footer {
     margin-top: 0.8rem;
     padding-top: 0.8rem;
-    border-top: 1px solid rgba(90, 134, 175, 0.12);
+    border-top: 1px solid var(--surface-border);
 }
 
 .publication-links {
@@ -883,7 +940,7 @@ h1.publication-title:hover strong {
     border: 1px solid var(--surface-border);
     border-radius: 999px;
     background: var(--surface-bg);
-    color: #3b648a;
+    color: var(--link-blue);
     font-family: var(--font-family);
     font-size: 0.7rem;
     font-weight: 600;
@@ -899,7 +956,7 @@ h1.publication-title:hover strong {
 
 .publication-links a:hover {
     color: var(--accent);
-    border-color: rgba(229, 139, 154, 0.32);
+    border-color: var(--accent-soft-border);
     background: var(--surface-muted);
     text-decoration: none;
 }

@@ -1,6 +1,59 @@
 {
     "publications": [
         {
+            "title": "Measuring biases in AI-generated co-authorship networks",
+            "theme": "authenticity-trust-ai-systems",
+            "authors": [
+                "Ghazal Kalhor",
+                "Shiza Ali",
+                "Afra Mashhadi"
+            ],
+            "year": 2025,
+            "venue": "EPJ Data Science Springer Journal",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://link.springer.com/content/pdf/10.1140/epjds/s13688-025-00555-9.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Evolving Hate Speech Online: An Adaptive Framework for Detection and Mitigation",
+            "theme": "online-safety-platform-harm",
+            "authors": [
+                "Shiza Ali",
+                "Jeremy Blackburn", 
+                "Gianluca Stringhini"
+            ],
+            "year": 2025,
+            "venue": "arXiv preprint",
+            "urls": [
+                {
+                    "name": "Preprint",
+                    "url": "https://arxiv.org/abs/2502.10921"
+                }
+            ]
+        },
+        {
+            "title": "Unraveling the Web of Disinformation: Exploring the Larger Context of State-Sponsored Influence Campaigns on Twitter",
+            "theme": "online-safety-platform-harm",
+            "authors": [
+                "Mohammad Hammas Saeed",
+                "Shiza Ali",
+                "Pujan Paudel",
+                "Jeremy Blackburn", 
+                "Gianluca Stringhini"
+            ],
+            "year": 2024,
+            "venue": "Proceedings of the 27th International Symposium on Research in Attacks, Intrusions and Defenses (RAID '24)",
+            "urls": [
+                {
+                    "name": "published",
+                    "url": "https://doi.org/10.1145/3678890.3678911"
+                }
+            ]
+        },
+        {
             "title": "Getting Meta: A Multimodal Approach for Detecting Unsafe Conversations within Instagram Direct Messages of Youth",
             "theme": "online-safety-platform-harm",
             "authors": [
