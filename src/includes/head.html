@@ -2,8 +2,14 @@
 <script>
   (() => {
     const key = 'theme';
-    const saved = localStorage.getItem(key);
-    const theme = saved || 'light';
+    const defaultTheme = 'light';
+    let saved = null;
+
+    try {
+      saved = localStorage.getItem(key);
+    } catch (e) {}
+
+    const theme = ['light', 'dark'].includes(saved) ? saved : defaultTheme;
     document.documentElement.dataset.theme = theme;
     document.documentElement.style.colorScheme = theme;
   })();
