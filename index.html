@@ -7,8 +7,14 @@
   <script>
     (() => {
       const key = 'theme';
-      const saved = localStorage.getItem(key);
-      const theme = saved || 'light';
+      const defaultTheme = 'light';
+      let saved = null;
+
+      try {
+        saved = localStorage.getItem(key);
+      } catch (e) {}
+
+      const theme = ['light', 'dark'].includes(saved) ? saved : defaultTheme;
       document.documentElement.dataset.theme = theme;
       document.documentElement.style.colorScheme = theme;
     })();
@@ -339,6 +345,11 @@
           <h1 class="section-title">My Blog</h1>
           <div class="homepage-panel-body">
             <div class="blog-list" role="list">
+              <a class="blog-card" role="listitem" href="/blog/ai-alignment-is-about-us/">
+                <span class="blog-card-kicker">New Essay</span>
+                <span class="blog-card-title">AI Alignment Is Not Just About Machines. It Is About Us.</span>
+                <span class="blog-card-meta">AI alignment as a human-centered problem of values, incentives, and institutions</span>
+              </a>
               <a class="blog-card" role="listitem" href="https://medium.com/acm-cscw/unlocking-the-power-of-multimodal-analysis-for-safer-online-spaces-288a8802708a">
                 <span class="blog-card-kicker">Featured on Medium</span>
                 <span class="blog-card-title">Unlocking the Power of Multimodal Analysis for Safer Online Spaces</span>

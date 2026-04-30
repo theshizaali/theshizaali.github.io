@@ -7,8 +7,14 @@
   <script>
     (() => {
       const key = 'theme';
-      const saved = localStorage.getItem(key);
-      const theme = saved || 'light';
+      const defaultTheme = 'light';
+      let saved = null;
+
+      try {
+        saved = localStorage.getItem(key);
+      } catch (e) {}
+
+      const theme = ['light', 'dark'].includes(saved) ? saved : defaultTheme;
       document.documentElement.dataset.theme = theme;
       document.documentElement.style.colorScheme = theme;
     })();
@@ -103,6 +109,20 @@
       <p>&nbsp;</p>
     </div>
     <div class="container">
+      <div class="blog-index-entry">
+          <p class="blog-index-date">April 30, 2026</p>
+          <h1 class="is-size-4 underline">
+            <a href="/blog/ai-alignment-is-about-us/">AI Alignment Is Not Just About Machines. It Is About Us.</a>
+        </h1>
+        <p class="introduction mt-1">
+          A reflective essay on AI alignment as a human-centered problem: how AI systems scale human choices, incentives, values, and blind spots.
+        </p>
+      </div>
+
+      <div>
+        <p>&nbsp;</p>
+      </div>
+
       <div>
           <h1 class="is-size-4 underline">
             <a href="\research">Tackling Toxicity Online: Developing Comprehensive Approaches for Online Risk Detection</a>.
