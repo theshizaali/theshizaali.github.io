@@ -15,6 +15,190 @@
   <meta name="twitter:title" content="Who Gets to See the Prompt?" />
   <meta name="twitter:description" content="A research-forward essay on workplace AI visibility, monitoring, and shared AI workspaces." />
   <script> PAGE_NAME = 'blog'; </script>
+  <style>
+    .blog-post-chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 0.25rem 0 1.35rem;
+      padding: 0;
+    }
+
+    .blog-post-chip-list li {
+      list-style: none;
+      padding: 0.38rem 0.62rem;
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      background: var(--surface-bg);
+      color: var(--heading-text);
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .blog-post-frill {
+      margin: 2rem 0;
+    }
+
+    .blog-post-frill h2 {
+      margin-top: 0;
+    }
+
+    .blog-post-visibility-ladder {
+      display: grid;
+      gap: 0.72rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .blog-post-visibility-ladder li {
+      display: grid;
+      grid-template-columns: minmax(8rem, 0.38fr) 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      list-style: none;
+      padding: 0.85rem 0.95rem;
+      border: 1px solid var(--surface-border);
+      border-left: 4px solid var(--link-blue);
+      border-radius: 8px;
+      background: var(--surface-bg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .blog-post-visibility-ladder li:nth-child(even) {
+      border-left-color: var(--accent);
+    }
+
+    .visibility-label {
+      color: var(--heading-text);
+      font-size: 0.98rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .visibility-detail {
+      color: var(--body-text);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .blog-post-interface-figure {
+      margin: 1.8rem 0 2rem;
+    }
+
+    .mock-ai-workspace {
+      overflow: hidden;
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      background: var(--surface-bg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mock-ai-topbar,
+    .mock-ai-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      padding: 0.78rem 0.95rem;
+      color: var(--heading-text);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .mock-ai-topbar {
+      border-bottom: 1px solid var(--surface-border);
+      background: var(--surface-muted);
+    }
+
+    .mock-ai-controls {
+      border-top: 1px solid var(--surface-border);
+      background: var(--accent-soft-bg);
+      color: var(--body-text);
+      font-size: 0.85rem;
+    }
+
+    .mock-ai-thread {
+      display: grid;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    .mock-ai-thread p {
+      max-width: 34rem;
+      margin: 0;
+      padding: 0.75rem 0.85rem;
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .mock-ai-user {
+      justify-self: start;
+      background: var(--surface-muted);
+    }
+
+    .mock-ai-assistant {
+      justify-self: end;
+      background: var(--accent-soft-bg);
+    }
+
+    .blog-post-interface-figure figcaption {
+      margin-top: 0.65rem;
+      color: var(--muted-text);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .blog-post-question-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin: 1.4rem 0 1.55rem;
+    }
+
+    .blog-post-question {
+      padding: 0.92rem 1rem;
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      background: var(--surface-bg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .blog-post-question strong,
+    .blog-post-question span {
+      display: block;
+    }
+
+    .blog-post-question strong {
+      margin-bottom: 0.38rem;
+      color: var(--heading-text);
+      font-size: 0.96rem;
+      line-height: 1.35;
+    }
+
+    .blog-post-question span {
+      color: var(--body-text);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 768px) {
+      .blog-post-visibility-ladder li,
+      .blog-post-question-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mock-ai-topbar,
+      .mock-ai-controls {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -50,6 +234,10 @@
           </p>
 
           <p>
+            I have had my own small version of this feeling: realizing after the fact that I put more work context into an AI prompt than I meant to. It was not dramatic, and nothing bad happened. But it made the boundary feel suddenly visible. The tool felt like a private scratchpad until I remembered that accounts, workspaces, logs, and organizational policies sit around the conversation too.
+          </p>
+
+          <p>
             Generative AI tools are being adopted inside shared organizational environments: team workspaces, enterprise accounts, admin dashboards, shared projects, collaborative chat histories, and internal AI platforms. In these settings, AI use may not be fully individual. Prompts, outputs, files, usage patterns, or metadata may be visible to someone else: a teammate, a manager, an administrator, or the organization itself.
           </p>
 
@@ -58,7 +246,7 @@
           </blockquote>
 
           <p>
-            That changes the meaning of AI disclosure.
+            Once AI use happens inside workplace infrastructure, disclosure shifts from a moment of personal admission to a question of system design: what gets logged, who can access it, and how clearly any of that is explained to the people using the tool.
           </p>
 
           <p>
@@ -70,7 +258,7 @@
           </p>
 
           <p>
-            And that uncertainty matters.
+            Uncertainty itself can change how people use the tool.
           </p>
 
           <h2>What Might Be Visible?</h2>
@@ -117,6 +305,10 @@
                 <span class="visibility-label">My organization</span>
                 <span class="visibility-detail">AI use becomes part of infrastructure, policy, metrics, and workplace governance.</span>
               </li>
+              <li>
+                <span class="visibility-label">IT or admins</span>
+                <span class="visibility-detail">Visibility may be framed as maintenance, security, or compliance, but it can still feel like surveillance.</span>
+              </li>
             </ol>
           </div>
 
@@ -132,6 +324,16 @@
             Visibility can shape behavior before anyone is formally punished or rewarded.
           </p>
 
+          <h2>Managers Are Users Too</h2>
+
+          <p>
+            I also think the manager view matters here. What can managers actually see in these systems? What do they usually look at? Do they understand the trade-offs that come with making AI use visible? A dashboard that looks useful for adoption tracking may also make employees feel watched while they are still learning how to use the tool.
+          </p>
+
+          <p>
+            The same question applies to other roles, especially IT staff, administrators, team leads, and upper management. Visibility can travel sideways and upward in ways users may not expect. Managers may also have their own version of the concern: are they comfortable with their AI use being visible to other managers, senior leadership, or IT?
+          </p>
+
           <figure class="blog-post-interface-figure">
             <div class="mock-ai-workspace" role="img" aria-label="Mock AI workspace showing a prompt, a response, and visibility settings">
               <div class="mock-ai-topbar">
@@ -144,6 +346,7 @@
               </div>
               <div class="mock-ai-controls">
                 <span>Visible to: manager summary</span>
+                <span>Admin access: enabled</span>
                 <span>Usage: weekly dashboard</span>
               </div>
             </div>
@@ -154,10 +357,14 @@
             People may censor their prompts. They may avoid sensitive but legitimate tasks. They may move work into personal accounts. They may stop using AI for early-stage thinking. Or they may overuse it because the organization seems to reward visible AI adoption.
           </p>
 
+          <p>
+            I am also interested in boundary crossing: the messy moments when people accidentally or intentionally put personal information into workplace tools, or use a personal AI subscription for work because it feels faster, safer, more familiar, or less monitored. Those moments are not only rule violations or user mistakes. They reveal where people think the boundaries are, where the tools make those boundaries blurry, and what people are trying to protect.
+          </p>
+
           <h2>The Research I Am Starting</h2>
 
           <p>
-            I am doing research on this: how people understand visibility, monitoring, and surveillance in collaborative workplace AI systems. I am interested in what workers believe is shared when they use AI at work, how they feel about that visibility, and how it changes their behavior.
+            I am doing research on this: how people understand visibility, monitoring, and surveillance in collaborative workplace AI systems. I am interested in what workers believe is shared when they use AI at work, how managers and administrators understand the visibility they are given, and how all of this changes behavior.
           </p>
 
           <p>
@@ -185,14 +392,18 @@
               <strong>Governance</strong>
               <span>How do policies, dashboards, metrics, and leaderboards shape trust and usage?</span>
             </div>
+            <div class="blog-post-question">
+              <strong>Oversight</strong>
+              <span>What can managers, IT staff, and admins see, and how do they interpret the trade-offs?</span>
+            </div>
           </div>
 
           <p>
-            For this project, I plan to conduct semi-structured interviews with roughly 25 to 35 employees who use AI tools in workplace settings. I am especially interested in people with experience using shared or enterprise AI systems, but I also want to include people who are unsure whether their AI use is visible. That uncertainty is part of the problem.
+            For this project, I plan to conduct semi-structured interviews with roughly 25 to 35 people who use or oversee AI tools in workplace settings. I am especially interested in people with experience using shared or enterprise AI systems, but I also want to include people who are unsure whether their AI use is visible. That uncertainty is part of the problem.
           </p>
 
           <p>
-            The interviews will focus on how participants understand what is shared in these systems: prompts, outputs, files, chat histories, and usage metadata. I will ask what they know about organizational policies and monitoring practices, and how they feel about different forms of visibility, such as peer access versus managerial oversight.
+            The interviews will focus on how participants understand what is shared in these systems: prompts, outputs, files, chat histories, and usage metadata. I will ask what they know about organizational policies and monitoring practices, and how they feel about different forms of visibility, such as peer access, managerial oversight, administrator access, and organization-wide reporting.
           </p>
 
           <p>
@@ -224,11 +435,7 @@
           </p>
 
           <p>
-            And those adaptations will shape what workplace AI becomes.
-          </p>
-
-          <p>
-            Not just technically, but socially.
+            Those adaptations will shape what workplace AI becomes: not only which tools organizations buy or configure, but how safe people feel experimenting, learning, making mistakes, asking for help, and doing the quiet thinking that happens before work is ready to be seen.
           </p>
         </div>
       </article>
