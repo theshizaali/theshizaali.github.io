@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Three user groups in AI chatbot safety perceptions</title>
+  <desc id="desc">A data figure comparing Hesitant Skeptics, Cautious Trusters, and Confident Adopters in the SOUPS 2025 study.</desc>
+  <style>
+    .bg { fill: #fbfaf7; }
+    .card { fill: #ffffff; stroke: #d8ddd7; stroke-width: 2; }
+    .title { fill: #1e2a32; font-family: Inter, Arial, sans-serif; font-size: 42px; font-weight: 700; }
+    .subtitle { fill: #58636b; font-family: Inter, Arial, sans-serif; font-size: 22px; }
+    .group { fill: #1e2a32; font-family: Inter, Arial, sans-serif; font-size: 27px; font-weight: 700; }
+    .share { fill: #58636b; font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 650; }
+    .body { fill: #2d3b43; font-family: Inter, Arial, sans-serif; font-size: 19px; }
+    .label { fill: #24313a; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 650; }
+    .percent { fill: #1e2a32; font-family: Inter, Arial, sans-serif; font-size: 29px; font-weight: 700; }
+    .bar-bg { fill: #e9ece8; }
+    .hs { fill: #d95f4c; }
+    .ct { fill: #d7a225; }
+    .ca { fill: #2f8f83; }
+    .footnote { fill: #657079; font-family: Inter, Arial, sans-serif; font-size: 17px; }
+  </style>
+
+  <rect class="bg" width="1200" height="720" />
+  <text class="title" x="60" y="78">Three ways people read chatbot safety</text>
+  <text class="subtitle" x="60" y="116">Latent class analysis found groups with different mixes of risk, trust, and fairness.</text>
+
+  <rect class="card" x="60" y="160" width="320" height="470" rx="8" />
+  <rect class="card" x="440" y="160" width="320" height="470" rx="8" />
+  <rect class="card" x="820" y="160" width="320" height="470" rx="8" />
+
+  <rect class="hs" x="60" y="160" width="320" height="8" />
+  <rect class="ct" x="440" y="160" width="320" height="8" />
+  <rect class="ca" x="820" y="160" width="320" height="8" />
+
+  <text class="group" x="90" y="224">Hesitant Skeptics</text>
+  <text class="share" x="90" y="258">n = 37, 30%</text>
+  <text class="body" x="90" y="316">
+    <tspan x="90" dy="0">Highest risk concerns,</tspan>
+    <tspan x="90" dy="30">especially about</tspan>
+    <tspan x="90" dy="30">misinformation and</tspan>
+    <tspan x="90" dy="30">discrimination.</tspan>
+  </text>
+  <text class="label" x="90" y="455">Frequent chatbot use</text>
+  <rect class="bar-bg" x="90" y="480" width="240" height="20" rx="8" />
+  <rect class="hs" x="90" y="480" width="98" height="20" rx="8" />
+  <text class="percent" x="90" y="552">41%</text>
+  <text class="body" x="90" y="588">High risk, low trust</text>
+
+  <text class="group" x="470" y="224">Cautious Trusters</text>
+  <text class="share" x="470" y="258">n = 42, 34%</text>
+  <text class="body" x="470" y="316">
+    <tspan x="470" dy="0">Middle ground: fairly</tspan>
+    <tspan x="470" dy="30">positive on trust and</tspan>
+    <tspan x="470" dy="30">fairness, but still</tspan>
+    <tspan x="470" dy="30">aware of risk.</tspan>
+  </text>
+  <text class="label" x="470" y="455">Frequent chatbot use</text>
+  <rect class="bar-bg" x="470" y="480" width="240" height="20" rx="8" />
+  <rect class="ct" x="470" y="480" width="149" height="20" rx="8" />
+  <text class="percent" x="470" y="552">62%</text>
+  <text class="body" x="470" y="588">Medium risk, higher trust</text>
+
+  <text class="group" x="850" y="224">Confident Adopters</text>
+  <text class="share" x="850" y="258">n = 44, 36%</text>
+  <text class="body" x="850" y="316">
+    <tspan x="850" dy="0">Lowest risk concerns,</tspan>
+    <tspan x="850" dy="30">highest trust and</tspan>
+    <tspan x="850" dy="30">fairness ratings, and</tspan>
+    <tspan x="850" dy="30">high politeness scores.</tspan>
+  </text>
+  <text class="label" x="850" y="455">Frequent chatbot use</text>
+  <rect class="bar-bg" x="850" y="480" width="240" height="20" rx="8" />
+  <rect class="ca" x="850" y="480" width="180" height="20" rx="8" />
+  <text class="percent" x="850" y="552">75%</text>
+  <text class="body" x="850" y="588">Low risk, high trust</text>
+
+  <text class="footnote" x="60" y="680">Source: Tolsdorf et al., SOUPS 2025. Frequent use means more than once per week.</text>
+</svg>

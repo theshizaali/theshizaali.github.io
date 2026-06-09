@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Safety perceptions split into risk, trust, and fairness</title>
+  <desc id="desc">A data figure showing median ratings from one to five for AI chatbot risk, trust, and fairness dimensions.</desc>
+  <style>
+    .bg { fill: #fbfaf7; }
+    .panel { fill: #ffffff; stroke: #d8ddd7; stroke-width: 2; }
+    .title { fill: #1e2a32; font-family: Inter, Arial, sans-serif; font-size: 42px; font-weight: 700; }
+    .subtitle { fill: #58636b; font-family: Inter, Arial, sans-serif; font-size: 22px; }
+    .panel-title { fill: #1e2a32; font-family: Inter, Arial, sans-serif; font-size: 30px; font-weight: 700; }
+    .panel-note { fill: #58636b; font-family: Inter, Arial, sans-serif; font-size: 18px; }
+    .label { fill: #24313a; font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 650; }
+    .value { fill: #24313a; font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 700; }
+    .tick { fill: #77828a; font-family: Inter, Arial, sans-serif; font-size: 15px; }
+    .axis { stroke: #c9d0cc; stroke-width: 3; stroke-linecap: round; }
+    .grid { stroke: #e5e9e5; stroke-width: 2; }
+    .risk { fill: #d95f4c; }
+    .trust { fill: #2f8f83; }
+    .fair { fill: #d7a225; }
+    .footnote { fill: #657079; font-family: Inter, Arial, sans-serif; font-size: 17px; }
+  </style>
+
+  <rect class="bg" width="1200" height="760" rx="0" />
+  <text class="title" x="60" y="78">What people mean by &quot;safe&quot;</text>
+  <text class="subtitle" x="60" y="116">Median ratings from Tolsdorf et al., SOUPS 2025. One word breaks into several judgments.</text>
+
+  <rect class="panel" x="60" y="160" width="320" height="500" rx="8" />
+  <rect class="panel" x="440" y="160" width="320" height="500" rx="8" />
+  <rect class="panel" x="820" y="160" width="320" height="500" rx="8" />
+
+  <text class="panel-title" x="92" y="212">Risk</text>
+  <text class="panel-note" x="92" y="242">How likely is harm?</text>
+  <line class="axis" x1="100" y1="568" x2="336" y2="568" />
+  <line class="grid" x1="100" y1="560" x2="100" y2="576" />
+  <line class="grid" x1="159" y1="560" x2="159" y2="576" />
+  <line class="grid" x1="218" y1="560" x2="218" y2="576" />
+  <line class="grid" x1="277" y1="560" x2="277" y2="576" />
+  <line class="grid" x1="336" y1="560" x2="336" y2="576" />
+  <text class="tick" x="96" y="600">1</text>
+  <text class="tick" x="155" y="600">2</text>
+  <text class="tick" x="214" y="600">3</text>
+  <text class="tick" x="273" y="600">4</text>
+  <text class="tick" x="332" y="600">5</text>
+
+  <text class="label" x="92" y="296">Misinformation</text>
+  <text class="value" x="317" y="296">3.0</text>
+  <line class="axis" x1="100" y1="322" x2="336" y2="322" />
+  <circle class="risk" cx="218" cy="322" r="13" />
+
+  <text class="label" x="92" y="382">Discrimination</text>
+  <text class="value" x="317" y="382">2.0</text>
+  <line class="axis" x1="100" y1="408" x2="336" y2="408" />
+  <circle class="risk" cx="159" cy="408" r="13" />
+
+  <text class="label" x="92" y="468">Offensive language</text>
+  <text class="value" x="317" y="468">1.5</text>
+  <line class="axis" x1="100" y1="494" x2="336" y2="494" />
+  <circle class="risk" cx="130" cy="494" r="13" />
+
+  <text class="panel-title" x="472" y="212">Trust</text>
+  <text class="panel-note" x="472" y="242">Do I trust it?</text>
+  <line class="axis" x1="480" y1="568" x2="716" y2="568" />
+  <line class="grid" x1="480" y1="560" x2="480" y2="576" />
+  <line class="grid" x1="539" y1="560" x2="539" y2="576" />
+  <line class="grid" x1="598" y1="560" x2="598" y2="576" />
+  <line class="grid" x1="657" y1="560" x2="657" y2="576" />
+  <line class="grid" x1="716" y1="560" x2="716" y2="576" />
+  <text class="tick" x="476" y="600">1</text>
+  <text class="tick" x="535" y="600">2</text>
+  <text class="tick" x="594" y="600">3</text>
+  <text class="tick" x="653" y="600">4</text>
+  <text class="tick" x="712" y="600">5</text>
+
+  <text class="label" x="472" y="296">Benevolence</text>
+  <text class="value" x="697" y="296">3.3</text>
+  <line class="axis" x1="480" y1="322" x2="716" y2="322" />
+  <circle class="trust" cx="617" cy="322" r="13" />
+
+  <text class="label" x="472" y="382">Reliability</text>
+  <text class="value" x="697" y="382">3.0</text>
+  <line class="axis" x1="480" y1="408" x2="716" y2="408" />
+  <circle class="trust" cx="598" cy="408" r="13" />
+
+  <text class="label" x="472" y="468">Low personal risk</text>
+  <text class="value" x="697" y="468">2.7</text>
+  <line class="axis" x1="480" y1="494" x2="716" y2="494" />
+  <circle class="trust" cx="578" cy="494" r="13" />
+
+  <text class="panel-title" x="852" y="212">Fairness</text>
+  <text class="panel-note" x="852" y="242">Does it seem fair?</text>
+  <line class="axis" x1="860" y1="568" x2="1096" y2="568" />
+  <line class="grid" x1="860" y1="560" x2="860" y2="576" />
+  <line class="grid" x1="919" y1="560" x2="919" y2="576" />
+  <line class="grid" x1="978" y1="560" x2="978" y2="576" />
+  <line class="grid" x1="1037" y1="560" x2="1037" y2="576" />
+  <line class="grid" x1="1096" y1="560" x2="1096" y2="576" />
+  <text class="tick" x="856" y="600">1</text>
+  <text class="tick" x="915" y="600">2</text>
+  <text class="tick" x="974" y="600">3</text>
+  <text class="tick" x="1033" y="600">4</text>
+  <text class="tick" x="1092" y="600">5</text>
+
+  <text class="label" x="852" y="318">Politeness</text>
+  <text class="value" x="1077" y="318">4.0</text>
+  <line class="axis" x1="860" y1="344" x2="1096" y2="344" />
+  <circle class="fair" cx="1037" cy="344" r="13" />
+
+  <text class="label" x="852" y="434">Decision integrity</text>
+  <text class="value" x="1077" y="434">3.4</text>
+  <line class="axis" x1="860" y1="460" x2="1096" y2="460" />
+  <circle class="fair" cx="1000" cy="460" r="13" />
+
+  <text class="footnote" x="60" y="706">Source: &quot;Safety Perceptions of Generative AI Conversational Agents&quot; (SOUPS 2025), n = 123 U.S. participants.</text>
+</svg>

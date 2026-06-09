@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>"Safe" Is Not One Feeling | Shiza Ali</title>
+  <!--(bake /src/includes/head.html)-->
+  <meta name="description" content="A plain-language research note on a SOUPS 2025 study showing that people do not judge AI chatbot safety as one thing." />
+  <link rel="canonical" href="https://theshizaali.github.io/blog/safe-is-not-one-feeling/" />
+  <meta property="og:title" content="&quot;Safe&quot; Is Not One Feeling" />
+  <meta property="og:description" content="A SOUPS 2025 study shows why AI chatbot safety is not one score: people separate misinformation from discrimination, politeness from fairness, and trust from personal risk." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://theshizaali.github.io/blog/safe-is-not-one-feeling/" />
+  <meta property="og:image" content="https://theshizaali.github.io/img/blog/safe-is-not-one-feeling/safety-perceptions-map.svg" />
+  <meta property="article:published_time" content="2026-06-09" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="&quot;Safe&quot; Is Not One Feeling" />
+  <meta name="twitter:description" content="People do not judge AI chatbot safety as one thing. They split it into several smaller, more useful questions." />
+  <meta name="twitter:image" content="https://theshizaali.github.io/img/blog/safe-is-not-one-feeling/safety-perceptions-map.svg" />
+  <script> PAGE_NAME = 'blog'; </script>
+</head>
+
+<body>
+  <!--(bake /src/includes/navbar.html)-->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <article class="blog-post-page">
+        <a class="blog-post-back" href="/blog/">Back to Blog</a>
+
+        <header class="blog-post-header">
+          <p class="blog-post-date">June 9, 2026</p>
+          <h1 class="blog-post-title">&ldquo;Safe&rdquo; Is Not One Feeling</h1>
+          <p class="blog-post-description">
+            We often ask whether people think AI chatbots are safe. A better question is: safe how, and safe for whom?
+          </p>
+        </header>
+
+        <div class="blog-post-content">
+          <p>
+            We tend to talk about AI safety in blunt language. A system is safe or unsafe. Users trust it or they do not. A survey gives us a percentage, a headline turns that into a mood, and suddenly &ldquo;the public&rdquo; is treated like one person with one opinion.
+          </p>
+
+          <p>
+            That has always felt too simple to me. Safety is not one feeling when you are actually using a chatbot. You might worry about bad medical advice, but not about offensive language. You might find the tone polite while still wondering whether the answer is fair. You might use the tool every day and still avoid giving it anything personal.
+          </p>
+
+          <p>
+            A SOUPS 2025 paper, <a href="https://www.usenix.org/conference/soups2025/presentation/tolsdorf" target="_blank" rel="noopener noreferrer">&ldquo;Safety Perceptions of Generative AI Conversational Agents&rdquo;</a>, puts numbers around that messiness. Jan Tolsdorf, Alan F. Luo, Monica Kodwani, Junho Eum, Mahmood Sharif, Michelle L. Mazurek, and Adam J. Aviv surveyed 123 U.S. participants about how they perceive the safety of AI chatbots. Several of the authors are at George Washington University, and the work was supported through <a href="https://www.trails.umd.edu/" target="_blank" rel="noopener noreferrer">TRAILS</a>, the NSF Institute for Trustworthy AI in Law &amp; Society. It sits close to questions I keep coming back to in my own research: how people decide what AI systems are doing, when they feel comfortable using them, and when that comfort is earned.
+          </p>
+
+          <h2>Safety breaks into smaller questions</h2>
+
+          <p>
+            The paper starts with a useful move: it does not assume that risk, trust, and fairness are each one clean thing. The authors used factor analysis to see how people grouped their answers. The result was less tidy and more believable.
+          </p>
+
+          <p>
+            Risk split into three worries: discrimination, misinformation or unhelpfulness, and offensive language. Trust split into benevolence, reliability, and low personal risk. Fairness split into decision-making integrity and politeness. That last split matters. A chatbot can sound respectful and still leave someone unsure whether its judgments are fair.
+          </p>
+
+          <figure class="blog-post-figure blog-post-data-figure">
+            <img src="/img/blog/safe-is-not-one-feeling/safety-perceptions-map.svg" alt="Data figure showing median ratings for risk, trust, and fairness dimensions in a SOUPS 2025 study of AI chatbot safety perceptions." loading="lazy" />
+            <figcaption>Median ratings from the study. The scales all run from 1 to 5, but the meaning changes by construct: risk is likelihood of harm, trust is agreement with trust statements, and fairness is agreement with fairness statements.</figcaption>
+          </figure>
+
+          <p>
+            The strongest risk concern was not slurs or obviously offensive replies. It was misinformation: the quiet, plausible answer that may be wrong. Offensive language had the lowest median risk rating. Discrimination sat in between. In other words, people were not just asking, &ldquo;Will this chatbot say something awful?&rdquo; They were also asking, &ldquo;Will it confidently steer me wrong?&rdquo;
+          </p>
+
+          <p>
+            The fairness results are just as useful. Participants gave politeness a higher median rating than decision-making integrity. That sounds small, but it names a problem I see in a lot of AI product language. A system can be smooth, friendly, and careful in tone without being fair in substance. Politeness is not the same as justice. It is not even the same as trust.
+          </p>
+
+          <blockquote class="blog-post-pullquote">
+            <p>A chatbot can feel polite and still leave people unsure whether it is fair.</p>
+          </blockquote>
+
+          <p>
+            This is why a single safety score does not tell us much. If a company says people &ldquo;trust&rdquo; its chatbot, I want to know what kind of trust. Trust that it wants to help? Trust that it is reliable? Trust that using it will not expose the user to harm? Those are different judgments, and users seem to know that even when our dashboards do not.
+          </p>
+
+          <h2>There is no average user</h2>
+
+          <p>
+            The second part of the paper looks at how these perceptions cluster across people. Using latent class analysis, the authors identify three groups: Hesitant Skeptics, Cautious Trusters, and Confident Adopters.
+          </p>
+
+          <figure class="blog-post-figure blog-post-data-figure">
+            <img src="/img/blog/safe-is-not-one-feeling/user-groups.svg" alt="Data figure comparing the three user groups from the SOUPS 2025 study: Hesitant Skeptics, Cautious Trusters, and Confident Adopters." loading="lazy" />
+            <figcaption>The study found three groups, not one average user. Frequent chatbot use rises from the skeptical group to the confident group, but usage does not explain everything.</figcaption>
+          </figure>
+
+          <p>
+            The Hesitant Skeptics had the highest risk concerns and the lowest trust and fairness ratings. The Cautious Trusters were in the middle: fairly positive about trust and fairness, but still alert to risk. The Confident Adopters had the lowest risk concerns and the highest trust and fairness ratings.
+          </p>
+
+          <p>
+            Usage frequency was the clearest separator. Only 41% of Hesitant Skeptics reported using AI chatbots more than once a week, compared with 62% of Cautious Trusters and 75% of Confident Adopters. Familiarity seems to make chatbots feel safer.
+          </p>
+
+          <p>
+            But that is not the whole story. The paper notes that 41% of Hesitant Skeptics still used chatbots more than once a week, while 25% of Confident Adopters used them less frequently. So the easy story, &ldquo;people worry because they do not use the tools enough,&rdquo; does not hold. Some people use AI often and remain wary. Some people use it rarely and feel fine about it. Comfort and frequency overlap, but they are not the same thing.
+          </p>
+
+          <h2>Who gets to feel safe?</h2>
+
+          <p>
+            The demographic findings are the part I would handle most carefully. This was an exploratory study with 123 U.S. participants, and the authors are clear about the limits of that sample. The results should not be turned into a universal claim about whole communities.
+          </p>
+
+          <p>
+            Still, the patterns are worth taking seriously. Participants who identified as non-heterosexual were more likely to be Hesitant Skeptics and less likely to be Confident Adopters. Participants with higher incomes and participants who identified as non-White were more likely to be Confident Adopters. Older participants were underrepresented among Confident Adopters. Gender, disability status, and education level were not significantly associated with group membership.
+          </p>
+
+          <p>
+            The point is not to flatten any group into a single attitude. It is to avoid the lazy interpretation that skeptical users simply need more exposure. Skepticism can be a reasonable response to experience. If your identity has often been misread, stereotyped, or mishandled by technical systems, caution is not ignorance. It is data.
+          </p>
+
+          <blockquote class="blog-post-pullquote">
+            <p>Skepticism is not a failure to understand the technology. Sometimes it is a clear read of what the technology has failed to understand.</p>
+          </blockquote>
+
+          <h2>What I take from it</h2>
+
+          <p>
+            First, we should stop asking for one trust score. If people separate misinformation from discrimination, politeness from fairness, and benevolence from personal risk, then our measurement tools should preserve those differences. A simple average may be easy to report, but it can hide the concern that matters most.
+          </p>
+
+          <p>
+            Second, we should be careful with polite systems. A chatbot that sounds calm and respectful may lower the user&rsquo;s guard without resolving the harder questions: whether it is right, whether it treats people fairly, whether it handles sensitive contexts well, and whether the user understands the risks of relying on it.
+          </p>
+
+          <p>
+            Third, we should design for several publics, not an imaginary average user. A reassurance that works for a Confident Adopter may do very little for a Hesitant Skeptic. That does not mean the skeptic is being difficult. It may mean the system has not earned trust in the dimension that matters to them.
+          </p>
+
+          <p>
+            Good safety work does not just ask whether users are comfortable. It asks what kind of comfort, bought at what tradeoff, and for whom. If this paper is right, people already understand that AI safety is plural. Our measurements and designs need to catch up.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!--(bake /src/includes/footer.html)-->
+</body>
+
+</html>
