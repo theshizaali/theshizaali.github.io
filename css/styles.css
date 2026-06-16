@@ -1018,6 +1018,24 @@ ul.social-list svg:hover {
     margin: 0.7rem 0 0;
 }
 
+.research-statement-card {
+    margin-bottom: 1.8rem;
+    padding: 2rem 2.1rem 2.15rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 28px;
+    background: var(--surface-bg);
+    text-align: left;
+}
+
+.research-statement-card .teaching-section-title {
+    margin-top: 1.95rem;
+}
+
+.research-statement-card .teaching-page-intro,
+.research-statement-card .teaching-body-copy {
+    max-width: none;
+}
+
 .teaching-course-list {
     margin: 0.75rem 0 0;
     padding-left: 1.25rem;
