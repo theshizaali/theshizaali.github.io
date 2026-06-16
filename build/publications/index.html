@@ -98,8 +98,8 @@
       });
   </script>
 
-  <section class="section">
-    <div class="container is-max-desktop">
+  <section class="section publications-section">
+    <div class="container publications-container">
       <section class="publications-hero">
         <a href="/" aria-label="Go to homepage" class="hero-title-link">
           <h1 class="hero-title publications-page-title">
@@ -112,59 +112,79 @@
       </section>
 
       <div class="publications-page-content">
-        <div class="publication-filters" role="navigation" aria-label="Publication areas">
-            <a class="publication-filter-link" data-area-link="all" href="/publications/">All</a>
-            <a class="publication-filter-link" data-area-link="online-safety-platform-harm" href="/publications/?area=online-safety-platform-harm">Online Safety &amp; Platform Harm</a>
-            <a class="publication-filter-link" data-area-link="authenticity-provenance-trust-ai" href="/publications/?area=authenticity-provenance-trust-ai">Authenticity, Provenance &amp; Trust in AI</a>
-            <a class="publication-filter-link" data-area-link="ai-surveillance-sociotechnical-security" href="/publications/?area=ai-surveillance-sociotechnical-security">AI, Surveillance &amp; Sociotechnical Security</a>
+        <div class="publication-area-nav">
+            <p class="publication-area-label">By Area</p>
+            <div class="publication-filters" role="navigation" aria-label="Publication areas">
+                <a class="publication-filter-link" data-area-link="all" href="/publications/">All</a>
+                <a class="publication-filter-link" data-area-link="online-safety-platform-harm" href="/publications/?area=online-safety-platform-harm">Online Safety &amp; Platform Harm</a>
+                <a class="publication-filter-link" data-area-link="authenticity-provenance-trust-ai" href="/publications/?area=authenticity-provenance-trust-ai">Authenticity, Provenance &amp; Trust in AI</a>
+                <a class="publication-filter-link" data-area-link="ai-surveillance-sociotechnical-security" href="/publications/?area=ai-surveillance-sociotechnical-security">AI, Surveillance &amp; Sociotechnical Security</a>
+            </div>
         </div>
 
         <div id="publication-empty-state" class="publication-empty-state" hidden></div>
         <div id="publication-list-root" class="publication-year-groups"></div>
 
         <div id="publication-source-list" hidden>
-            <article class="publication publication-record" data-theme="authenticity-trust-ai-systems" data-year="2025">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">EPJ Data Science Springer Journal &middot; 2025</p>
+            <article class="publication publication-record" data-theme="authenticity-provenance-trust-ai" data-year="2026">
+                <div class="publication-title-line">
+                    <h3 class="publication-title">
+                        <strong>SoK: Mapping Threats to Defenses in Online Survey Fraud</strong>
+                    </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <span class="publication-link-disabled" aria-disabled="true">Paper forthcoming</span>
+                    </div>
+                </div>
+                <p class="publication-authors">
+                    <span><strong>Shiza Ali</strong></span>
+                    <span>Wellington Esposito Barbosa</span>
+                    <span>Matthias Fassl</span>
+                    <span>Aditi Ganapathi</span>
+                    <span>Jaron Mink</span>
+                    <span>Adam J. Aviv</span>
+                </p>
+                <p class="publication-venue-badge">Symposium on Usable Privacy and Security (SOUPS'26), August &middot; 2026</p>
+            </article>
+            <article class="publication publication-record" data-theme="ai-surveillance-sociotechnical-security" data-year="2025">
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Measuring biases in AI-generated co-authorship networks</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://link.springer.com/content/pdf/10.1140/epjds/s13688-025-00555-9.pdf" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span>Ghazal Kalhor</span>
                     <span><strong>Shiza Ali</strong></span>
                     <span>Afra Mashhadi</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://link.springer.com/content/pdf/10.1140/epjds/s13688-025-00555-9.pdf" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">EPJ Data Science Springer Journal &middot; 2025</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2025">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">arXiv preprint &middot; 2025</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Evolving Hate Speech Online: An Adaptive Framework for Detection and Mitigation</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://arxiv.org/abs/2502.10921" target="_blank">Preprint</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
                     <span>Jeremy Blackburn</span>
                     <span>Gianluca Stringhini</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://arxiv.org/abs/2502.10921" target="_blank">Preprint</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">arXiv preprint &middot; 2025</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2024">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">Proceedings of the 27th International Symposium on Research in Attacks, Intrusions and Defenses (RAID '24) &middot; 2024</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Unraveling the Web of Disinformation: Exploring the Larger Context of State-Sponsored Influence Campaigns on Twitter</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3678890.3678911" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span>Mohammad Hammas Saeed</span>
@@ -173,18 +193,16 @@
                     <span>Jeremy Blackburn</span>
                     <span>Gianluca Stringhini</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3678890.3678911" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">Proceedings of the 27th International Symposium on Research in Attacks, Intrusions and Defenses (RAID '24) &middot; 2024</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2023">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">Proceedings of the ACM on Human-Computer Interaction (CSCW'23) &middot; 2023</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Getting Meta: A Multimodal Approach for Detecting Unsafe Conversations within Instagram Direct Messages of Youth</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3579608" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
@@ -196,18 +214,16 @@
                     <span>Pamela J. Wisniewski</span>
                     <span>Gianluca Stringhini</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3579608" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">Proceedings of the ACM on Human-Computer Interaction (CSCW'23) &middot; 2023</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2023">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">Proceedings of the ACM on Human-Computer Interaction (CSCW'23) &middot; 2023</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Sliding into My DMs: Detecting Uncomfortable or Unsafe Sexual Risk Experiences within Instagram Direct Messages Grounded in the Perspective of Youth</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3579522" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span>Afsaneh Razi</span>
@@ -218,18 +234,16 @@
                     <span>Munmun De Choudhury</span>
                     <span>Pamela J. Wisniewski</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3579522" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">Proceedings of the ACM on Human-Computer Interaction (CSCW'23) &middot; 2023</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2022">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">CHI Conference on Human Factors in Computing Systems (CHI'22) &middot; 2022</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Understanding the Digital Lives of Youth: Analyzing Media Shared within Safe Versus Unsafe Private Conversations on Instagram</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3491102.3501969" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
@@ -241,18 +255,16 @@
                     <span>Pamela J. Wisniewski</span>
                     <span>Gianluca Stringhini</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3491102.3501969" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">CHI Conference on Human Factors in Computing Systems (CHI'22) &middot; 2022</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2022">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">Extended Abstracts CHI Conference on Human Factors in Computing Systems &middot; 2022</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Instagram Data Donation: A Case Study on Collecting Ecologically Valid Social Media Data for the Purpose of Adolescent Online Risk Detection</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3491101.3503569" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span>Afsaneh Razi</span>
@@ -264,18 +276,16 @@
                     <span>Munmun De Choudhury</span>
                     <span>Pamela J. Wisniewski</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3491101.3503569" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">Extended Abstracts CHI Conference on Human Factors in Computing Systems &middot; 2022</p>
             </article>
             <article class="publication publication-record" data-theme="ai-surveillance-sociotechnical-security" data-year="2022">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">IEEE Symposium on Security and Privacy (IEEE SP'22) &middot; 2022</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>TROLLMAGNIFIER: Detecting State-Sponsored Troll Accounts on Reddit</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1109/SP46214.2022.9833706" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span>Mohammad Hammas Saeed</span>
@@ -285,18 +295,16 @@
                     <span>Savvas Zannettou</span>
                     <span>Gianluca Stringhini</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1109/SP46214.2022.9833706" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">IEEE Symposium on Security and Privacy (IEEE SP'22) &middot; 2022</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2021">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">Proceedings of the 13th ACM Web Science Conference (WebSci'21) &middot; 2021</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Understanding the Effect of Deplatforming on Social Networks</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3447535.3462637" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span><strong>Shiza Ali</strong></span>
@@ -307,18 +315,16 @@
                     <span>Savvas Zannettou</span>
                     <span>Gianluca Stringhini</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3447535.3462637" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">Proceedings of the 13th ACM Web Science Conference (WebSci'21) &middot; 2021</p>
             </article>
             <article class="publication publication-record" data-theme="online-safety-platform-harm" data-year="2019">
-                <div class="publication-card-top">
-                    <p class="publication-venue-badge">Proceedings of the IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM'19) &middot; 2019</p>
+                <div class="publication-title-line">
                     <h3 class="publication-title">
                         <strong>Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms</strong>
                     </h3>
+                    <div class="external-links publication-links publication-title-links">
+                        <a href="https://doi.org/10.1145/3341161.3342913" target="_blank">Read Paper</a>
+                    </div>
                 </div>
                 <p class="publication-authors">
                     <span>Rashid Tahir</span>
@@ -328,11 +334,7 @@
                     <span>Fareed Zaffar</span>
                     <span>Christo Wilson</span>
                 </p>
-                <div class="publication-footer">
-                    <div class="external-links publication-links">
-                        <a href="https://doi.org/10.1145/3341161.3342913" target="_blank">Read Paper</a>
-                    </div>
-                </div>
+                <p class="publication-venue-badge">Proceedings of the IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM'19) &middot; 2019</p>
             </article>
         </div>
 

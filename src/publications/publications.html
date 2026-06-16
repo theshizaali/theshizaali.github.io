@@ -1,8 +1,11 @@
-<div class="publication-filters" role="navigation" aria-label="Publication areas">
-    <a class="publication-filter-link" data-area-link="all" href="/publications/">All</a>
-    <a class="publication-filter-link" data-area-link="online-safety-platform-harm" href="/publications/?area=online-safety-platform-harm">Online Safety &amp; Platform Harm</a>
-    <a class="publication-filter-link" data-area-link="authenticity-provenance-trust-ai" href="/publications/?area=authenticity-provenance-trust-ai">Authenticity, Provenance &amp; Trust in AI</a>
-    <a class="publication-filter-link" data-area-link="ai-surveillance-sociotechnical-security" href="/publications/?area=ai-surveillance-sociotechnical-security">AI, Surveillance &amp; Sociotechnical Security</a>
+<div class="publication-area-nav">
+    <p class="publication-area-label">By Area</p>
+    <div class="publication-filters" role="navigation" aria-label="Publication areas">
+        <a class="publication-filter-link" data-area-link="all" href="/publications/">All</a>
+        <a class="publication-filter-link" data-area-link="online-safety-platform-harm" href="/publications/?area=online-safety-platform-harm">Online Safety &amp; Platform Harm</a>
+        <a class="publication-filter-link" data-area-link="authenticity-provenance-trust-ai" href="/publications/?area=authenticity-provenance-trust-ai">Authenticity, Provenance &amp; Trust in AI</a>
+        <a class="publication-filter-link" data-area-link="ai-surveillance-sociotechnical-security" href="/publications/?area=ai-surveillance-sociotechnical-security">AI, Surveillance &amp; Sociotechnical Security</a>
+    </div>
 </div>
 
 <div id="publication-empty-state" class="publication-empty-state" hidden></div>
@@ -11,11 +14,25 @@
 <div id="publication-source-list" hidden>
     <!--(bake-start _foreach="publication:publications")-->
     <article class="publication publication-record" data-theme="{{ publication.theme }}" data-year="{{ publication.year }}">
-        <div class="publication-card-top">
-            <p class="publication-venue-badge">{{ publication.venue }} &middot; {{ publication.year }}</p>
+        <div class="publication-title-line">
             <h3 class="publication-title">
                 <strong>{{ publication.title }}</strong>
             </h3>
+            <div class="external-links publication-links publication-title-links">
+                <!--(bake-start _foreach="url:publication.urls")-->
+                <!--(bake-start _if="url.url == ''")-->
+                <span class="publication-link-disabled" aria-disabled="true">{{ url.name }}</span>
+                <!--(bake-end)-->
+                <!--(bake-start _if="url.url != ''")-->
+                <!--(bake-start _if="url.name == 'published'")-->
+                <a href="{{ url.url }}" target="_blank">Read Paper</a>
+                <!--(bake-end)-->
+                <!--(bake-start _if="url.name != 'published'")-->
+                <a href="{{ url.url }}" target="_blank">{{ url.name }}</a>
+                <!--(bake-end)-->
+                <!--(bake-end)-->
+                <!--(bake-end)-->
+            </div>
         </div>
         <p class="publication-authors">
             <!--(bake-start _foreach="author:publication.authors")-->
@@ -27,18 +44,7 @@
             <!--(bake-end)-->
             <!--(bake-end)-->
         </p>
-        <div class="publication-footer">
-            <div class="external-links publication-links">
-                <!--(bake-start _foreach="url:publication.urls")-->
-                <!--(bake-start _if="url.name == 'published'")-->
-                <a href="{{ url.url }}" target="_blank">Read Paper</a>
-                <!--(bake-end)-->
-                <!--(bake-start _if="url.name != 'published'")-->
-                <a href="{{ url.url }}" target="_blank">{{ url.name }}</a>
-                <!--(bake-end)-->
-                <!--(bake-end)-->
-            </div>
-        </div>
+        <p class="publication-venue-badge">{{ publication.venue }} &middot; {{ publication.year }}</p>
     </article>
     <!--(bake-end)-->
 </div>
