@@ -509,17 +509,6 @@ ul.social-list svg:hover {
     background: var(--surface-muted);
 }
 
-.blog-card-featured {
-    border-color: rgba(47, 121, 189, 0.24);
-    background:
-        linear-gradient(135deg, rgba(47, 121, 189, 0.08), transparent 52%),
-        var(--surface-bg);
-}
-
-.blog-card-featured .blog-card-kicker {
-    color: var(--link-blue);
-}
-
 .blog-card-kicker {
     display: inline-block;
     margin-bottom: 0.45rem;
@@ -548,16 +537,6 @@ ul.social-list svg:hover {
 
 .blog-index-entry {
     margin-bottom: 0;
-}
-
-.blog-index-entry-featured {
-    padding: 1rem 1.05rem 1.05rem;
-    border: 1px solid rgba(47, 121, 189, 0.2);
-    border-left: 4px solid var(--link-blue);
-    border-radius: 8px;
-    background:
-        linear-gradient(135deg, rgba(47, 121, 189, 0.08), transparent 55%),
-        var(--surface-bg);
 }
 
 .blog-index-date {
