@@ -21,7 +21,7 @@
   <!--(bake /src/includes/navbar.html)-->
   <section class="section">
     <div class="container is-max-desktop">
-      <article class="blog-post-page ai-research-post">
+      <article class="blog-post-page">
         <a class="blog-post-back" href="/blog/">Back to Blog</a>
 
         <header class="blog-post-header">
@@ -30,16 +30,12 @@
           <p class="blog-post-description">
             My human-in-the-loop workflow for literature review, study design, qualitative coding, analysis, and writing.
           </p>
-          <ul class="blog-post-chip-list ai-research-badges" aria-label="Research areas">
-            <li>Human-in-the-loop</li>
-            <li>Usable Security</li>
-            <li>Trustworthy AI</li>
-          </ul>
         </header>
 
-        <div class="blog-post-content ai-research-content">
+        <div class="blog-post-content">
           <p>
-            I use AI a lot in research, and I distrust it constantly. That tension is not a contradiction; it is the workflow. Most of the time, I am not asking AI to tell me what my study means. I am asking it to make my own thinking easier to inspect: the assumptions in a protocol, the gaps in a literature review, the weak parts of a codebook, and the claims that sound more confident than the evidence allows.
+              I have started using AI a lot, but then I distrust it constantly, and the internal turmoil gnaws at me all the time. I have settled on thinking that this is not a contradiction but a workflow, hence this blog.
+              Most of the time, I am not asking AI to tell me what my study means. I am asking it to make my own thinking easier to inspect: the assumptions in a protocol, the gaps in a literature review, the weak parts of a codebook, and the claims that sound more confident than the evidence allows.
           </p>
 
           <p>
@@ -51,31 +47,25 @@
           </blockquote>
 
           <p>
-            This is not a guide to automating user research. I do not think that is the interesting goal. It is a guide to how I use AI while keeping the important parts human: consent, interpretation, ethics, evidence, and responsibility.
+            This is not a guide to automating user research. I do not think it’s ethical to remove the user from user research. This is me on how I use AI while keeping the important parts human: consent, interpretation, ethics, evidence, and responsibility.
           </p>
 
-          <section class="ai-research-section" aria-labelledby="pipeline-title">
-            <div class="ai-section-heading">
-              <h2 id="pipeline-title">The basic rule</h2>
-            </div>
+          <h2 id="pipeline-title">The basic rule</h2>
 
-            <p>
-              Every AI output has to point back to something outside the model: a paper, a transcript, a participant quote, a codebook, an analysis script, a consent constraint, or a research decision I can explain later. If it cannot be traced back to evidence, it stays a note. It does not become a finding.
-            </p>
+          <p>Nothing from AI counts as a finding on its own.
+            Every claim has to connect back to real evidence, such as data, quotes, literature, methods, or documented decisions.
+            If I cannot explain where it came from, I do not treat it as a result.
+          </p>
 
-            <p>
-              That one rule changes how I use these tools. It means AI can help me move faster, but it cannot launder uncertainty into confidence. It can suggest structure, but it cannot invent evidence. It can notice patterns, but I still have to decide whether those patterns are real, meaningful, ethical to report, and supported by the data.
-            </p>
-          </section>
+          <p>
+            This means that AI can help me move faster, but it cannot launder uncertainty into confidence. It can suggest structure, but it cannot invent evidence. It can notice patterns, but I still have to decide whether those patterns are real, meaningful, ethical to report, and supported by the data.
+          </p>
 
-          <section class="ai-research-section" aria-labelledby="field-title">
-            <div class="ai-section-heading">
-              <h2 id="field-title">What the field is still figuring out</h2>
-            </div>
+          <h2 id="field-title">What the field is still figuring out</h2>
 
-            <p>
-              The debate around AI-assisted qualitative research is not simply hype versus fear. Some researchers see LLMs as useful interlocutors: tools that can help with familiarization, coding suggestions, memoing, comparison, and synthesis. Many of the same researchers also worry about whether these systems can protect participant interests, preserve context, and support the kind of reflexive judgment qualitative work depends on.
-            </p>
+          <p>
+            The debate around AI-assisted qualitative research is not simply hype versus fear. Some researchers see LLMs as useful interlocutors: tools that can help with familiarization, coding suggestions, memoing, comparison, and synthesis. Many of the same researchers also worry about whether these systems can protect participant interests, preserve context, and support the kind of reflexive judgment qualitative work depends on.
+          </p>
 
             <p>
               Some of this AI/UX research is still emerging, including preprint work, so I treat it as a useful signal about where the field is moving rather than settled doctrine.
@@ -93,15 +83,11 @@
               There is also a more skeptical position. <a href="https://arxiv.org/abs/2511.08461" target="_blank" rel="noopener noreferrer"><em>Generative Artificial Intelligence in Qualitative Research Methods: Between Hype and Risks?</em></a> argues that generative AI can undermine qualitative rigor because of hallucinations, commercial opacity, and weak documentation. I do not think that means researchers should never use AI. But I do think it is a useful warning: efficiency is not the same thing as validity.
             </p>
 
-            <p>
-              The work I find most useful does not treat AI as a replacement for interpretation. For example, <a href="https://arxiv.org/abs/2601.11850" target="_blank" rel="noopener noreferrer"><em>Human-AI Collaborative Inductive Thematic Analysis</em></a> describes AI as a procedural scaffold while keeping interpretive authority with human researchers. That is close to how I think about it. I want AI to help structure the work, not decide what the work means.
-            </p>
-          </section>
+          <p>
+            The work I find most useful does not treat AI as a replacement for interpretation. For example, <a href="https://arxiv.org/abs/2601.11850" target="_blank" rel="noopener noreferrer"><em>Human-AI Collaborative Inductive Thematic Analysis</em></a> describes AI as a procedural scaffold while keeping interpretive authority with human researchers. That is close to how I think about it. I want AI to help structure the work, not decide what the work means.
+          </p>
 
-          <section class="ai-research-section" aria-labelledby="pipeline-tools-title">
-            <div class="ai-section-heading">
-              <h2 id="pipeline-tools-title">My actual tool pipeline</h2>
-            </div>
+          <h2 id="pipeline-tools-title">My actual tool pipeline</h2>
 
             <p>
               Tools matter, but they are not the method. A messy study in a polished platform is still a messy study. What I want from my tool stack is a clear path from question to evidence: where papers came from, how participants were recruited, how transcripts were handled, how codes changed, and how claims made it into the final write-up.
@@ -111,165 +97,77 @@
               The exact stack changes by project, but this is the version I would reach for first: a narrow set of tools, each with a job, and a check that keeps the workflow tied to evidence.
             </p>
 
-            <ol class="ai-tool-flow" aria-label="Personal AI-assisted user research tool flow">
+            <ol aria-label="Personal AI-assisted user research tool flow">
               <li>
-                <span class="ai-flow-step">01</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Map the literature</h3>
-                    <p>Research Rabbit <span>with</span> Google Scholar</p>
-                  </div>
-                  <p>I use Research Rabbit to map citation neighborhoods and find adjacent work, then use Google Scholar to verify the paper trail and chase the original source.</p>
-                  <p class="ai-flow-check">Check: every useful claim goes back to the paper, not the map.</p>
-                </div>
+                <strong>Map the literature:</strong> I use Research Rabbit to map citation neighborhoods and find adjacent work, then use Google Scholar to verify the paper trail and chase the original source. Check: every useful claim goes back to the paper, not the map.
               </li>
               <li>
-                <span class="ai-flow-step">02</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Build the source library</h3>
-                    <p>Zotero <span>with</span> NotebookLM</p>
-                  </div>
-                  <p>Zotero is my source of truth for PDFs, metadata, notes, and citations. NotebookLM can help me compare notes across sources, but it never replaces reading.</p>
-                  <p class="ai-flow-check">Check: citations, quotes, and caveats stay anchored in Zotero.</p>
-                </div>
+                <strong>Build the source library:</strong> Zotero is my source of truth for PDFs, metadata, notes, and citations. NotebookLM can help me compare notes across sources, but it never replaces reading. Check: citations, quotes, and caveats stay anchored in Zotero.
               </li>
               <li>
-                <span class="ai-flow-step">03</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Pressure-test the protocol</h3>
-                    <p>Claude <span>or</span> ChatGPT</p>
-                  </div>
-                  <p>I draft the protocol myself, then ask AI to find leading questions, weak consent language, unclear task wording, and confounds before I pilot.</p>
-                  <p class="ai-flow-check">Check: AI critiques the study; it does not define the research question.</p>
-                </div>
+                <strong>Pressure-test the protocol:</strong> I draft the protocol myself, then ask AI to find leading questions, weak consent language, unclear task wording, and confounds before I pilot. Check: AI critiques the study; it does not define the research question.
               </li>
               <li>
-                <span class="ai-flow-step">04</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Recruit and collect data</h3>
-                    <p>Qualtrics <span>with</span> Prolific</p>
-                  </div>
-                  <p>Qualtrics handles surveys, screeners, and structured data collection. Prolific helps when I need targeted participant recruitment for a specific study population.</p>
-                  <p class="ai-flow-check">Check: the sample, screener, and consent language match the research question.</p>
-                </div>
+                <strong>Recruit and collect data:</strong> Qualtrics handles surveys, screeners, and structured data collection. Prolific helps when I need targeted participant recruitment for a specific study population. Check: the sample, screener, and consent language match the research question.
               </li>
               <li>
-                <span class="ai-flow-step">05</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Prepare transcripts</h3>
-                    <p>Zoom transcripts <span>or</span> Otter.ai</p>
-                  </div>
-                  <p>I use approved transcription workflows, then de-identify transcripts before analysis. The privacy step comes before the AI step, every time.</p>
-                  <p class="ai-flow-check">Check: names, contextual identifiers, and consent records are handled before coding.</p>
-                </div>
+                <strong>Prepare transcripts:</strong> I use approved transcription workflows, then de-identify transcripts before analysis. The privacy step comes before the AI step, every time. Check: names, contextual identifiers, and consent records are handled before coding.
               </li>
               <li>
-                <span class="ai-flow-step">06</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Code qualitatively</h3>
-                    <p>MAXQDA <span>with</span> AI critique</p>
-                  </div>
-                  <p>MAXQDA is my main tool for serious qualitative coding: codebooks, memos, retrieval, comparisons, and auditability. AI helps me look for overlap, ambiguity, and negative cases.</p>
-                  <p class="ai-flow-check">Check: every code has to survive contact with participant evidence.</p>
-                </div>
+                <strong>Code qualitatively:</strong> MAXQDA is my main tool for serious qualitative coding: codebooks, memos, retrieval, comparisons, and auditability. AI helps me look for overlap, ambiguity, and negative cases. Check: every code has to survive contact with participant evidence.
               </li>
               <li>
-                <span class="ai-flow-step">07</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Analyze and reproduce</h3>
-                    <p>Python <span>with</span> Quarto</p>
-                  </div>
-                  <p>Python handles cleaning, exploratory analysis, and reproducible checks. Quarto helps me keep analysis, notes, figures, and interpretation close together.</p>
-                  <p class="ai-flow-check">Check: scripts and outputs have to be inspectable later.</p>
-                </div>
+                <strong>Analyze and reproduce:</strong> Python handles cleaning, exploratory analysis, and reproducible checks. Quarto helps me keep analysis, notes, figures, and interpretation close together. Check: scripts and outputs have to be inspectable later.
               </li>
               <li>
-                <span class="ai-flow-step">08</span>
-                <div class="ai-flow-card">
-                  <div class="ai-flow-card-header">
-                    <h3>Write and audit</h3>
-                    <p>Claude <span>or</span> ChatGPT</p>
-                  </div>
-                  <p>I use AI for outlining, reviewer simulation, clarity checks, and plain-language summaries, then verify claims against papers, quotes, codebooks, and analysis outputs.</p>
-                  <p class="ai-flow-check">Check: no invented citations, no invented quotes, no confidence I did not earn.</p>
-                </div>
+                <strong>Write and audit:</strong> I use AI for outlining, reviewer simulation, clarity checks, and plain-language summaries, then verify claims against papers, quotes, codebooks, and analysis outputs. Check: no invented citations, no invented quotes, no confidence I did not earn.
               </li>
             </ol>
-          </section>
 
-          <section class="ai-research-section" aria-labelledby="workflow-title">
-            <div class="ai-section-heading">
-              <h2 id="workflow-title">How I use AI during a study</h2>
-            </div>
+          <h2 id="workflow-title">How I use AI during a study</h2>
 
-            <div class="ai-workflow-list">
-              <section>
-                <h3>1. I start without AI</h3>
-                <p>I usually write the first version of the research question, study motivation, participant population, and protocol myself. I want the initial shape of the study to come from the human problem, not from whatever phrasing the model makes sound smooth. Before I ask AI for anything, I try to write down what I think I am studying, why it matters, what kind of evidence would change my mind, and what would count as overclaiming.</p>
-              </section>
-              <section>
-                <h3>2. Then I ask AI to attack the design</h3>
-                <p>Once I have a draft, I use AI as a critique partner. I ask it to find leading questions, missing confounds, unclear tasks, recruitment problems, and places where my protocol assumes too much about the participant. I especially like asking for three versions of critique: methodological, ethical, and participant-centered. The methodological critique catches design problems. The ethical critique catches consent and privacy issues. The participant-centered critique asks whether the study would feel confusing, extractive, or exhausting to take part in.</p>
-              </section>
-              <section>
-                <h3>3. I use it to read more systematically</h3>
-                <p>For literature review, I like structured tables: research question, population, method, measure, construct, limitation, and what the paper does not answer. AI is helpful for making that structure less painful, especially when I am comparing papers across HCI, usable security, and AI evaluation. But I do not cite an AI summary. If a claim matters, I go back to the original paper, check the wording, and make sure the summary did not flatten an important caveat.</p>
-              </section>
-              <section>
-                <h3>4. I keep participant data on a short leash</h3>
-                <p>With interviews, transcripts, and open-ended survey responses, the first question is not “what can AI do?” It is “what did participants consent to, what does policy allow, and what is safe to upload?” If the answer is unclear, I do not upload identifiable data. In practice, that means de-identifying transcripts, removing names and contextual clues, separating consent records from analysis files, and using approved tools rather than treating every chatbot as a research repository.</p>
-              </section>
-              <section>
-                <h3>5. I code before I ask for coding help</h3>
-                <p>I do not want the model to set the first frame for qualitative analysis. I manually code a subset in MAXQDA, build an initial codebook, and then use AI to suggest refinements, edge cases, overlaps, or possible first-pass tags. I treat those suggestions as analytic prompts, not final labels. If a code cannot be defended with participant evidence, it does not belong in the codebook.</p>
-              </section>
-              <section>
-                <h3>6. I ask for contradictions, not just themes</h3>
-                <p>AI is very good at making things sound coherent. That is exactly why I ask it to look for negative cases, contradictions, and overclaims. I might ask: Which participants do not fit this theme? What quote weakens this claim? What alternative explanation would a skeptical reviewer propose? A theme that survives disagreement is more useful than a theme that only sounds elegant.</p>
-              </section>
-              <section>
-                <h3>7. I use it for code, not statistical judgment</h3>
-                <p>For quantitative work, AI can help write Python or R scaffolding, debug scripts, reshape data, or explain an error message. But I still check assumptions, inspect outputs, and decide what the numbers can actually support. If I am cleaning survey data, I want to see the missingness patterns. If I am modeling outcomes, I want to know what the model assumes. If a result changes after one coding decision, I want to know that too.</p>
-              </section>
-              <section>
-                <h3>8. I use it as a validity auditor</h3>
-                <p>Near the end, I ask uncomfortable questions: What bias did I miss? What alternative explanation fits this evidence? What privacy risk is under-discussed? Which claim is too strong? Where would a skeptical reviewer push back? This is one of my favorite uses of AI because it makes revision less about polishing and more about stress-testing.</p>
-              </section>
-              <section>
-                <h3>9. I let it improve writing, not invent results</h3>
-                <p>I use AI for structure, clarity, reviewer simulation, and plain-language summaries. I might ask whether an argument flows, whether a limitation is buried, or whether a paragraph is too vague. I do not use it to invent citations, participant quotes, findings, or certainty I have not earned.</p>
-              </section>
-            </div>
-          </section>
+          <h3>1. I start without AI</h3>
+          <p>I usually write the first version of the research question, study motivation, participant population, and protocol myself. I want the initial shape of the study to come from the human problem, not from whatever phrasing the model makes sound smooth. Before I ask AI for anything, I try to write down what I think I am studying, why it matters, what kind of evidence would change my mind, and what would count as overclaiming.</p>
 
-          <section class="ai-research-section" aria-labelledby="prompts-title">
-            <div class="ai-section-heading">
-              <h2 id="prompts-title">Prompts I actually find useful</h2>
-            </div>
+          <h3>2. Then I ask AI to attack the design</h3>
+          <p>Once I have a draft, I use AI as a critique partner. I ask it to find leading questions, missing confounds, unclear tasks, recruitment problems, and places where my protocol assumes too much about the participant. I especially like asking for three versions of critique: methodological, ethical, and participant-centered. The methodological critique catches design problems. The ethical critique catches consent and privacy issues. The participant-centered critique asks whether the study would feel confusing, extractive, or exhausting to take part in.</p>
+
+          <h3>3. I use it to read more systematically</h3>
+          <p>For literature review, I like structured tables: research question, population, method, measure, construct, limitation, and what the paper does not answer. AI is helpful for making that structure less painful, especially when I am comparing papers across HCI, usable security, and AI evaluation. But I do not cite an AI summary. If a claim matters, I go back to the original paper, check the wording, and make sure the summary did not flatten an important caveat.</p>
+
+          <h3>4. I keep participant data on a short leash</h3>
+          <p>With interviews, transcripts, and open-ended survey responses, the first question is not “what can AI do?” It is “what did participants consent to, what does policy allow, and what is safe to upload?” If the answer is unclear, I do not upload identifiable data. In practice, that means de-identifying transcripts, removing names and contextual clues, separating consent records from analysis files, and using approved tools rather than treating every chatbot as a research repository.</p>
+
+          <h3>5. I code before I ask for coding help</h3>
+          <p>I do not want the model to set the first frame for qualitative analysis. I manually code a subset in MAXQDA, build an initial codebook, and then use AI to suggest refinements, edge cases, overlaps, or possible first-pass tags. I treat those suggestions as analytic prompts, not final labels. If a code cannot be defended with participant evidence, it does not belong in the codebook.</p>
+
+          <h3>6. I ask for contradictions, not just themes</h3>
+          <p>AI is very good at making things sound coherent. That is exactly why I ask it to look for negative cases, contradictions, and overclaims. I might ask: Which participants do not fit this theme? What quote weakens this claim? What alternative explanation would a skeptical reviewer propose? A theme that survives disagreement is more useful than a theme that only sounds elegant.</p>
+
+          <h3>7. I use it for code, not statistical judgment</h3>
+          <p>For quantitative work, AI can help write Python or R scaffolding, debug scripts, reshape data, or explain an error message. But I still check assumptions, inspect outputs, and decide what the numbers can actually support. If I am cleaning survey data, I want to see the missingness patterns. If I am modeling outcomes, I want to know what the model assumes. If a result changes after one coding decision, I want to know that too.</p>
+
+          <h3>8. I use it as a validity auditor</h3>
+          <p>Near the end, I ask uncomfortable questions: What bias did I miss? What alternative explanation fits this evidence? What privacy risk is under-discussed? Which claim is too strong? Where would a skeptical reviewer push back? This is one of my favorite uses of AI because it makes revision less about polishing and more about stress-testing.</p>
+
+          <h3>9. I let it improve writing, not invent results</h3>
+          <p>I use AI for structure, clarity, reviewer simulation, and plain-language summaries. I might ask whether an argument flows, whether a limitation is buried, or whether a paragraph is too vague. I do not use it to invent citations, participant quotes, findings, or certainty I have not earned.</p>
+
+          <h2 id="prompts-title">Prompts I actually find useful</h2>
 
             <p>
               I do not think prompts are magic spells. The useful ones are usually boring and specific. They name the role I want AI to play, the evidence it is allowed to use, and the kind of failure I want it to look for.
             </p>
 
-            <ul class="ai-guide-list">
+            <ul>
               <li><strong>Protocol critique:</strong> “Act as a skeptical HCI reviewer. Identify leading questions, hidden assumptions, missing probes, and ethical risks in this interview guide. Do not rewrite yet. First explain what is weak and why.”</li>
               <li><strong>Literature synthesis:</strong> “Turn these paper notes into a comparison table with columns for research question, population, method, construct, key finding, limitation, and open question. Flag any claim that needs verification from the original PDF.”</li>
               <li><strong>Codebook refinement:</strong> “Given this draft codebook and these anonymized excerpts, identify overlapping codes, ambiguous definitions, and examples that do not fit cleanly. Do not create new findings.”</li>
               <li><strong>Negative case search:</strong> “Here is a candidate theme and supporting excerpts. Find excerpts that complicate, contradict, or narrow the theme. Explain how the claim should change.”</li>
               <li><strong>Validity audit:</strong> “Read this findings section like Reviewer 2. What claim is too broad, what evidence is thin, what alternative explanation is plausible, and what limitation should be stated more directly?”</li>
             </ul>
-          </section>
 
-          <section class="ai-research-section" aria-labelledby="not-use-title">
-            <div class="ai-section-heading">
-              <h2 id="not-use-title">Where I do not use AI</h2>
-            </div>
+          <h2 id="not-use-title">Where I do not use AI</h2>
 
             <p>
               There are places where AI is the wrong tool, or at least the wrong default. I do not use it to decide what participants “really meant.” I do not use it to replace pilot testing. I do not use it to make consent decisions after the fact. I do not use it to turn weak evidence into a stronger story.
@@ -278,30 +176,23 @@
             <p>
               I am also careful with emotional, identity-related, or high-risk excerpts. A participant talking about harassment, fear, disability, immigration status, sexuality, workplace surveillance, or security harm is not just “text data.” Those excerpts need more care, not more automation.
             </p>
-          </section>
 
-          <section class="ai-research-section" aria-labelledby="loop-title">
-            <div class="ai-section-heading">
-              <h2 id="loop-title">The loop I keep coming back to</h2>
-            </div>
+          <h2 id="loop-title">The loop I keep coming back to</h2>
 
-            <figure class="ai-loop-figure">
-              <ol class="ai-loop" aria-label="Human-in-the-loop AI research loop">
-                <li>Human research judgment</li>
-                <li>AI-assisted generation</li>
-                <li>Human review</li>
-                <li>Evidence check</li>
-                <li>Revision</li>
-                <li>Audit trail</li>
-              </ol>
-              <figcaption>AI can suggest, structure, and critique. The researcher remains responsible for interpretation, ethics, and evidence.</figcaption>
-            </figure>
-          </section>
+          <ol aria-label="Human-in-the-loop AI research loop">
+            <li>Human research judgment</li>
+            <li>AI-assisted generation</li>
+            <li>Human review</li>
+            <li>Evidence check</li>
+            <li>Revision</li>
+            <li>Audit trail</li>
+          </ol>
 
-          <section class="ai-research-section ai-example-section" aria-labelledby="example-title">
-            <div class="ai-section-heading">
-              <h2 id="example-title">A concrete example</h2>
-            </div>
+          <p>
+            AI can suggest, structure, and critique. The researcher remains responsible for interpretation, ethics, and evidence.
+          </p>
+
+          <h2 id="example-title">A concrete example</h2>
 
             <p>
               Say I am studying how users make security decisions: how they interpret a browser warning, whether they trust a password manager prompt, how they evaluate a suspicious message, or when they decide an AI security tool is worth relying on.
@@ -315,14 +206,10 @@
             <p>
               That is where AI becomes useful to me. Not because it produces the conclusion, but because it helps me interrogate whether the conclusion is strong enough.
             </p>
-          </section>
 
-          <section class="ai-research-section ai-rules-section" aria-labelledby="rules-title">
-            <div class="ai-section-heading">
-              <h2 id="rules-title">Rules I actually follow</h2>
-            </div>
+          <h2 id="rules-title">Rules I actually follow</h2>
 
-            <ol class="ai-rules-list">
+            <ol>
               <li>Do not upload identifiable participant data unless the tool, consent, and IRB or institutional policy allow it.</li>
               <li>Treat AI summaries as notes, not findings.</li>
               <li>Keep raw data as the source of truth.</li>
@@ -332,12 +219,8 @@
               <li>Use AI to critique methods, not to hide weak methods.</li>
               <li>Preserve an audit trail of research decisions.</li>
             </ol>
-          </section>
 
-          <section class="ai-research-section ai-style-section" aria-labelledby="style-title">
-            <div class="ai-section-heading">
-              <h2 id="style-title">What this says about my research style</h2>
-            </div>
+          <h2 id="style-title">What this says about my research style</h2>
 
             <p>
               I like research workflows that are fast, careful, and auditable. AI is useful because it forces me to externalize parts of my thinking: assumptions, codebooks, evidence chains, limitations, and alternative explanations.
@@ -345,9 +228,8 @@
             <p>
               Used well, AI does not make research less human. It makes the researcher more explicit about judgment. That is the version of AI-assisted research I am interested in: not a machine replacing interpretation, but a set of tools that make interpretation easier to question.
             </p>
-          </section>
 
-          <blockquote class="blog-post-pullquote ai-closing-quote">
+          <blockquote class="blog-post-pullquote">
             <p>The future of user research is not fully automated research. It is human-centered research with better instruments: faster synthesis, sharper critique, clearer audit trails, and stronger links between claims and evidence.</p>
           </blockquote>
         </div>
