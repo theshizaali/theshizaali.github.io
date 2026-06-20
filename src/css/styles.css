@@ -509,6 +509,17 @@ ul.social-list svg:hover {
     background: var(--surface-muted);
 }
 
+.blog-card-featured {
+    border-color: rgba(47, 121, 189, 0.24);
+    background:
+        linear-gradient(135deg, rgba(47, 121, 189, 0.08), transparent 52%),
+        var(--surface-bg);
+}
+
+.blog-card-featured .blog-card-kicker {
+    color: var(--link-blue);
+}
+
 .blog-card-kicker {
     display: inline-block;
     margin-bottom: 0.45rem;
@@ -537,6 +548,16 @@ ul.social-list svg:hover {
 
 .blog-index-entry {
     margin-bottom: 0;
+}
+
+.blog-index-entry-featured {
+    padding: 1rem 1.05rem 1.05rem;
+    border: 1px solid rgba(47, 121, 189, 0.2);
+    border-left: 4px solid var(--link-blue);
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(47, 121, 189, 0.08), transparent 55%),
+        var(--surface-bg);
 }
 
 .blog-index-date {
@@ -837,6 +858,327 @@ ul.social-list svg:hover {
     color: var(--body-text);
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+.ai-research-post {
+    max-width: 46rem;
+}
+
+.ai-research-badges {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.ai-research-badges li {
+    border-radius: 6px;
+}
+
+.ai-research-content {
+    display: block;
+}
+
+.ai-research-section {
+    margin: 1.9rem 0 0;
+}
+
+.ai-section-heading {
+    margin-bottom: 0.65rem;
+}
+
+.ai-research-content .ai-section-heading h2 {
+    margin: 0 0 0.85rem;
+}
+
+.ai-pipeline {
+    display: grid;
+    gap: 0;
+    margin: 0 0 0.2rem;
+    padding: 0;
+    counter-reset: ai-pipeline;
+}
+
+.ai-pipeline li {
+    display: grid;
+    grid-template-columns: 2.55rem 10rem 1fr;
+    gap: 0.8rem;
+    align-items: start;
+    list-style: none;
+    padding: 0.72rem 0;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.ai-pipeline-step {
+    color: var(--accent);
+    font-family: var(--font-family-mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.ai-pipeline strong {
+    color: var(--heading-text);
+    font-size: 0.98rem;
+    line-height: 1.35;
+}
+
+.ai-pipeline span:last-child {
+    color: var(--body-text);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.ai-tool-flow {
+    position: relative;
+    display: grid;
+    gap: 0.85rem;
+    margin: 1.15rem 0 0.2rem;
+    padding: 0;
+}
+
+.ai-tool-flow::before {
+    content: "";
+    position: absolute;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    left: 1.05rem;
+    width: 1px;
+    background: var(--surface-border);
+}
+
+.ai-tool-flow li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    gap: 0.82rem;
+    align-items: start;
+    list-style: none;
+}
+
+.ai-flow-step {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 1px solid var(--accent-soft-border);
+    border-radius: 50%;
+    background: var(--page-bg);
+    color: var(--accent);
+    font-family: var(--font-family-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ai-flow-card {
+    padding: 0.78rem 0 0.9rem;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.ai-flow-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.35rem 0.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.ai-flow-card h3 {
+    margin: 0;
+    color: var(--heading-text);
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.ai-flow-card-header p {
+    margin: 0;
+    color: var(--link-blue);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.ai-flow-card-header span {
+    color: var(--muted-text);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.ai-flow-card > p {
+    margin: 0 0 0.45rem;
+    color: var(--body-text);
+    font-size: 0.98rem;
+    line-height: 1.68;
+}
+
+.ai-flow-card .ai-flow-check {
+    margin-bottom: 0;
+    color: var(--heading-text);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+.ai-tool-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.2rem;
+    margin-top: 1.1rem;
+}
+
+.ai-tool-card {
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+.ai-tool-card h3,
+.ai-workflow-list h3 {
+    margin: 0 0 0.62rem;
+    color: var(--heading-text);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.ai-tool-card ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.42rem;
+    margin: 0;
+    padding: 0;
+}
+
+.ai-tool-card li {
+    list-style: none;
+    padding: 0.26rem 0.48rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--heading-text);
+    font-size: 0.86rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.ai-workflow-list {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.ai-workflow-list section {
+    padding-left: 0.95rem;
+    border-left: 3px solid var(--surface-border);
+}
+
+.ai-workflow-list p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.ai-loop-figure {
+    margin: 0;
+}
+
+.ai-loop {
+    display: grid;
+    gap: 0.52rem;
+    margin: 0;
+    padding: 0;
+}
+
+.ai-loop li {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr;
+    gap: 0.65rem;
+    align-items: baseline;
+    list-style: none;
+    padding: 0.52rem 0;
+    border-bottom: 1px solid var(--surface-border);
+    color: var(--heading-text);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.ai-loop li::before {
+    content: ">";
+    color: var(--accent);
+    font-family: var(--font-family-mono);
+    font-weight: 700;
+}
+
+.ai-loop-figure figcaption {
+    margin-top: 0.65rem;
+    color: var(--muted-text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.ai-guide-list {
+    display: grid;
+    gap: 0.72rem;
+    margin: 0.2rem 0 0;
+    padding: 0;
+}
+
+.ai-guide-list li {
+    list-style: none;
+    padding: 0.78rem 0;
+    border-bottom: 1px solid var(--surface-border);
+    color: var(--body-text);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.ai-guide-list strong {
+    color: var(--heading-text);
+}
+
+.ai-example-section,
+.ai-style-section {
+    padding: 0 0 0 1rem;
+    border: 0;
+    border-left: 4px solid var(--accent);
+}
+
+.ai-rules-list {
+    display: grid;
+    gap: 0.62rem;
+    margin: 0;
+    padding: 0;
+    counter-reset: ai-rules;
+}
+
+.ai-rules-list li {
+    display: grid;
+    grid-template-columns: 2.35rem 1fr;
+    gap: 0.72rem;
+    align-items: start;
+    list-style: none;
+    padding: 0.62rem 0;
+    border-bottom: 1px solid var(--surface-border);
+    color: var(--body-text);
+    font-size: 1rem;
+    line-height: 1.65;
+    counter-increment: ai-rules;
+}
+
+.ai-rules-list li::before {
+    content: counter(ai-rules, decimal-leading-zero);
+    color: var(--accent);
+    font-family: var(--font-family-mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.65;
+}
+
+.ai-closing-quote {
+    margin-top: 0.2rem;
 }
 
 .publications-hero {
@@ -1456,6 +1798,38 @@ h1.publication-title:hover strong {
     .blog-post-visibility-ladder li,
     .blog-post-question-grid {
         grid-template-columns: 1fr;
+    }
+
+    .ai-research-intro {
+        font-size: 1rem;
+        line-height: 1.68;
+    }
+
+    .ai-pipeline,
+    .ai-tool-grid,
+    .ai-workflow-list {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-pipeline li {
+        grid-template-columns: 2.2rem 1fr;
+    }
+
+    .ai-pipeline li span:last-child {
+        grid-column: 2;
+    }
+
+    .ai-flow-card-header {
+        display: block;
+    }
+
+    .ai-flow-card-header p {
+        margin-top: 0.2rem;
+    }
+
+    .ai-rules-list li {
+        grid-template-columns: 1.9rem 1fr;
+        font-size: 0.96rem;
     }
 
     .mock-ai-topbar,
