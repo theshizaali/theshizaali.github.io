@@ -123,7 +123,8 @@
 
         <div class="blog-post-content">
           <p>
-            I use AI a lot in research, and I distrust it constantly. That tension is not a contradiction; it is the workflow. Most of the time, I am not asking AI to tell me what my study means. I am asking it to make my own thinking easier to inspect: the assumptions in a protocol, the gaps in a literature review, the weak parts of a codebook, and the claims that sound more confident than the evidence allows.
+              I have started using AI a lot, but then I distrust it constantly, and the internal turmoil gnaws at me all the time. I have settled on thinking that this is not a contradiction but a workflow, hence this blog.
+              Most of the time, I am not asking AI to tell me what my study means. I am asking it to make my own thinking easier to inspect: the assumptions in a protocol, the gaps in a literature review, the weak parts of a codebook, and the claims that sound more confident than the evidence allows.
           </p>
 
           <p>
@@ -135,17 +136,18 @@
           </blockquote>
 
           <p>
-            This is not a guide to automating user research. I do not think that is the interesting goal. It is a guide to how I use AI while keeping the important parts human: consent, interpretation, ethics, evidence, and responsibility.
+            This is not a guide to automating user research. I do not think it’s ethical to remove the user from user research. This is me on how I use AI while keeping the important parts human: consent, interpretation, ethics, evidence, and responsibility.
           </p>
 
           <h2 id="pipeline-title">The basic rule</h2>
 
-          <p>
-            Every AI output has to point back to something outside the model: a paper, a transcript, a participant quote, a codebook, an analysis script, a consent constraint, or a research decision I can explain later. If it cannot be traced back to evidence, it stays a note. It does not become a finding.
+          <p>Nothing from AI counts as a finding on its own.
+            Every claim has to connect back to real evidence, such as data, quotes, literature, methods, or documented decisions.
+            If I cannot explain where it came from, I do not treat it as a result.
           </p>
 
           <p>
-            That one rule changes how I use these tools. It means AI can help me move faster, but it cannot launder uncertainty into confidence. It can suggest structure, but it cannot invent evidence. It can notice patterns, but I still have to decide whether those patterns are real, meaningful, ethical to report, and supported by the data.
+            This means that AI can help me move faster, but it cannot launder uncertainty into confidence. It can suggest structure, but it cannot invent evidence. It can notice patterns, but I still have to decide whether those patterns are real, meaningful, ethical to report, and supported by the data.
           </p>
 
           <h2 id="field-title">What the field is still figuring out</h2>
@@ -177,39 +179,38 @@
           <h2 id="pipeline-tools-title">My actual tool pipeline</h2>
 
             <p>
-              Tools matter, but they are not the method. A messy study in a polished platform is still a messy study. What I want from my tool stack is a clear path from question to evidence: where papers came from, how participants were recruited, how transcripts were handled, how codes changed, and how claims made it into the final write-up.
+              I do not have a sacred stack. Tools change by project, institution, budget, data sensitivity, and sometimes by whatever is least annoying that week. What stays constant is the shape of the workflow: I want every claim to have a trail behind it. Where did the paper come from? What did the participant actually say? Who was recruited? How did the codebook change? What script produced that number? What evidence made it into the write-up, and what got left out?
             </p>
 
             <p>
-              The exact stack changes by project, but this is the version I would reach for first: a narrow set of tools, each with a job, and a check that keeps the workflow tied to evidence.
+              So my tools are less like a magic productivity setup and more like a set of handrails. Each one has a job. None of them gets to become the source of truth by itself.
             </p>
 
-            <ol aria-label="Personal AI-assisted user research tool flow">
-              <li>
-                <strong>Map the literature:</strong> I use Research Rabbit to map citation neighborhoods and find adjacent work, then use Google Scholar to verify the paper trail and chase the original source. Check: every useful claim goes back to the paper, not the map.
-              </li>
-              <li>
-                <strong>Build the source library:</strong> Zotero is my source of truth for PDFs, metadata, notes, and citations. NotebookLM can help me compare notes across sources, but it never replaces reading. Check: citations, quotes, and caveats stay anchored in Zotero.
-              </li>
-              <li>
-                <strong>Pressure-test the protocol:</strong> I draft the protocol myself, then ask AI to find leading questions, weak consent language, unclear task wording, and confounds before I pilot. Check: AI critiques the study; it does not define the research question.
-              </li>
-              <li>
-                <strong>Recruit and collect data:</strong> Qualtrics handles surveys, screeners, and structured data collection. Prolific helps when I need targeted participant recruitment for a specific study population. Check: the sample, screener, and consent language match the research question.
-              </li>
-              <li>
-                <strong>Prepare transcripts:</strong> I use approved transcription workflows, then de-identify transcripts before analysis. The privacy step comes before the AI step, every time. Check: names, contextual identifiers, and consent records are handled before coding.
-              </li>
-              <li>
-                <strong>Code qualitatively:</strong> MAXQDA is my main tool for serious qualitative coding: codebooks, memos, retrieval, comparisons, and auditability. AI helps me look for overlap, ambiguity, and negative cases. Check: every code has to survive contact with participant evidence.
-              </li>
-              <li>
-                <strong>Analyze and reproduce:</strong> Python handles cleaning, exploratory analysis, and reproducible checks. Quarto helps me keep analysis, notes, figures, and interpretation close together. Check: scripts and outputs have to be inspectable later.
-              </li>
-              <li>
-                <strong>Write and audit:</strong> I use AI for outlining, reviewer simulation, clarity checks, and plain-language summaries, then verify claims against papers, quotes, codebooks, and analysis outputs. Check: no invented citations, no invented quotes, no confidence I did not earn.
-              </li>
-            </ol>
+            <figure class="blog-post-tool-map">
+              <ol aria-label="My AI-assisted research tool pipeline">
+                <li>
+                  <span class="tool-map-stage">1. Find and read</span>
+                  <strong>Research Rabbit, Google Scholar, Zotero, NotebookLM</strong>
+                  <p>I use Research Rabbit to notice citation neighborhoods, Google Scholar to chase the original paper, Zotero to keep PDFs and notes honest, and NotebookLM only as a way to compare source notes. The paper is the authority, not the map or the summary.</p>
+                </li>
+                <li>
+                  <span class="tool-map-stage">2. Design the study</span>
+                  <strong>Google Docs, ChatGPT or Claude, Qualtrics, Prolific</strong>
+                  <p>I draft the research question, protocol, consent language, and screener myself. Then I ask AI to critique the design: leading questions, missing probes, weak consent language, confusing tasks, and assumptions I may be carrying into the study.</p>
+                </li>
+                <li>
+                  <span class="tool-map-stage">3. Prepare and analyze</span>
+                  <strong>Approved transcription tools, MAXQDA, Python, Quarto</strong>
+                  <p>After collection, privacy comes first: transcripts get cleaned and de-identified before analysis. MAXQDA holds the qualitative work; Python and Quarto help with cleaning, checks, figures, and reproducible notes. AI can suggest places to look, but the data has to answer back.</p>
+                </li>
+                <li>
+                  <span class="tool-map-stage">4. Write and audit</span>
+                  <strong>Zotero, Quarto, ChatGPT or Claude</strong>
+                  <p>I use AI for outlines, reviewer simulation, clarity checks, and plain-language summaries. Before anything becomes a claim, I trace it back to a paper, quote, codebook decision, script, or analysis output.</p>
+                </li>
+              </ol>
+              <figcaption>The simple rule underneath the stack: every tool should make the evidence easier to inspect, not easier to blur.</figcaption>
+            </figure>
 
           <h2 id="workflow-title">How I use AI during a study</h2>
 

@@ -692,6 +692,64 @@ ul.social-list svg:hover {
     text-align: center;
 }
 
+.blog-post-tool-map {
+    margin: 1.6rem 0 2rem;
+}
+
+.blog-post-tool-map ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-post-tool-map li {
+    list-style: none;
+    margin: 0;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--surface-border);
+    border-left: 4px solid var(--link-blue);
+    border-radius: 8px;
+    background: var(--surface-bg);
+}
+
+.blog-post-tool-map li:nth-child(even) {
+    border-left-color: var(--accent);
+}
+
+.blog-post-tool-map .tool-map-stage {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--muted-text);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.blog-post-tool-map strong {
+    display: block;
+    color: var(--heading-text);
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
+.blog-post-tool-map p {
+    margin: 0.55rem 0 0;
+    font-size: 0.98rem;
+    line-height: 1.68;
+}
+
+.blog-post-tool-map figcaption {
+    margin-top: 0.7rem;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    text-align: center;
+}
+
 .blog-post-data-figure {
     overflow-x: auto;
     padding-bottom: 0.15rem;
@@ -1501,6 +1559,7 @@ h1.publication-title:hover strong {
     }
 
     .blog-post-visibility-ladder li,
+    .blog-post-tool-map ol,
     .blog-post-question-grid {
         grid-template-columns: 1fr;
     }
