@@ -179,68 +179,67 @@
           <h2 id="pipeline-tools-title">My actual tool pipeline</h2>
 
             <p>
-              Tools matter, but they are not the method. A messy study in a polished platform is still a messy study. What I want from my tool stack is a clear path from question to evidence: where papers came from, how participants were recruited, how transcripts were handled, how codes changed, and how claims made it into the final write-up.
+              I do not have a sacred stack. Tools change by project, institution, budget, data sensitivity, and sometimes by whatever is least annoying that week. What stays constant is the shape of the workflow: I want every claim to have a trail behind it. Where did the paper come from? What did the participant actually say? Who was recruited? How did the codebook change? What script produced that number? What evidence made it into the write-up, and what got left out?
             </p>
 
             <p>
-              The exact stack changes by project, but this is the version I would reach for first: a narrow set of tools, each with a job, and a check that keeps the workflow tied to evidence.
+              So my tools are less like a magic productivity setup and more like a set of handrails. Each one has a job. None of them gets to become the source of truth by itself.
             </p>
 
-            <ol aria-label="Personal AI-assisted user research tool flow">
-              <li>
-                <strong>Map the literature:</strong> I use Research Rabbit to map citation neighborhoods and find adjacent work, then use Google Scholar to verify the paper trail and chase the original source. Check: every useful claim goes back to the paper, not the map.
-              </li>
-              <li>
-                <strong>Build the source library:</strong> Zotero is my source of truth for PDFs, metadata, notes, and citations. NotebookLM can help me compare notes across sources, but it never replaces reading. Check: citations, quotes, and caveats stay anchored in Zotero.
-              </li>
-              <li>
-                <strong>Pressure-test the protocol:</strong> I draft the protocol myself, then ask AI to find leading questions, weak consent language, unclear task wording, and confounds before I pilot. Check: AI critiques the study; it does not define the research question.
-              </li>
-              <li>
-                <strong>Recruit and collect data:</strong> Qualtrics handles surveys, screeners, and structured data collection. Prolific helps when I need targeted participant recruitment for a specific study population. Check: the sample, screener, and consent language match the research question.
-              </li>
-              <li>
-                <strong>Prepare transcripts:</strong> I use approved transcription workflows, then de-identify transcripts before analysis. The privacy step comes before the AI step, every time. Check: names, contextual identifiers, and consent records are handled before coding.
-              </li>
-              <li>
-                <strong>Code qualitatively:</strong> MAXQDA is my main tool for serious qualitative coding: codebooks, memos, retrieval, comparisons, and auditability. AI helps me look for overlap, ambiguity, and negative cases. Check: every code has to survive contact with participant evidence.
-              </li>
-              <li>
-                <strong>Analyze and reproduce:</strong> Python handles cleaning, exploratory analysis, and reproducible checks. Quarto helps me keep analysis, notes, figures, and interpretation close together. Check: scripts and outputs have to be inspectable later.
-              </li>
-              <li>
-                <strong>Write and audit:</strong> I use AI for outlining, reviewer simulation, clarity checks, and plain-language summaries, then verify claims against papers, quotes, codebooks, and analysis outputs. Check: no invented citations, no invented quotes, no confidence I did not earn.
-              </li>
-            </ol>
+            <figure class="blog-post-tool-map">
+              <ol aria-label="My AI-assisted research tool pipeline">
+                <li>
+                  <span class="tool-map-stage">1. Find and read</span>
+                  <strong>Research Rabbit, Google Scholar, Zotero, NotebookLM</strong>
+                  <p>I use Research Rabbit to notice citation neighborhoods, Google Scholar to chase the original paper, Zotero to keep PDFs and notes honest, and NotebookLM only as a way to compare source notes. The paper is the authority, not the map or the summary.</p>
+                </li>
+                <li>
+                  <span class="tool-map-stage">2. Design the study</span>
+                  <strong>Qualtrics, Prolific</strong>
+                  <p>I draft the research question, protocol, consent language, and screener myself. Then I ask AI to critique the design: leading questions, missing probes, weak consent language, confusing tasks, and assumptions I may be carrying into the study.</p>
+                </li>
+                <li>
+                  <span class="tool-map-stage">3. Prepare and analyze</span>
+                  <strong>MAXQDA, Python, Quarto</strong>
+                  <p>After collection, privacy comes first: transcripts get cleaned and de-identified before analysis. MAXQDA holds the qualitative work; Python and Quarto help with cleaning, checks, figures, and reproducible notes. AI can suggest places to look, but the data has to answer back.</p>
+                </li>
+                <li>
+                  <span class="tool-map-stage">4. Write and audit</span>
+                  <strong>NotebookLM</strong>
+                  <p>I use AI for outlines, reviewer simulation, clarity checks, and plain-language summaries. Before anything becomes a claim, I trace it back to a paper, quote, codebook decision, script, or analysis output.</p>
+                </li>
+              </ol>
+              <figcaption>The simple rule underneath the stack: every tool should make the evidence easier to inspect, not easier to blur.</figcaption>
+            </figure>
 
           <h2 id="workflow-title">How I use AI during a study</h2>
 
-          <h3>1. I start without AI</h3>
+          <h3>1. Start without AI</h3>
           <p>I usually write the first version of the research question, study motivation, participant population, and protocol myself. I want the initial shape of the study to come from the human problem, not from whatever phrasing the model makes sound smooth. Before I ask AI for anything, I try to write down what I think I am studying, why it matters, what kind of evidence would change my mind, and what would count as overclaiming.</p>
 
-          <h3>2. Then I ask AI to attack the design</h3>
+          <h3>2. Ask AI to attack the design</h3>
           <p>Once I have a draft, I use AI as a critique partner. I ask it to find leading questions, missing confounds, unclear tasks, recruitment problems, and places where my protocol assumes too much about the participant. I especially like asking for three versions of critique: methodological, ethical, and participant-centered. The methodological critique catches design problems. The ethical critique catches consent and privacy issues. The participant-centered critique asks whether the study would feel confusing, extractive, or exhausting to take part in.</p>
 
-          <h3>3. I use it to read more systematically</h3>
+          <h3>3. Use it to read more systematically</h3>
           <p>For literature review, I like structured tables: research question, population, method, measure, construct, limitation, and what the paper does not answer. AI is helpful for making that structure less painful, especially when I am comparing papers across HCI, usable security, and AI evaluation. But I do not cite an AI summary. If a claim matters, I go back to the original paper, check the wording, and make sure the summary did not flatten an important caveat.</p>
 
-          <h3>4. I keep participant data on a short leash</h3>
+          <h3>4. Keep participant data on a short leash</h3>
           <p>With interviews, transcripts, and open-ended survey responses, the first question is not “what can AI do?” It is “what did participants consent to, what does policy allow, and what is safe to upload?” If the answer is unclear, I do not upload identifiable data. In practice, that means de-identifying transcripts, removing names and contextual clues, separating consent records from analysis files, and using approved tools rather than treating every chatbot as a research repository.</p>
 
-          <h3>5. I code before I ask for coding help</h3>
+          <h3>5. Code before I ask for coding help</h3>
           <p>I do not want the model to set the first frame for qualitative analysis. I manually code a subset in MAXQDA, build an initial codebook, and then use AI to suggest refinements, edge cases, overlaps, or possible first-pass tags. I treat those suggestions as analytic prompts, not final labels. If a code cannot be defended with participant evidence, it does not belong in the codebook.</p>
 
-          <h3>6. I ask for contradictions, not just themes</h3>
+          <h3>6. Ask for contradictions, not just themes</h3>
           <p>AI is very good at making things sound coherent. That is exactly why I ask it to look for negative cases, contradictions, and overclaims. I might ask: Which participants do not fit this theme? What quote weakens this claim? What alternative explanation would a skeptical reviewer propose? A theme that survives disagreement is more useful than a theme that only sounds elegant.</p>
 
-          <h3>7. I use it for code, not statistical judgment</h3>
+          <h3>7. Use it for code, not statistical judgment</h3>
           <p>For quantitative work, AI can help write Python or R scaffolding, debug scripts, reshape data, or explain an error message. But I still check assumptions, inspect outputs, and decide what the numbers can actually support. If I am cleaning survey data, I want to see the missingness patterns. If I am modeling outcomes, I want to know what the model assumes. If a result changes after one coding decision, I want to know that too.</p>
 
-          <h3>8. I use it as a validity auditor</h3>
+          <h3>8. Use it as a validity auditor</h3>
           <p>Near the end, I ask uncomfortable questions: What bias did I miss? What alternative explanation fits this evidence? What privacy risk is under-discussed? Which claim is too strong? Where would a skeptical reviewer push back? This is one of my favorite uses of AI because it makes revision less about polishing and more about stress-testing.</p>
 
-          <h3>9. I let it improve writing, not invent results</h3>
-          <p>I use AI for structure, clarity, reviewer simulation, and plain-language summaries. I might ask whether an argument flows, whether a limitation is buried, or whether a paragraph is too vague. I do not use it to invent citations, participant quotes, findings, or certainty I have not earned.</p>
+          <h3>9. Let it improve writing, not invent results</h3>
+          <p>Use AI for structure, clarity, reviewer simulation, and plain-language summaries. I might ask whether an argument flows, whether a limitation is buried, or whether a paragraph is too vague. I do not use it to invent citations, participant quotes, findings, or certainty I have not earned.</p>
 
           <h2 id="prompts-title">Prompts I actually find useful</h2>
 
@@ -259,46 +258,17 @@
           <h2 id="not-use-title">Where I do not use AI</h2>
 
             <p>
-              There are places where AI is the wrong tool, or at least the wrong default. I do not use it to decide what participants “really meant.” I do not use it to replace pilot testing. I do not use it to make consent decisions after the fact. I do not use it to turn weak evidence into a stronger story.
-            </p>
-
-            <p>
-              I am also careful with emotional, identity-related, or high-risk excerpts. A participant talking about harassment, fear, disability, immigration status, sexuality, workplace surveillance, or security harm is not just “text data.” Those excerpts need more care, not more automation.
+              There are places where AI is the wrong tool, or at least the wrong default. I would argue against using it to decide what participants “really meant”, or to replace pilot testing. Pilot testing is actually where you realise what can change or what needs improvement so I prefer doing it manually.I would also argue against using it to make consent decisions after the fact or to turn weak evidence into a stronger story.
+            Also be very careful with emotional, identity-related, or high-risk excerpts. A participant talking about harassment, fear, disability, immigration status, sexuality, workplace surveillance, or security harm is not just “text data.” Those excerpts need more care, not more automation, again keep coming back to the participant, the user and the human side of research. If the participant is not safe, then the research is not ethical, no matter how efficient it is.
             </p>
 
           <h2 id="loop-title">The loop I keep coming back to</h2>
 
           <ol aria-label="Human-in-the-loop AI research loop">
             <li>Human research judgment</li>
-            <li>AI-assisted generation</li>
-            <li>Human review</li>
             <li>Evidence check</li>
-            <li>Revision</li>
+            <li>Revise, revise, revise</li>
             <li>Audit trail</li>
-          </ol>
-
-          <p>
-            AI can suggest, structure, and critique. The researcher remains responsible for interpretation, ethics, and evidence.
-          </p>
-
-          <h2 id="example-title">A concrete example</h2>
-
-            <p>
-              Say I am studying how users make security decisions: how they interpret a browser warning, whether they trust a password manager prompt, how they evaluate a suspicious message, or when they decide an AI security tool is worth relying on.
-            </p>
-            <p>
-              I would start by drafting the protocol manually. What decision is the participant making? What do they know at that moment? What risk do they perceive? What evidence do I need to understand their reasoning? Only after that would I bring in AI to identify leading questions, ambiguous wording, missing probes, and possible confounds.
-            </p>
-            <p>
-              After data collection, I would de-identify transcripts, manually code a subset, build a first codebook, and then use AI for code suggestions or consistency checks. If a theme starts to emerge, I would ask AI to find the cases that make it messier: people who trusted the warning but ignored it, people who disliked the tool but still relied on it, people whose privacy choices changed depending on who they imagined could see their data.
-            </p>
-            <p>
-              That is where AI becomes useful to me. Not because it produces the conclusion, but because it helps me interrogate whether the conclusion is strong enough.
-            </p>
-
-          <h2 id="rules-title">Rules I actually follow</h2>
-
-            <ol>
               <li>Do not upload identifiable participant data unless the tool, consent, and IRB or institutional policy allow it.</li>
               <li>Treat AI summaries as notes, not findings.</li>
               <li>Keep raw data as the source of truth.</li>
@@ -309,17 +279,13 @@
               <li>Preserve an audit trail of research decisions.</li>
             </ol>
 
-          <h2 id="style-title">What this says about my research style</h2>
-
             <p>
-              I like research workflows that are fast, careful, and auditable. AI is useful because it forces me to externalize parts of my thinking: assumptions, codebooks, evidence chains, limitations, and alternative explanations.
-            </p>
-            <p>
-              Used well, AI does not make research less human. It makes the researcher more explicit about judgment. That is the version of AI-assisted research I am interested in: not a machine replacing interpretation, but a set of tools that make interpretation easier to question.
+              What really works for me is that my research workflows should be fast but careful, and auditable. AI is useful because it forces me to externalize parts of my thinking: assumptions, codebooks, evidence chains, limitations, and alternative explanations.
+              But, AI cannot do research for you. It makes the researcher more explicit about judgment. That is the version of AI-assisted research I am interested in: not a machine replacing interpretation, but a set of tools that make interpretation easier to question.
             </p>
 
           <blockquote class="blog-post-pullquote">
-            <p>The future of user research is not fully automated research. It is human-centered research with better instruments: faster synthesis, sharper critique, clearer audit trails, and stronger links between claims and evidence.</p>
+            <p>The future of user research is not fully automated research. It is human-centered research with better instruments: sharper critique, clearer audit trails, and stronger links between claims and evidence.</p>
           </blockquote>
         </div>
       </article>
